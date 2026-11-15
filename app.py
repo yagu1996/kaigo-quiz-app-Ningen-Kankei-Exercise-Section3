@@ -61,13 +61,13 @@ if "user_answers" not in st.session_state:
     st.session_state.user_answers = []
 
 # 受講生情報（共通ヘッダー・折りたたみ）
-with st.expander("👤 受講生情報（提出用・任意入力）", expanded=False):
+with st.expander("👤 学生情報（提出用）", expanded=False):
     col1, col2 = st.columns(2)
     with col1:
-        student_class = st.text_input("クラス名", value="介護福祉科1年")
+        student_class = st.text_input("クラス名", value="25A")
     with col2:
-        student_id = st.text_input("学籍番号", placeholder="A123456")
-    student_name = st.text_input("氏名", placeholder="介護 太郎")
+        student_id = st.text_input("学籍番号", placeholder="92594999")
+    student_name = st.text_input("氏名", placeholder="ヤグラ タロウ")
 
 ruby_toggle = st.toggle("ふりがな（ルビ）を表示する", value=True)
 
