@@ -1,2013 +1,2486 @@
+# -*- coding: utf-8 -*-
 """
-介護福祉士養成講座『人間の理解』第3章 チームマネジメント
-四肢択一 練習問題・模擬試験用 完全データセット（全118問・完全均等分散版）
+介護福祉士養成テキスト『人間の理解』第3章 練習問題・模擬試験
+全118問 完全問題データセット（camelCase/snake_case両互換版）
 """
 
 QUESTIONS = [
-  {
-    "id": 1,
-    "unit": 1,
-    "unit_title": "第1節 介護実践マネジメント",
-    "q_number": "1-1",
-    "question_ruby": "<ruby>介護<rt>かいご</rt></ruby>サービスには<ruby>物質的<rt>ぶっしつてき</rt></ruby>な「かたち」がないという [___] の<ruby>特性<rt>とくせい</rt></ruby>がある。",
-    "question_plain": "介護サービスには物質的な「かたち」がないという [___] の特性がある。",
-    "options": [
-      "不可分性",
-      "消滅性",
-      "無形性",
-      "品質の変動性"
-    ],
-    "answer": 3,
-    "answer_text": "無形性",
-    "explanation": "介護サービスは形として目に見えず、手に取ることができない「無形性（不可視性）」という特性を持ちます。"
-  },
-  {
-    "id": 2,
-    "unit": 1,
-    "unit_title": "第1節 介護実践マネジメント",
-    "q_number": "1-2",
-    "question_ruby": "<ruby>介護<rt>かいご</rt></ruby>サービスは<ruby>生産<rt>せいさん</rt></ruby>と<ruby>消費<rt>しょうひ</rt></ruby>を<ruby>切<rt>き</rt></ruby>り<ruby>離<rt>はな</rt></ruby>すことができない [___] の<ruby>特性<rt>とくせい</rt></ruby>をもつ。",
-    "question_plain": "介護サービスは生産と消費を切り離すことができない [___] の特性をもつ。",
-    "options": [
-      "即時性",
-      "消滅性",
-      "無形性",
-      "不可分性"
-    ],
-    "answer": 4,
-    "answer_text": "不可分性",
-    "explanation": "利用者にサービスが提供されたその瞬間に消費されるため、生産と消費を切り離せない「不可分性（同時性）」があります。"
-  },
-  {
-    "id": 3,
-    "unit": 1,
-    "unit_title": "第1節 介護実践マネジメント",
-    "q_number": "1-3",
-    "question_ruby": "<ruby>提供<rt>ていきょう</rt></ruby>する<ruby>人<rt>ひと</rt></ruby>やタイミングによって<ruby>内容<rt>ないよう</rt></ruby>が<ruby>異<rt>こと</rt></ruby>なる<ruby>性質<rt>せいしつ</rt></ruby>を [___] という。",
-    "question_plain": "提供する人やタイミングによって内容が異なる性質を [___] という。",
-    "options": [
-      "品質の変動性",
-      "無形性",
-      "不可分性",
-      "個別化"
-    ],
-    "answer": 1,
-    "answer_text": "品質の変動性",
-    "explanation": "提供する職員の技能や利用者のその日の心身状況・タイミングによって質が変わりやすい特性を「品質の変動性（異質性）」と呼びます。"
-  },
-  {
-    "id": 4,
-    "unit": 1,
-    "unit_title": "第1節 介護実践マネジメント",
-    "q_number": "1-4",
-    "question_ruby": "サービスを<ruby>保管<rt>ほかん</rt></ruby>してためておくことができない<ruby>性質<rt>せいしつ</rt></ruby>を [___] という。",
-    "question_plain": "サービスを保管してためておくことができない性質を [___] という。",
-    "options": [
-      "不可分性",
-      "無形性",
-      "消滅性",
-      "有限性"
-    ],
-    "answer": 3,
-    "answer_text": "消滅性",
-    "explanation": "物質的な製品のように倉庫に在庫として貯蔵・保管できず、提供されたその場で消費・消滅する性質を「消滅性」といいます。"
-  },
-  {
-    "id": 5,
-    "unit": 1,
-    "unit_title": "第1節 介護実践マネジメント",
-    "q_number": "1-5",
-    "question_ruby": "「<ruby>人<rt>ひと</rt></ruby>が<ruby>人<rt>ひと</rt></ruby>に<ruby>対<rt>たい</rt></ruby>しておこなうサービス」のことを [___] という。",
-    "question_plain": "「人が人に対しておこなうサービス」のことを [___] という。",
-    "options": [
-      "パブリックケア",
-      "パーソナルサポート",
-      "ヒューマンサービス",
-      "ソーシャルワーク"
-    ],
-    "answer": 3,
-    "answer_text": "ヒューマンサービス",
-    "explanation": "人間が人間に対して深い関わりを持って行う支援や対人福祉サービスを広く「ヒューマンサービス」と総称します。"
-  },
-  {
-    "id": 6,
-    "unit": 1,
-    "unit_title": "第1節 介護実践マネジメント",
-    "q_number": "1-6",
-    "question_ruby": "<ruby>利用者<rt>りようしゃ</rt></ruby>の<ruby>身体面<rt>しんたいめん</rt></ruby>・<ruby>精神面<rt>せいしんめん</rt></ruby>・<ruby>社会環境面<rt>しゃかいかんきょうめん</rt></ruby>を<ruby>含<rt>ふく</rt></ruby>めた<ruby>全体<rt>ぜんたい</rt></ruby>をとらえる [___] が<ruby>重要<rt>じゅうよう</rt></ruby>である。",
-    "question_plain": "利用者の身体面・精神面・社会環境面を含めた全体をとらえる [___] が重要である。",
-    "options": [
-      "生活歴の視点",
-      "全体をとらえる視点",
-      "リスク回避の視点",
-      "医学的視点"
-    ],
-    "answer": 2,
-    "answer_text": "全体をとらえる視点",
-    "explanation": "病気や身体の不自由さだけでなく、本人の想いや人間関係、暮らしてきた地域や環境を包括的・全人的にとらえる姿勢です。"
-  },
-  {
-    "id": 7,
-    "unit": 1,
-    "unit_title": "第1節 介護実践マネジメント",
-    "q_number": "1-7",
-    "question_ruby": "<ruby>利用者<rt>りようしゃ</rt></ruby>の<ruby>過去<rt>かこ</rt></ruby>から<ruby>現在<rt>げんざい</rt></ruby>、<ruby>将来<rt>しょうらい</rt></ruby>にわたる<ruby>生活<rt>せいかつ</rt></ruby>に [___] にかかわる<ruby>視点<rt>してん</rt></ruby>が<ruby>求<rt>もと</rt></ruby>められる。",
-    "question_plain": "利用者の過去から現在、将来にわたる生活に [___] にかかわる視点が求められる。",
-    "options": [
-      "一時的",
-      "局所的",
-      "継続的",
-      "断続的"
-    ],
-    "answer": 3,
-    "answer_text": "継続的",
-    "explanation": "一時点のぶつ切りの支援ではなく、利用者が歩んできた人生とこれからの未来を見据えた「継続的」な関わりが不可欠です。"
-  },
-  {
-    "id": 8,
-    "unit": 1,
-    "unit_title": "第1節 介護実践マネジメント",
-    "q_number": "1-8",
-    "question_ruby": "<ruby>介護現場<rt>かいごげんば</rt></ruby>において<ruby>危険<rt>きけん</rt></ruby>や<ruby>事故<rt>じこ</rt></ruby>を<ruby>予測<rt>よそく</rt></ruby>し<ruby>未然<rt>みぜん</rt></ruby>に<ruby>防<rt>ふせ</rt></ruby>ぐ<ruby>取<rt>と</rt></ruby>り<ruby>組<rt>く</rt></ruby>みを [___] という。",
-    "question_plain": "介護現場において危険や事故を予測し未然に防ぐ取り組みを [___] という。",
-    "options": [
-      "インシデント管理",
-      "BCP策定",
-      "リスクマネジメント",
-      "ヒヤリハット"
-    ],
-    "answer": 3,
-    "answer_text": "リスクマネジメント",
-    "explanation": "事故や感染症などのリスクを事前に把握・分析し、未然に防ぎ再発を予防する組織的取り組みをリスクマネジメントといいます。"
-  },
-  {
-    "id": 9,
-    "unit": 1,
-    "unit_title": "第1節 介護実践マネジメント",
-    "q_number": "1-9",
-    "question_ruby": "アセスメントや<ruby>計画作成<rt>けいかくさくせい</rt></ruby>などを<ruby>通<rt>つう</rt></ruby>じて<ruby>自立<rt>じりつ</rt></ruby>を<ruby>支援<rt>しえん</rt></ruby>する<ruby>対人援助<rt>たいじんえんじょ</rt></ruby>を [___] という。",
-    "question_plain": "アセスメントや計画作成などを通じて自立を支援する対人援助を [___] という。",
-    "options": [
-      "ケースワーク",
-      "スーパービジョン",
-      "モニタリング",
-      "ケアマネジメント"
-    ],
-    "answer": 4,
-    "answer_text": "ケアマネジメント",
-    "explanation": "利用者の生活課題を把握（アセスメント）し、ケアプランの作成や調整を通じて自立支援を行う一連のプロセスです。"
-  },
-  {
-    "id": 10,
-    "unit": 1,
-    "unit_title": "第1節 介護実践マネジメント",
-    "q_number": "1-10",
-    "question_ruby": "<ruby>多職種連携<rt>たしょくしゅれんけい</rt></ruby>と<ruby>同義<rt>どうぎ</rt></ruby>で<ruby>用<rt>もち</rt></ruby>いられ、<ruby>対象者<rt>たいしょうしゃ</rt></ruby>の<ruby>理解<rt>りかい</rt></ruby>や<ruby>課題整理<rt>かだいせいり</rt></ruby>を<ruby>深<rt>ふか</rt></ruby>めるかかわりを [___] という。",
-    "question_plain": "多職種連携と同義で用いられ、対象者の理解や課題整理を深めるかかわりを [___] という。",
-    "options": [
-      "チームビルディング",
-      "チームアプローチ",
-      "ケアカンファレンス",
-      "グループワーク"
-    ],
-    "answer": 2,
-    "answer_text": "チームアプローチ",
-    "explanation": "多職種が専門性を持ち寄り、利用者の全体像や生活課題の整理を深めて協働する姿勢・枠組みをチームアプローチと呼びます。"
-  },
-  {
-    "id": 11,
-    "unit": 1,
-    "unit_title": "第1節 介護実践マネジメント",
-    "q_number": "1-11",
-    "question_ruby": "<ruby>職種<rt>しょくしゅ</rt></ruby>や<ruby>役割<rt>やくわり</rt></ruby>の<ruby>枠<rt>わく</rt></ruby>を<ruby>超<rt>こ</rt></ruby>えた<ruby>多職種協働<rt>たしょくしゅきょうどう</rt></ruby>による<ruby>一体的<rt>いったいてき</rt></ruby>・<ruby>包括的<rt>ほうかつてき</rt></ruby>なケアを [___] という。",
-    "question_plain": "職種や役割の枠を超えた多職種協働による一体的・包括的なケアを [___] という。",
-    "options": [
-      "個別ケア",
-      "チームケア",
-      "プライマリケア",
-      "ユニットケア"
-    ],
-    "answer": 2,
-    "answer_text": "チームケア",
-    "explanation": "職種ごとの縦割りを脱し、チーム全員が目的を共有して一体となって提供する包括的なケアを「チームケア」と呼びます。"
-  },
-  {
-    "id": 12,
-    "unit": 1,
-    "unit_title": "第1節 介護実践マネジメント",
-    "q_number": "1-12",
-    "question_ruby": "2025<ruby>年度<rt>ねんど</rt></ruby>には<ruby>約<rt>やく</rt></ruby> [___] <ruby>万人<rt>まんにん</rt></ruby>の<ruby>介護人材<rt>かいごじんざい</rt></ruby>が<ruby>不足<rt>ふそく</rt></ruby>する<ruby>見通<rt>みとお</rt></ruby>しである。",
-    "question_plain": "2025年度には約 [___] 万人の介護人材が不足する見通しである。",
-    "options": [
-      "37.7",
-      "18.2",
-      "25.0",
-      "50.5"
-    ],
-    "answer": 1,
-    "answer_text": "37.7",
-    "explanation": "厚生労働省の需給推計において、団塊の世代が75歳以上となる2025年度には約37.7万人の介護人材不足が見込まれています。"
-  },
-  {
-    "id": 13,
-    "unit": 1,
-    "unit_title": "第1節 介護実践マネジメント",
-    "q_number": "1-13",
-    "question_ruby": "チーム<ruby>全員<rt>ぜんいん</rt></ruby>が<ruby>協力<rt>きょうりょく</rt></ruby>し<ruby>合<rt>あ</rt></ruby>い、<ruby>主体性<rt>しゅたいせい</rt></ruby>と<ruby>補佐的役<rt>ほさてきやく</rt></ruby>割を<ruby>果<rt>は</rt></ruby>たす [___] とフォロワーシップの<ruby>発揮<rt>はっき</rt></ruby>が<ruby>求<rt>もと</rt></ruby>められる。",
-    "question_plain": "チーム全員が協力し合い、主体性と補佐的役割を果たす [___] とフォロワーシップの発揮が求められる。",
-    "options": [
-      "リーダーシップ",
-      "オーナーシップ",
-      "パートナーシップ",
-      "メンバーシップ"
-    ],
-    "answer": 1,
-    "answer_text": "リーダーシップ",
-    "explanation": "リーダーシップとフォロワーシップは表裏一体であり、チームの全員が状況に応じて双方を発揮することが求められます。"
-  },
-  {
-    "id": 14,
-    "unit": 1,
-    "unit_title": "第1節 介護実践マネジメント",
-    "q_number": "1-14",
-    "question_ruby": "<ruby>新任職員<rt>しんにんしょくいん</rt></ruby>や<ruby>多様<rt>たよう</rt></ruby>な<ruby>背景<rt>はいけい</rt></ruby>をもつ<ruby>介護人材<rt>かいごじんざい</rt></ruby>のリーダーとして<ruby>期待<rt>きたい</rt></ruby>されるのが [___] である。",
-    "question_plain": "新任職員や多様な背景をもつ介護人材のリーダーとして期待されるのが [___] である。",
-    "options": [
-      "介護福祉士",
-      "社会福祉主事",
-      "作業療法士",
-      "看護師"
-    ],
-    "answer": 1,
-    "answer_text": "介護福祉士",
-    "explanation": "国家資格である介護福祉士には、チームのリーダーや初任者の指導役として質の高いケアを主導する役割が期待されています。"
-  },
-  {
-    "id": 15,
-    "unit": 1,
-    "unit_title": "第1節 介護実践マネジメント",
-    "q_number": "1-15",
-    "question_ruby": "チームマネジメントの3つの<ruby>柱<rt>はしら</rt></ruby>の1つ<ruby>目<rt>め</rt></ruby>は、<ruby>個別<rt>こべつ</rt></ruby>の<ruby>支援計画<rt>しえんけいかく</rt></ruby>に<ruby>基<rt>もと</rt></ruby>づきケアを<ruby>提供<rt>ていきょう</rt></ruby>する [___] である。",
-    "question_plain": "チームマネジメントの3つの柱の1つ目は、個別の支援計画に基づきケアを提供する [___] である。",
-    "options": [
-      "組織の目標達成",
-      "ケアの展開",
-      "人材育成・自己研鑽",
-      "リスクマネジメント"
-    ],
-    "answer": 2,
-    "answer_text": "ケアの展開",
-    "explanation": "チームマネジメントの3つの柱は①「ケアの展開」、②「人材育成・自己研鑽」、③「組織の目標達成」です。"
-  },
-  {
-    "id": 16,
-    "unit": 1,
-    "unit_title": "第1節 介護実践マネジメント",
-    "q_number": "1-16",
-    "question_ruby": "チームマネジメントの3つの<ruby>柱<rt>はしら</rt></ruby>の2つ<ruby>目<rt>め</rt></ruby>は、<ruby>学<rt>まな</rt></ruby>びや<ruby>学<rt>まな</rt></ruby>び<ruby>合<rt>あ</rt></ruby>いを<ruby>通<rt>つう</rt></ruby>じて<ruby>成長<rt>せいちょう</rt></ruby>する [___] である。",
-    "question_plain": "チームマネジメントの3つの柱の2つ目は、学びや学び合いを通じて成長する [___] である。",
-    "options": [
-      "人材育成・自己研鑽",
-      "コンプライアンス",
-      "組織の目標達成",
-      "ケアの展開"
-    ],
-    "answer": 1,
-    "answer_text": "人材育成・自己研鑽",
-    "explanation": "職員一人ひとりの成長を組織として支え、互いに高め合う柱が「人材育成・自己研鑽」です。"
-  },
-  {
-    "id": 17,
-    "unit": 1,
-    "unit_title": "第1節 介護実践マネジメント",
-    "q_number": "1-17",
-    "question_ruby": "チームマネジメントの3つの<ruby>柱<rt>はしら</rt></ruby>の3つ<ruby>目<rt>め</rt></ruby>は、<ruby>理念<rt>りねん</rt></ruby>や<ruby>目標<rt>もくひょう</rt></ruby>の<ruby>具体化<rt>ぐたいか</rt></ruby>と<ruby>達成<rt>たっせい</rt></ruby>をめざす [___] である。",
-    "question_plain": "チームマネジメントの3つの柱の3つ目は、理念や目標の具体化と達成をめざす [___] である。",
-    "options": [
-      "ケアの展開",
-      "組織の目標達成",
-      "業務マニュアル化",
-      "人材育成・自己研鑽"
-    ],
-    "answer": 2,
-    "answer_text": "組織の目標達成",
-    "explanation": "法人の理念や事業計画を現場で実現し、持続可能な運営を行うための柱が「組織の目標達成」です。"
-  },
-  {
-    "id": 18,
-    "unit": 1,
-    "unit_title": "第1節 介護実践マネジメント",
-    "q_number": "1-18",
-    "question_ruby": "<ruby>実際<rt>じっさい</rt></ruby>の<ruby>仕事<rt>しごと</rt></ruby>を<ruby>通<rt>とお</rt></ruby>しておこなわれる<ruby>訓練<rt>くんれん</rt></ruby>や<ruby>学<rt>まな</rt></ruby>びを [___] という。",
-    "question_plain": "実際の仕事を通しておこなわれる訓練や学びを [___] という。",
-    "options": [
-      "Off-JT",
-      "スーパービジョン",
-      "SDS",
-      "OJT"
-    ],
-    "answer": 4,
-    "answer_text": "OJT",
-    "explanation": "職場内訓練（On-the-Job Training）の略で、現場の実務を通じて指導者から指導・教育を受ける手法です。"
-  },
-  {
-    "id": 19,
-    "unit": 1,
-    "unit_title": "第1節 介護実践マネジメント",
-    "q_number": "1-19",
-    "question_ruby": "<ruby>研修会<rt>けんしゅうかい</rt></ruby>や<ruby>通信教育<rt>つうしんきょういく</rt></ruby>など<ruby>現場<rt>げんば</rt></ruby>を<ruby>離<rt>はな</rt></ruby>れておこなわれる<ruby>学<rt>まな</rt></ruby>びを [___] という。",
-    "question_plain": "研修会や通信教育など現場を離れておこなわれる学びを [___] という。",
-    "options": [
-      "Off-JT",
-      "OJT",
-      "SDS",
-      "リカレント教育"
-    ],
-    "answer": 1,
-    "answer_text": "Off-JT",
-    "explanation": "職場外訓練（Off-the-Job Training）の略で、通常の実務を離れて集合研修やセミナー等で体系的な理論や知識を学びます。"
-  },
-  {
-    "id": 20,
-    "unit": 1,
-    "unit_title": "第1節 介護実践マネジメント",
-    "q_number": "1-20",
-    "question_ruby": "<ruby>関係者<rt>かんけいしゃ</rt></ruby>が<ruby>集<rt>あつ</rt></ruby>まり<ruby>情報共有<rt>じょうほうきょうゆう</rt></ruby>や<ruby>共通理解<rt>きょうつうりかい</rt></ruby>をはかり<ruby>課題解決<rt>かだいかいけつ</rt></ruby>を<ruby>行<rt>おこな</rt></ruby>う<ruby>会議<rt>かいぎ</rt></ruby>を [___] という。",
-    "question_plain": "関係者が集まり情報共有や共通理解をはかり課題解決を行う会議を [___] という。",
-    "options": [
-      "運営委員会",
-      "朝礼",
-      "スーパービジョン",
-      "ケアカンファレンス"
-    ],
-    "answer": 4,
-    "answer_text": "ケアカンファレンス",
-    "explanation": "ケアに関する課題をチームで話し合い、方針の統一やよりよい支援方法を検討する専門会議です。"
-  },
-  {
-    "id": 21,
-    "unit": 1,
-    "unit_title": "第1節 介護実践マネジメント",
-    "q_number": "1-21",
-    "question_ruby": "<ruby>介護<rt>かいご</rt></ruby>サービスの<ruby>質<rt>しつ</rt></ruby>を<ruby>高<rt>たか</rt></ruby>めるために、チーム<ruby>全体<rt>ぜんたい</rt></ruby>で<ruby>取<rt>と</rt></ruby>り<ruby>組<rt>く</rt></ruby>む<ruby>活動<rt>かつどう</rt></ruby>を [___] という。",
-    "question_plain": "介護サービスの質を高めるために、チーム全体で取り組む活動を [___] という。",
-    "options": [
-      "人事考課",
-      "業務改善運動",
-      "リスクマネジメント",
-      "チームマネジメント"
-    ],
-    "answer": 4,
-    "answer_text": "チームマネジメント",
-    "explanation": "個々の力を結集し、理念やケア方針の実現に向けてチームを効果的に導き統括する活動全体を指します。"
-  },
-  {
-    "id": 22,
-    "unit": 1,
-    "unit_title": "第1節 介護実践マネジメント",
-    "q_number": "1-22",
-    "question_ruby": "サービスの<ruby>内容<rt>ないよう</rt></ruby>や<ruby>効果<rt>こうか</rt></ruby>を<ruby>確認<rt>かくにん</rt></ruby>・<ruby>再評価<rt>さいひょうか</rt></ruby>するプロセスのことを [___] という。",
-    "question_plain": "サービスの内容や効果を確認・再評価するプロセスのことを [___] という。",
-    "options": [
-      "モニタリング",
-      "アセスメント",
-      "プランニング",
-      "スーパービジョン"
-    ],
-    "answer": 1,
-    "answer_text": "モニタリング",
-    "explanation": "提供したケアプランやサービスが目標に向けて適切に機能しているかを定期的に把握・点検する過程です。"
-  },
-  {
-    "id": 23,
-    "unit": 1,
-    "unit_title": "第1節 介護実践マネジメント",
-    "q_number": "1-23",
-    "question_ruby": "ケアプランの<ruby>立案<rt>りつあん</rt></ruby>において<ruby>中心的<rt>ちゅうしんてき</rt></ruby>な<ruby>役割<rt>やくわり</rt></ruby>を<ruby>担<rt>にな</rt></ruby>う<ruby>職種<rt>しょくしゅ</rt></ruby>は [___] である。",
-    "question_plain": "ケアプランの立案において中心的な役割を担う職種は [___] である。",
-    "options": [
-      "介護支援専門員",
-      "理学療法士",
-      "介護福祉士",
-      "生活相談員"
-    ],
-    "answer": 1,
-    "answer_text": "介護支援専門員",
-    "explanation": "ケアマネジャー（介護支援専門員）は、利用者の意向やアセスメントに基づきケアプランを統括立案する専門職です。"
-  },
-  {
-    "id": 24,
-    "unit": 1,
-    "unit_title": "第1節 介護実践マネジメント",
-    "q_number": "1-24",
-    "question_ruby": "<ruby>利用者<rt>りようしゃ</rt></ruby>の<ruby>自立<rt>じりつ</rt></ruby>に<ruby>向<rt>む</rt></ruby>けた<ruby>目標<rt>もくひょう</rt></ruby>を<ruby>設定<rt>せってい</rt></ruby>し、<ruby>個別<rt>こべつ</rt></ruby>の<ruby>支援内容<rt>しえんないよう</rt></ruby>をまとめた<ruby>計画<rt>けいかく</rt></ruby>を [___] という。",
-    "question_plain": "利用者の自立に向けた目標を設定し、個別の支援内容をまとめた計画を [___] という。",
-    "options": [
-      "業務手順書",
-      "施設運営計画",
-      "介護計画",
-      "BCP"
-    ],
-    "answer": 3,
-    "answer_text": "介護計画",
-    "explanation": "ケアプランに基づき、介護現場で実践する具体的な援助内容・手順を定めたものが「個別援助計画（介護計画）」です。"
-  },
-  {
-    "id": 25,
-    "unit": 1,
-    "unit_title": "第1節 介護実践マネジメント",
-    "q_number": "1-25",
-    "question_ruby": "チームでケアを<ruby>展開<rt>てんかい</rt></ruby>するプロセスのことを [___] という。",
-    "question_plain": "チームでケアを展開するプロセスのことを [___] という。",
-    "options": [
-      "リスクアセスメント",
-      "ケアアセスメント",
-      "介護過程",
-      "PDCAサイクル"
-    ],
-    "answer": 3,
-    "answer_text": "介護過程",
-    "explanation": "アセスメント→計画立案→実施→評価という一連の科学的・論理的なケア展開プロセスを「介護過程」と呼びます。"
-  },
-  {
-    "id": 26,
-    "unit": 2,
-    "unit_title": "第2節 1,2項 ケア展開",
-    "q_number": "2-1",
-    "question_ruby": "<ruby>介護実践<rt>かいごじっせん</rt></ruby>の<ruby>場<rt>ば</rt></ruby>は、<ruby>介護施設<rt>かいごしせつ</rt></ruby>や<ruby>病院<rt>びょういん</rt></ruby>、<ruby>利用者<rt>りようしゃ</rt></ruby>の [___] など<ruby>多様<rt>たよう</rt></ruby>であり、その<ruby>場<rt>ば</rt></ruby>の<ruby>特性<rt>とくせい</rt></ruby>に<ruby>応<rt>おう</rt></ruby>じたチームが<ruby>作<rt>つく</rt></ruby>られる。",
-    "question_plain": "介護実践の場は、介護施設や病院、利用者の [___] など多様であり、その場の特性に応じたチームが作られる。",
-    "options": [
-      "職場",
-      "居宅",
-      "公共施設",
-      "地域サロン"
-    ],
-    "answer": 2,
-    "answer_text": "居宅",
-    "explanation": "介護が実践される場は施設や病院のみならず、利用者の生活拠点である居宅（自宅）など極めて多様です。"
-  },
-  {
-    "id": 27,
-    "unit": 2,
-    "unit_title": "第2節 1,2項 ケア展開",
-    "q_number": "2-2",
-    "question_ruby": "<ruby>介護福祉職<rt>かいごふくししょく</rt></ruby>のみで<ruby>構成<rt>こうせい</rt></ruby>され、<ruby>食事<rt>しょくじ</rt></ruby>・<ruby>排泄<rt>はいせつ</rt></ruby>・<ruby>入浴<rt>にゅうよく</rt></ruby>ケアチームや<ruby>研修委員会<rt>けんしゅういいんかい</rt></ruby>などを<ruby>行<rt>おこな</rt></ruby>うチームを [___] チームという。",
-    "question_plain": "介護福祉職のみで構成され、食事・排泄・入浴ケアチームや研修委員会などを行うチームを [___] チームという。",
-    "options": [
-      "同職種",
-      "多職種",
-      "地域包括",
-      "専門職"
-    ],
-    "answer": 1,
-    "answer_text": "同職種",
-    "explanation": "同じ職種（介護職同士）で共通の専門技術や業務手順の統一を行うチームを同職種チームと呼びます。"
-  },
-  {
-    "id": 28,
-    "unit": 2,
-    "unit_title": "第2節 1,2項 ケア展開",
-    "q_number": "2-3",
-    "question_ruby": "<ruby>医療職<rt>いりょうしょく</rt></ruby>、<ruby>相談職<rt>そうだんしょく</rt></ruby>、<ruby>地域<rt>ちいき</rt></ruby>の<ruby>関係者<rt>かんけいしゃ</rt></ruby>など、<ruby>異<rt>こと</rt></ruby>なる<ruby>専門<rt>せんもん</rt></ruby>を<ruby>持<rt>も</rt></ruby>つ<ruby>職種<rt>しょくしゅ</rt></ruby>が<ruby>連携<rt>れんけい</rt></ruby>するチームを [___] チームという。",
-    "question_plain": "医療職、相談職、地域の関係者など、異なる専門を持つ職種が連携するチームを [___] チームという。",
-    "options": [
-      "多職種",
-      "総合",
-      "複眼",
-      "同職種"
-    ],
-    "answer": 1,
-    "answer_text": "多職種",
-    "explanation": "看護師・リハビリ職・相談員・ケアマネなど、異なる専門性を持つ職種が連携・協働するチームを多職種チームと呼びます。"
-  },
-  {
-    "id": 29,
-    "unit": 2,
-    "unit_title": "第2節 1,2項 ケア展開",
-    "q_number": "2-4",
-    "question_ruby": "<ruby>連携<rt>れんけい</rt></ruby>の<ruby>取<rt>と</rt></ruby>り<ruby>組<rt>く</rt></ruby>みには、<ruby>事故<rt>じこ</rt></ruby>や<ruby>危険<rt>きけん</rt></ruby>を<ruby>未然<rt>みぜん</rt></ruby>に<ruby>防<rt>ふせ</rt></ruby>ぐための [___] マネジメント<ruby>委員会<rt>いいんかい</rt></ruby>や<ruby>感染症対策委員会<rt>かんせんしょうたいさくいいんかい</rt></ruby>がある。",
-    "question_plain": "連携の取り組みには、事故や危険を未然に防ぐための [___] マネジメント委員会や感染症対策委員会がある。",
-    "options": [
-      "タイム",
-      "リスク",
-      "コスト",
-      "キャリア"
-    ],
-    "answer": 2,
-    "answer_text": "リスク",
-    "explanation": "ヒヤリハット報告の集約や安全対策基準を作成するリスクマネジメント委員会が代表的です。"
-  },
-  {
-    "id": 30,
-    "unit": 2,
-    "unit_title": "第2節 1,2項 ケア展開",
-    "q_number": "2-5",
-    "question_ruby": "<ruby>地域包括<rt>ちいきほうかつ</rt></ruby>ケアの<ruby>展開<rt>てんかい</rt></ruby>においては、<ruby>個別<rt>こべつ</rt></ruby>の<ruby>課題解決<rt>かだいかいけつ</rt></ruby>やネットワーク<ruby>構築<rt>こうちく</rt></ruby>の<ruby>場<rt>ば</rt></ruby>として [___] ケア<ruby>会議<rt>かいぎ</rt></ruby>が<ruby>重要<rt>じゅうよう</rt></ruby>である。",
-    "question_plain": "地域包括ケアの展開においては、個別の課題解決やネットワーク構築の場として [___] ケア会議が重要である。",
-    "options": [
-      "地域",
-      "サービス担当者",
-      "倫理",
-      "運営"
-    ],
-    "answer": 1,
-    "answer_text": "地域",
-    "explanation": "地域ケア会議は、個別の自立支援策の検討から地域課題の発見、地域包括支援体制の基盤構築までを担います。"
-  },
-  {
-    "id": 31,
-    "unit": 2,
-    "unit_title": "第2節 1,2項 ケア展開",
-    "q_number": "2-6",
-    "question_ruby": "<ruby>人<rt>ひと</rt></ruby>の<ruby>行動<rt>こうどう</rt></ruby>や<ruby>考<rt>かんが</rt></ruby>え<ruby>方<rt>かた</rt></ruby>は<ruby>集団<rt>しゅうだん</rt></ruby>から<ruby>影響<rt>えいきょう</rt></ruby>を<ruby>受<rt>う</rt></ruby>け、<ruby>個人<rt>こじん</rt></ruby>の<ruby>行動<rt>こうどう</rt></ruby>も<ruby>集団<rt>しゅうだん</rt></ruby>に<ruby>影響<rt>えいきょう</rt></ruby>を<ruby>与<rt>あた</rt></ruby>えるという<ruby>特性<rt>とくせい</rt></ruby>を [___] （グループ・ダイナミクス）という。",
-    "question_plain": "人の行動や考え方は集団から影響を受け、個人の行動も集団に影響を与えるという特性を [___] （グループ・ダイナミクス）という。",
-    "options": [
-      "行動心理学",
-      "集団力学",
-      "相互扶助",
-      "組織統制"
-    ],
-    "answer": 2,
-    "answer_text": "集団力学",
-    "explanation": "集団内の力関係や相互作用によって人と集団が互いに及ぼし合う影響を「集団力学（グループ・ダイナミクス）」といいます。"
-  },
-  {
-    "id": 32,
-    "unit": 2,
-    "unit_title": "第2節 1,2項 ケア展開",
-    "q_number": "2-7",
-    "question_ruby": "クルト・レヴィンは、<ruby>集団<rt>しゅうだん</rt></ruby>における<ruby>人<rt>ひと</rt></ruby>の<ruby>行動<rt>こうどう</rt></ruby>や<ruby>考<rt>かんが</rt></ruby>え<ruby>方<rt>かた</rt></ruby>を<ruby>分析<rt>ぶんせき</rt></ruby>する<ruby>際<rt>さい</rt></ruby>に「 [___] の<ruby>力<rt>ちから</rt></ruby>」をとらえることの<ruby>重要性<rt>じゅうようせい</rt></ruby>を<ruby>指摘<rt>してき</rt></ruby>した。",
-    "question_plain": "クルト・レヴィンは、集団における人の行動や考え方を分析する際に「 [___] の力」をとらえることの重要性を指摘した。",
-    "options": [
-      "絆",
-      "場",
-      "命",
-      "運"
-    ],
-    "answer": 2,
-    "answer_text": "場",
-    "explanation": "社会心理学者クルト・レヴィンは、行動は人と環境の相互作用（生活空間＝場の力）によって生じると論じました。"
-  },
-  {
-    "id": 33,
-    "unit": 2,
-    "unit_title": "第2節 1,2項 ケア展開",
-    "q_number": "2-8",
-    "question_ruby": "<ruby>三隅二不二<rt>みすみじゅうじ</rt></ruby>が<ruby>提唱<rt>ていしょう</rt></ruby>したリーダーシップ<ruby>理論<rt>りろん</rt></ruby>であり、2つの<ruby>機能<rt>きのう</rt></ruby>の<ruby>頭文字<rt>かしらもじ</rt></ruby>をとったものを [___] <ruby>理論<rt>りろん</rt></ruby>という。",
-    "question_plain": "三隅二不二が提唱したリーダーシップ理論であり、2つの機能の頭文字をとったものを [___] 理論という。",
-    "options": [
-      "３Ｃ",
-      "ＳＷＯＴ",
-      "ＰＭ",
-      "ＭＢＯ"
-    ],
-    "answer": 3,
-    "answer_text": "ＰＭ",
-    "explanation": "日本の心理学者・三隅二不二が確立したリーダーシップ理論で、目標達成機能（P）と集団維持機能（M）から構成されます。"
-  },
-  {
-    "id": 34,
-    "unit": 2,
-    "unit_title": "第2節 1,2項 ケア展開",
-    "q_number": "2-9",
-    "question_ruby": "PM<ruby>理論<rt>りろん</rt></ruby>において、<ruby>組織<rt>そしき</rt></ruby>の<ruby>目的<rt>もくてき</rt></ruby>を<ruby>達成<rt>たっせい</rt></ruby>させる「<ruby>職務<rt>しょくむ</rt></ruby>を<ruby>遂行<rt>すいこう</rt></ruby>させる<ruby>機能<rt>きのう</rt></ruby>」を [___] <ruby>機能<rt>きのう</rt></ruby>という。",
-    "question_plain": "PM理論において、組織の目的を達成させる「職務を遂行させる機能」を [___] 機能という。",
-    "options": [
-      "Ｍ（メンテナンス）",
-      "Ｐ（パフォーマンス）",
-      "Ｌ（リーダー）",
-      "Ｓ（サポート）"
-    ],
-    "answer": 2,
-    "answer_text": "Ｐ（パフォーマンス）",
-    "explanation": "Performance（目標達成・課題解決能力）の頭文字Pをとった機能で、計画立案や指示、規則遵守の促進などを含みます。"
-  },
-  {
-    "id": 35,
-    "unit": 2,
-    "unit_title": "第2節 1,2項 ケア展開",
-    "q_number": "2-10",
-    "question_ruby": "PM<ruby>理論<rt>りろん</rt></ruby>において、メンバー<ruby>間<rt>かん</rt></ruby>の<ruby>摩擦<rt>まさつ</rt></ruby>や<ruby>葛藤<rt>かっとう</rt></ruby>を<ruby>回避<rt>かいひ</rt></ruby>しチーム<ruby>意識<rt>いしき</rt></ruby>を<ruby>醸成<rt>じょうせい</rt></ruby>させる「<ruby>集団<rt>しゅうだん</rt></ruby>を<ruby>維持<rt>いじ</rt></ruby>させる<ruby>機能<rt>きのう</rt></ruby>」を [___] <ruby>機能<rt>きのう</rt></ruby>という。",
-    "question_plain": "PM理論において、メンバー間の摩擦や葛藤を回避しチーム意識を醸成させる「集団を維持させる機能」を [___] 機能という。",
-    "options": [
-      "Ｃ（ケア）",
-      "Ｔ（チーム）",
-      "Ｍ（メンテナンス）",
-      "Ｐ（パフォーマンス）"
-    ],
-    "answer": 3,
-    "answer_text": "Ｍ（メンテナンス）",
-    "explanation": "Maintenance（集団維持機能）の頭文字Mをとった機能で、人間関係の調整やチームワークの向上を促します。"
-  },
-  {
-    "id": 36,
-    "unit": 2,
-    "unit_title": "第2節 1,2項 ケア展開",
-    "q_number": "2-11",
-    "question_ruby": "<ruby>災害<rt>さいがい</rt></ruby>や<ruby>緊急事態<rt>きんきゅうじたい</rt></ruby>に<ruby>備<rt>そな</rt></ruby>え、<ruby>介護<rt>かいご</rt></ruby>サービスの<ruby>提供<rt>ていきょう</rt></ruby>を<ruby>継続<rt>けいぞく</rt></ruby>するために<ruby>策定<rt>さくてい</rt></ruby>が<ruby>求<rt>もと</rt></ruby>められる<ruby>計画<rt>けいかく</rt></ruby>を [___] （<ruby>業務継続計画<rt>ぎょうむけいぞくけいかく</rt></ruby>）という。",
-    "question_plain": "災害や緊急事態に備え、介護サービスの提供を継続するために策定が求められる計画を [___] （業務継続計画）という。",
-    "options": [
-      "ＰＤＣＡ",
-      "ＳＤＳ",
-      "ＢＣＰ",
-      "ＯＪＴ"
-    ],
-    "answer": 3,
-    "answer_text": "ＢＣＰ",
-    "explanation": "Business Continuity Plan（事業継続計画）の略称で、感染症や自然災害発生時にも重要業務を中断させない計画です。"
-  },
-  {
-    "id": 37,
-    "unit": 2,
-    "unit_title": "第2節 1,2項 ケア展開",
-    "q_number": "2-12",
-    "question_ruby": "チームで<ruby>目標<rt>もくひょう</rt></ruby>を<ruby>共有<rt>きょうゆう</rt></ruby>し、<ruby>目標達成<rt>もくひょうたっせい</rt></ruby>のためにメンバー<ruby>全員<rt>ぜんいん</rt></ruby>で<ruby>協働<rt>きょうどう</rt></ruby>することをチーム [___] という。",
-    "question_plain": "チームで目標を共有し、目標達成のためにメンバー全員で協働することをチーム [___] という。",
-    "options": [
-      "ビルド",
-      "コーチ",
-      "リーダー",
-      "ワーク"
-    ],
-    "answer": 4,
-    "answer_text": "ワーク",
-    "explanation": "共通の目標に向かって各自が専門性を発揮しながら協力し合う協働行動をチームワークと呼びます。"
-  },
-  {
-    "id": 38,
-    "unit": 2,
-    "unit_title": "第2節 1,2項 ケア展開",
-    "q_number": "2-13",
-    "question_ruby": "<ruby>複数<rt>ふくすう</rt></ruby>の<ruby>職員<rt>しょくいん</rt></ruby>が<ruby>把握<rt>はあく</rt></ruby>した<ruby>情報<rt>じょうほう</rt></ruby>をつなぎ<ruby>合<rt>あ</rt></ruby>わせることで、<ruby>利用者<rt>りようしゃ</rt></ruby>の [___] <ruby>像<rt>ぞう</rt></ruby>をより<ruby>広<rt>ひろ</rt></ruby>く<ruby>理解<rt>りかい</rt></ruby>することができる。",
-    "question_plain": "複数の職員が把握した情報をつなぎ合わせることで、利用者の [___] 像をより広く理解することができる。",
-    "options": [
-      "理想",
-      "全体",
-      "過去",
-      "病態"
-    ],
-    "answer": 2,
-    "answer_text": "全体",
-    "explanation": "各職員の断片的な気付きや情報を持ち寄ることで、利用者の全人的な「全体像」が鮮明に浮かび上がります。"
-  },
-  {
-    "id": 39,
-    "unit": 2,
-    "unit_title": "第2節 1,2項 ケア展開",
-    "q_number": "2-14",
-    "question_ruby": "<ruby>介護保険<rt>かいごほけん</rt></ruby>のケアマネジメントにおいて、ケアマネジャーがケアプランを<ruby>立案<rt>りつあん</rt></ruby>・モニタリングする<ruby>際<rt>さい</rt></ruby>に<ruby>開催<rt>かいさい</rt></ruby>される<ruby>会議<rt>かいぎ</rt></ruby>をサービス [___] <ruby>会議<rt>かいぎ</rt></ruby>という。",
-    "question_plain": "介護保険のケアマネジメントにおいて、ケアマネジャーがケアプランを立案・モニタリングする際に開催される会議をサービス [___] 会議という。",
-    "options": [
-      "検討",
-      "評価",
-      "担当者",
-      "調整"
-    ],
-    "answer": 3,
-    "answer_text": "担当者",
-    "explanation": "利用者本人や家族、関わる全サービス事業所の担当者を招集して開催する公式な会議です。"
-  },
-  {
-    "id": 40,
-    "unit": 2,
-    "unit_title": "第2節 1,2項 ケア展開",
-    "q_number": "2-15",
-    "question_ruby": "サービス<ruby>担当者会議<rt>たんとうしゃかいぎ</rt></ruby>で<ruby>立案<rt>りつあん</rt></ruby>されるケアプランはサービス<ruby>全体<rt>ぜんたい</rt></ruby>を<ruby>網羅<rt>もうら</rt></ruby>したものであり、<ruby>介護過程<rt>かいごかてい</rt></ruby>で<ruby>作成<rt>さくせい</rt></ruby>される [___] <ruby>計画<rt>けいかく</rt></ruby>とは<ruby>異<rt>こと</rt></ruby>なる。",
-    "question_plain": "サービス担当者会議で立案されるケアプランはサービス全体を網羅したものであり、介護過程で作成される [___] 計画とは異なる。",
-    "options": [
-      "看護",
-      "介護",
-      "リハビリ",
-      "生活支援"
-    ],
-    "answer": 2,
-    "answer_text": "介護",
-    "explanation": "居宅サービス計画（ケアプラン）と、介護職が現場で具体化する個別援助計画（介護計画）の相違点です。"
-  },
-  {
-    "id": 41,
-    "unit": 2,
-    "unit_title": "第2節 1,2項 ケア展開",
-    "q_number": "2-16",
-    "question_ruby": "<ruby>入所<rt>にゅうしょ</rt></ruby>サービスなどの<ruby>交代制勤務<rt>こうたいせいきんむ</rt></ruby>において、<ruby>勤務交代時<rt>きんむこうたいじ</rt></ruby>に<ruby>次<rt>つぎ</rt></ruby>の<ruby>勤務者<rt>きんむしゃ</rt></ruby>へ<ruby>情報<rt>じょうほう</rt></ruby>をひきつぐことを [___] という。",
-    "question_plain": "入所サービスなどの交代制勤務において、勤務交代時に次の勤務者へ情報をひきつぐことを [___] という。",
-    "options": [
-      "報告書",
-      "引き継ぎ書",
-      "カンファレンス",
-      "申し送り"
-    ],
-    "answer": 4,
-    "answer_text": "申し送り",
-    "explanation": "24時間連続するケアにおいて、利用者の体調変化や特記事項を正確に次の勤務帯に伝える業務を「申し送り」といいます。"
-  },
-  {
-    "id": 42,
-    "unit": 2,
-    "unit_title": "第2節 1,2項 ケア展開",
-    "q_number": "2-17",
-    "question_ruby": "<ruby>同<rt>おな</rt></ruby>じ「<ruby>食事量<rt>しょくじりょう</rt></ruby>の<ruby>低下<rt>ていか</rt></ruby>」という<ruby>事実<rt>じじつ</rt></ruby>に<ruby>対<rt>たい</rt></ruby>しても、<ruby>職種<rt>しょくしゅ</rt></ruby>によってその<ruby>情報<rt>じょうほう</rt></ruby>への「 [___] づけ」が<ruby>異<rt>こと</rt></ruby>なる。",
-    "question_plain": "同じ「食事量の低下」という事実に対しても、職種によってその情報への「 [___] づけ」が異なる。",
-    "options": [
-      "順位",
-      "価値",
-      "位置",
-      "意味"
-    ],
-    "answer": 4,
-    "answer_text": "意味",
-    "explanation": "医師は病状、看護師は脱水やバイタル、栄養士は摂取カロリー、介護職は嗜好や姿勢など、意味づけの視点が異なります。"
-  },
-  {
-    "id": 43,
-    "unit": 2,
-    "unit_title": "第2節 1,2項 ケア展開",
-    "q_number": "2-18",
-    "question_ruby": "<ruby>職種<rt>しょくしゅ</rt></ruby>による<ruby>視点<rt>してん</rt></ruby>の<ruby>違<rt>ちが</rt></ruby>いはどれが<ruby>正<rt>ただ</rt></ruby>しいかではなく、<ruby>各専門性<rt>かくせんもんせい</rt></ruby>の<ruby>情報<rt>じょうほう</rt></ruby>を [___] することが<ruby>求<rt>もと</rt></ruby>められる。",
-    "question_plain": "職種による視点の違いはどれが正しいかではなく、各専門性の情報を [___] することが求められる。",
-    "options": [
-      "集約",
-      "平均化",
-      "統合",
-      "選別"
-    ],
-    "answer": 3,
-    "answer_text": "統合",
-    "explanation": "互いの視点の優劣を決めるのではなく、それぞれの専門的知見を統合して利用者の最善の支援に結びつけます。"
-  },
-  {
-    "id": 44,
-    "unit": 2,
-    "unit_title": "第2節 1,2項 ケア展開",
-    "q_number": "2-19",
-    "question_ruby": "チームという<ruby>集団<rt>しゅうだん</rt></ruby>が<ruby>一体<rt>いったい</rt></ruby>となって「<ruby>何<rt>なに</rt></ruby>をめざすのか」を<ruby>示<rt>しめ</rt></ruby>す<ruby>道標<rt>みちしるべ</rt></ruby>となるものを、ケアの [___] という。",
-    "question_plain": "チームという集団が一体となって「何をめざすのか」を示す道標となるものを、ケアの [___] という。",
-    "options": [
-      "記録",
-      "方針",
-      "基準",
-      "マニュアル"
-    ],
-    "answer": 2,
-    "answer_text": "方針",
-    "explanation": "チーム全体が目指す理念や方向性を共有するための指針を「ケアの方針」と呼びます。"
-  },
-  {
-    "id": 45,
-    "unit": 2,
-    "unit_title": "第2節 1,2項 ケア展開",
-    "q_number": "2-20",
-    "question_ruby": "ケアの<ruby>方針<rt>ほうしん</rt></ruby>が<ruby>明確<rt>めいかく</rt></ruby>でないと、それぞれの<ruby>介護職<rt>かいごしょく</rt></ruby>が<ruby>思<rt>おも</rt></ruby>い<ruby>思<rt>おも</rt></ruby>いのケアを<ruby>展開<rt>てんかい</rt></ruby>し、ケアの [___] <ruby>性<rt>せい</rt></ruby>がなくなってしまう。",
-    "question_plain": "ケアの方針が明確でないと、それぞれの介護職が思い思いのケアを展開し、ケアの [___] 性がなくなってしまう。",
-    "options": [
-      "多様",
-      "専門",
-      "一貫",
-      "効率"
-    ],
-    "answer": 3,
-    "answer_text": "一貫",
-    "explanation": "方針がないと担当者ごとに対応がバラバラになり、利用者を混乱させケアの一貫性が失われてしまいます。"
-  },
-  {
-    "id": 46,
-    "unit": 2,
-    "unit_title": "第2節 1,2項 ケア展開",
-    "q_number": "2-21",
-    "question_ruby": "よりよいケアを<ruby>行<rt>おこな</rt></ruby>うためには、チームでおこなったケアを「 [___] ・<ruby>修正<rt>しゅうせい</rt></ruby>」する<ruby>機会<rt>きかい</rt></ruby>を<ruby>設<rt>もう</rt></ruby>けることが<ruby>必要<rt>ひつよう</rt></ruby>である。",
-    "question_plain": "よりよいケアを行うためには、チームでおこなったケアを「 [___] ・修正」する機会を設けることが必要である。",
-    "options": [
-      "評価",
-      "承認",
-      "報告",
-      "記録"
-    ],
-    "answer": 1,
-    "answer_text": "評価",
-    "explanation": "やりっぱなしにせず、カンファレンス等で成果や問題点を振り返り「評価・修正」することが質の向上に不可欠です。"
-  },
-  {
-    "id": 47,
-    "unit": 2,
-    "unit_title": "第2節 1,2項 ケア展開",
-    "q_number": "2-22",
-    "question_ruby": "<ruby>無意識<rt>むいしき</rt></ruby>のうちに<ruby>展開<rt>てんかい</rt></ruby>している<ruby>質<rt>しつ</rt></ruby>の<ruby>高<rt>たか</rt></ruby>いケアをチーム<ruby>全体<rt>ぜんたい</rt></ruby>で<ruby>共有<rt>きょうゆう</rt></ruby>するため、 [___] <ruby>化<rt>か</rt></ruby>して<ruby>業務体制<rt>ぎょうむたいせい</rt></ruby>をととのえることが<ruby>有効<rt>ゆうこう</rt></ruby>である。",
-    "question_plain": "無意識のうちに展開している質の高いケアをチーム全体で共有するため、 [___] 化して業務体制をととのえることが有効である。",
-    "options": [
-      "マニュアル",
-      "ペーパーレス",
-      "システム",
-      "デジタル"
-    ],
-    "answer": 1,
-    "answer_text": "マニュアル",
-    "explanation": "ベテランの暗黙知や質の高い支援技術を手順書（マニュアル）化することで、チーム全員で標準化して共有できます。"
-  },
-  {
-    "id": 48,
-    "unit": 3,
-    "unit_title": "第2節 3項 チーム力最大化",
-    "q_number": "3-1",
-    "question_ruby": "チームの<ruby>力<rt>ちから</rt></ruby>を<ruby>最大化<rt>さいだいか</rt></ruby>するには、<ruby>職種<rt>しょくしゅ</rt></ruby>に<ruby>応<rt>おう</rt></ruby>じた<ruby>役割分担<rt>やくわりぶんたん</rt></ruby>だけでなく、メンバー<ruby>同士<rt>どうし</rt></ruby>の [___] や<ruby>協働<rt>きょうどう</rt></ruby>が<ruby>重要<rt>じゅうよう</rt></ruby>である。",
-    "question_plain": "チームの力を最大化するには、職種に応じた役割分担だけでなく、メンバー同士の [___] や協働が重要である。",
-    "options": [
-      "競争",
-      "監視",
-      "分断",
-      "連携"
-    ],
-    "answer": 4,
-    "answer_text": "連携",
-    "explanation": "単なる仕事の切り分けだけでなく、密接な連携と協力し合う関係性が基盤となります。"
-  },
-  {
-    "id": 49,
-    "unit": 3,
-    "unit_title": "第2節 3項 チーム力最大化",
-    "q_number": "3-2",
-    "question_ruby": "メンバー<ruby>同士<rt>どうし</rt></ruby>の<ruby>連携<rt>れんけい</rt></ruby>や<ruby>協働<rt>きょうどう</rt></ruby>によって、単なる<ruby>足<rt>た</rt></ruby>し<ruby>算<rt>ざん</rt></ruby>を<ruby>超<rt>こ</rt></ruby>えた [___] を<ruby>生<rt>う</rt></ruby>み<ruby>出<rt>だ</rt></ruby>すことが<ruby>重要<rt>じゅうよう</rt></ruby>である。",
-    "question_plain": "メンバー同士の連携や協働によって、単なる足し算を超えた [___] を生み出すことが重要である。",
-    "options": [
-      "時間短縮",
-      "コスト削減",
-      "相乗効果",
-      "業務分担"
-    ],
-    "answer": 3,
-    "answer_text": "相乗効果",
-    "explanation": "個々の能力の総和以上の大きな成果（シナジー＝相乗効果）を生み出すことがチームの真髄です。"
-  },
-  {
-    "id": 50,
-    "unit": 3,
-    "unit_title": "第2節 3項 チーム力最大化",
-    "q_number": "3-3",
-    "question_ruby": "<ruby>目標達成<rt>もくひょうたっせい</rt></ruby>のためにチームに<ruby>貢献<rt>こうけん</rt></ruby>し、<ruby>協力<rt>きょうりょく</rt></ruby>する<ruby>意識<rt>いしき</rt></ruby>や<ruby>行動<rt>こうどう</rt></ruby>を [___] という。",
-    "question_plain": "目標達成のためにチームに貢献し、協力する意識や行動を [___] という。",
-    "options": [
-      "メンバーシップ",
-      "オーナーシップ",
-      "パートナーシップ",
-      "リーダーシップ"
-    ],
-    "answer": 1,
-    "answer_text": "メンバーシップ",
-    "explanation": "チームの一員としての責任感と連帯感を持ち、目標達成に主体的に参画する姿勢をメンバーシップといいます。"
-  },
-  {
-    "id": 51,
-    "unit": 3,
-    "unit_title": "第2節 3項 チーム力最大化",
-    "q_number": "3-4",
-    "question_ruby": "リーダーシップはチームをまとめ<ruby>目標<rt>もくひょう</rt></ruby>へと<ruby>導<rt>みちび</rt></ruby>く [___] や<ruby>統率力<rt>とうそつりょく</rt></ruby>などが<ruby>中心的<rt>ちゅうしんてき</rt></ruby>な<ruby>機能<rt>きのう</rt></ruby>である。",
-    "question_plain": "リーダーシップはチームをまとめ目標へと導く [___] や統率力などが中心的な機能である。",
-    "options": [
-      "交渉力",
-      "強制力",
-      "指導力",
-      "発言力"
-    ],
-    "answer": 3,
-    "answer_text": "指導力",
-    "explanation": "チームメンバーの意欲を引き出し、方向性を示して導く指導力・統率力が中心的な役割です。"
-  },
-  {
-    "id": 52,
-    "unit": 3,
-    "unit_title": "第2節 3項 チーム力最大化",
-    "q_number": "3-5",
-    "question_ruby": "<ruby>経験<rt>けいけん</rt></ruby>の<ruby>浅<rt>あさ</rt></ruby>いメンバーが<ruby>多<rt>おお</rt></ruby>いチームや<ruby>緊急時<rt>きんきゅうじ</rt></ruby>には、 [___] な<ruby>導<rt>みちび</rt></ruby>きが<ruby>効果的<rt>こうかてき</rt></ruby>である。",
-    "question_plain": "経験の浅いメンバーが多いチームや緊急時には、 [___] な導きが効果的である。",
-    "options": [
-      "放任的",
-      "明確で強い",
-      "参加型",
-      "緩やかな"
-    ],
-    "answer": 2,
-    "answer_text": "明確で強い",
-    "explanation": "新任期が多い現場や事故・災害などの非常時には、迷いをなくす明確で力強い指示・リーダーシップが有効です。"
-  },
-  {
-    "id": 53,
-    "unit": 3,
-    "unit_title": "第2節 3項 チーム力最大化",
-    "q_number": "3-6",
-    "question_ruby": "<ruby>専門職<rt>せんもんしょく</rt></ruby>が<ruby>集<rt>あつ</rt></ruby>まったチームではメンバーの<ruby>主体性<rt>しゅたいせい</rt></ruby>を<ruby>重視<rt>じゅうし</rt></ruby>した [___] <ruby>中心<rt>ちゅうしん</rt></ruby>のリーダーシップが<ruby>効果的<rt>こうかてき</rt></ruby>である。",
-    "question_plain": "専門職が集まったチームではメンバーの主体性を重視した [___] 中心のリーダーシップが効果的である。",
-    "options": [
-      "調整",
-      "指導",
-      "命令",
-      "監視"
-    ],
-    "answer": 1,
-    "answer_text": "調整",
-    "explanation": "高い専門性を持つメンバー間では、一方的な命令ではなく意見をつなぎ合議をまとめる調整型リーダーシップが適しています。"
-  },
-  {
-    "id": 54,
-    "unit": 3,
-    "unit_title": "第2節 3項 チーム力最大化",
-    "q_number": "3-7",
-    "question_ruby": "チームの<ruby>目標達成<rt>もくひょうたっせい</rt></ruby>のためにフォロワーがリーダーを<ruby>支<rt>ささ</rt></ruby>える<ruby>機能<rt>きのう</rt></ruby>を [___] という。",
-    "question_plain": "チームの目標達成のためにフォロワーがリーダーを支える機能を [___] という。",
-    "options": [
-      "サブリーダーシップ",
-      "アライアンス",
-      "メンバーシップ",
-      "フォロワーシップ"
-    ],
-    "answer": 4,
-    "answer_text": "フォロワーシップ",
-    "explanation": "リーダーの独走を防ぎ、自立的に支援・補佐してチームの成果を高める機能をフォロワーシップといいます。"
-  },
-  {
-    "id": 55,
-    "unit": 3,
-    "unit_title": "第2節 3項 チーム力最大化",
-    "q_number": "3-8",
-    "question_ruby": "フォロワーシップとは<ruby>単<rt>たん</rt></ruby>に<ruby>指示<rt>しじ</rt></ruby>に<ruby>従<rt>したが</rt></ruby>うだけでなく、<ruby>自発的<rt>じはつてき</rt></ruby>に<ruby>意見<rt>いけん</rt></ruby>を<ruby>述<rt>の</rt></ruby>べ [___] に<ruby>行動<rt>こうどう</rt></ruby>することである。",
-    "question_plain": "フォロワーシップとは単に指示に従うだけでなく、自発的に意見を述べ [___] に行動することである。",
-    "options": [
-      "追従的",
-      "受動的",
-      "自律的",
-      "無批判"
-    ],
-    "answer": 3,
-    "answer_text": "自律的",
-    "explanation": "指示待ちではなく、自分の頭で考え状況を判断して自律的に行動する姿勢が健全なフォロワーシップです。"
-  },
-  {
-    "id": 56,
-    "unit": 3,
-    "unit_title": "第2節 3項 チーム力最大化",
-    "q_number": "3-9",
-    "question_ruby": "フォロワーシップには、リーダーやチーム<ruby>全体<rt>ぜんたい</rt></ruby>の<ruby>誤<rt>あやま</rt></ruby>りを [___] する<ruby>機能<rt>きのう</rt></ruby>も<ruby>包括<rt>ほうかつ</rt></ruby>される。",
-    "question_plain": "フォロワーシップには、リーダーやチーム全体の誤りを [___] する機能も包括される。",
-    "options": [
-      "修正",
-      "容認",
-      "隠蔽",
-      "告発"
-    ],
-    "answer": 1,
-    "answer_text": "修正",
-    "explanation": "リーダーの方針に盲従するのではなく、誤りや危険があれば建設的な提言で軌道修正を促す重要な役割です。"
-  },
-  {
-    "id": 57,
-    "unit": 3,
-    "unit_title": "第2節 3項 チーム力最大化",
-    "q_number": "3-10",
-    "question_ruby": "リーダーシップとフォロワーシップは、 [___] の<ruby>関係<rt>かんけい</rt></ruby>にある。",
-    "question_plain": "リーダーシップとフォロワーシップは、 [___] の関係にある。",
-    "options": [
-      "対立",
-      "表裏一体",
-      "無関係",
-      "主従"
-    ],
-    "answer": 2,
-    "answer_text": "表裏一体",
-    "explanation": "どちらか一方だけでは成立せず、状況によって役割が入れ替わる補完的かつ表裏一体の関係です。"
-  },
-  {
-    "id": 58,
-    "unit": 3,
-    "unit_title": "第2節 3項 チーム力最大化",
-    "q_number": "3-11",
-    "question_ruby": "<ruby>介護福祉士<rt>かいごふくしし</rt></ruby>は、<ruby>介護福祉職<rt>かいごふくししょく</rt></ruby>チームの [___] としてリーダーシップを<ruby>発揮<rt>はっき</rt></ruby>する。",
-    "question_plain": "介護福祉士は、介護福祉職チームの [___] としてリーダーシップを発揮する。",
-    "options": [
-      "リーダー",
-      "アドバイザー",
-      "監査役",
-      "フォロワー"
-    ],
-    "answer": 1,
-    "answer_text": "リーダー",
-    "explanation": "介護現場の同職種チーム内では、介護福祉士がリーダーとしてケアの質の標準化や指導を担います。"
-  },
-  {
-    "id": 59,
-    "unit": 3,
-    "unit_title": "第2節 3項 チーム力最大化",
-    "q_number": "3-12",
-    "question_ruby": "<ruby>介護福祉士<rt>かいごふくしし</rt></ruby>は、<ruby>多職種<rt>たしょくしゅ</rt></ruby>チームにおいては<ruby>専門性<rt>せんもんせい</rt></ruby>を<ruby>発揮<rt>はっき</rt></ruby>して [___] としての<ruby>役割<rt>やくわり</rt></ruby>を<ruby>果<rt>は</rt></ruby>たす。",
-    "question_plain": "介護福祉士は、多職種チームにおいては専門性を発揮して [___] としての役割を果たす。",
-    "options": [
-      "最終決定者",
-      "経営責任者",
-      "フォロワー",
-      "部外者"
-    ],
-    "answer": 3,
-    "answer_text": "フォロワー",
-    "explanation": "医師やケアマネジャーが主導する多職種チームにおいては、生活の専門家としてチームを支える良きフォロワーとなります。"
-  },
-  {
-    "id": 60,
-    "unit": 3,
-    "unit_title": "第2節 3項 チーム力最大化",
-    "q_number": "3-13",
-    "question_ruby": "<ruby>介護福祉士<rt>かいごふくしし</rt></ruby>は、<ruby>所属<rt>しょぞく</rt></ruby>チームや<ruby>活動場面<rt>かつどうばめん</rt></ruby>に<ruby>応<rt>おう</rt></ruby>じて<ruby>役割<rt>やくわり</rt></ruby>を [___] <ruby>発揮<rt>はっき</rt></ruby>することが<ruby>求<rt>もと</rt></ruby>められる。",
-    "question_plain": "介護福祉士は、所属チームや活動場面に応じて役割を [___] 発揮することが求められる。",
-    "options": [
-      "バランスよく",
-      "固定的に",
-      "控えめに",
-      "画一的に"
-    ],
-    "answer": 1,
-    "answer_text": "バランスよく",
-    "explanation": "場面に応じてリーダーとフォロワーの立ち位置を柔軟かつバランスよく切り替える柔軟性が求められます。"
-  },
-  {
-    "id": 61,
-    "unit": 3,
-    "unit_title": "第2節 3項 チーム力最大化",
-    "q_number": "3-14",
-    "question_ruby": "ロバート・グリーンリーフが<ruby>提唱<rt>ていしょう</rt></ruby>した [___] は、リーダーはまずフォロワーに<ruby>奉仕<rt>ほうし</rt></ruby>する<ruby>存在<rt>そんざい</rt></ruby>であるとする<ruby>理論<rt>りろん</rt></ruby>である。",
-    "question_plain": "ロバート・グリーンリーフが提唱した [___] は、リーダーはまずフォロワーに奉仕する存在であるとする理論である。",
-    "options": [
-      "オーセンティック理論",
-      "専制型リーダーシップ",
-      "状況適応理論",
-      "サーバントリーダーシップ"
-    ],
-    "answer": 4,
-    "answer_text": "サーバントリーダーシップ",
-    "explanation": "「支援型リーダーシップ」とも訳され、メンバーのニーズを第一に考え奉仕・サポートする姿勢を説きます。"
-  },
-  {
-    "id": 62,
-    "unit": 3,
-    "unit_title": "第2節 3項 チーム力最大化",
-    "q_number": "3-15",
-    "question_ruby": "サーバントリーダーシップでは、「 [___] 」という<ruby>姿勢<rt>しせい</rt></ruby>がチームの<ruby>行動力<rt>こうどうりょく</rt></ruby>を<ruby>高<rt>たか</rt></ruby>めるとしている。",
-    "question_plain": "サーバントリーダーシップでは、「 [___] 」という姿勢がチームの行動力を高めるとしている。",
-    "options": [
-      "規則を厳守させる",
-      "相手に奉仕する",
-      "強い命令を下す",
-      "成果を独占する"
-    ],
-    "answer": 2,
-    "answer_text": "相手に奉仕する",
-    "explanation": "支配ではなく、相手への奉仕と傾聴を通じて自発的な貢献意欲を引き出します。"
-  },
-  {
-    "id": 63,
-    "unit": 3,
-    "unit_title": "第2節 3項 チーム力最大化",
-    "q_number": "3-16",
-    "question_ruby": "リーダーとフォロワーが<ruby>互<rt>たが</rt></ruby>いに [___] されてこそ、それぞれの<ruby>機能<rt>きのう</rt></ruby>が<ruby>最大限<rt>さいだいげん</rt></ruby>に<ruby>発揮<rt>はっき</rt></ruby>される。",
-    "question_plain": "リーダーとフォロワーが互いに [___] されてこそ、それぞれの機能が最大限に発揮される。",
-    "options": [
-      "監視",
-      "契約",
-      "信頼",
-      "評価"
-    ],
-    "answer": 3,
-    "answer_text": "信頼",
-    "explanation": "チームワークの基盤には、心理的安全性と相互の深い信頼関係が不可欠です。"
-  },
-  {
-    "id": 64,
-    "unit": 3,
-    "unit_title": "第2節 3項 チーム力最大化",
-    "q_number": "3-17",
-    "question_ruby": "リーダーシップとフォロワーシップは、<ruby>確実<rt>かくじつ</rt></ruby>な<ruby>介護実践<rt>かいごじっせん</rt></ruby>や [___] を<ruby>積<rt>つ</rt></ruby>み<ruby>重<rt>かさ</rt></ruby>ねることで<ruby>強化<rt>きょうか</rt></ruby>される。",
-    "question_plain": "リーダーシップとフォロワーシップは、確実な介護実践や [___] を積み重ねることで強化される。",
-    "options": [
-      "研修",
-      "試験",
-      "業務",
-      "議論"
-    ],
-    "answer": 3,
-    "answer_text": "業務",
-    "explanation": "日々の着実な介護業務の積み重ねと協働を通じて、双方の機能が実践的に鍛えられます。"
-  },
-  {
-    "id": 65,
-    "unit": 3,
-    "unit_title": "第2節 3項 チーム力最大化",
-    "q_number": "3-18",
-    "question_ruby": "<ruby>日<rt>ひ</rt></ruby>々の<ruby>業務<rt>ぎょうむ</rt></ruby>の<ruby>積<rt>つ</rt></ruby>み<ruby>重<rt>かさ</rt></ruby>ねにより<ruby>介護<rt>かいご</rt></ruby>の [___] が<ruby>高<rt>たか</rt></ruby>まり、<ruby>利用者<rt>りようしゃ</rt></ruby>の<ruby>幸福<rt>こうふく</rt></ruby>へとつながる。",
-    "question_plain": "日々の業務の積み重ねにより介護の [___] が高まり、利用者の幸福へとつながる。",
-    "options": [
-      "質",
-      "量",
-      "コスト",
-      "速さ"
-    ],
-    "answer": 1,
-    "answer_text": "質",
-    "explanation": "個々のケアの質の向上が、施設や事業所全体のケア品質の向上と利用者の満足に直結します。"
-  },
-  {
-    "id": 66,
-    "unit": 3,
-    "unit_title": "第2節 3項 チーム力最大化",
-    "q_number": "3-19",
-    "question_ruby": "<ruby>介護<rt>かいご</rt></ruby>の<ruby>質<rt>しつ</rt></ruby>の<ruby>向上<rt>こうじょう</rt></ruby>は、<ruby>最終的<rt>さいしゅうてき</rt></ruby>に<ruby>利用者<rt>りようしゃ</rt></ruby>の<ruby>望<rt>のぞ</rt></ruby>む [___] の<ruby>実現<rt>じつげん</rt></ruby>へと<ruby>発展<rt>はってん</rt></ruby>する。",
-    "question_plain": "介護の質の向上は、最終的に利用者の望む [___] の実現へと発展する。",
-    "options": [
-      "回復",
-      "服薬",
-      "施設利用",
-      "暮らし"
-    ],
-    "answer": 4,
-    "answer_text": "暮らし",
-    "explanation": "ケアマネジメントや介護の究極の目的は、利用者がその人らしく望む「暮らし（生活）」の実現です。"
-  },
-  {
-    "id": 67,
-    "unit": 3,
-    "unit_title": "第2節 3項 チーム力最大化",
-    "q_number": "3-20",
-    "question_ruby": "リーダーシップとフォロワーシップは<ruby>別々<rt>べつべつ</rt></ruby>に<ruby>存在<rt>そんざい</rt></ruby>するのではなく、 [___] な<ruby>機能<rt>きのう</rt></ruby>として<ruby>存在<rt>そんざい</rt></ruby>する。",
-    "question_plain": "リーダーシップとフォロワーシップは別々に存在するのではなく、 [___] な機能として存在する。",
-    "options": [
-      "階層的",
-      "排他的",
-      "一体的",
-      "孤立的"
-    ],
-    "answer": 3,
-    "answer_text": "一体的",
-    "explanation": "組織の中で切り離せるものではなく、両者が調和し一体的に機能して初めてチームが機能します。"
-  },
-  {
-    "id": 68,
-    "unit": 3,
-    "unit_title": "第2節 3項 チーム力最大化",
-    "q_number": "3-21",
-    "question_ruby": "<ruby>介護<rt>かいご</rt></ruby>チームにおける<ruby>業務<rt>ぎょうむ</rt></ruby>の3つの<ruby>柱<rt>はしら</rt></ruby>の1つは「 [___] 」である。",
-    "question_plain": "介護チームにおける業務の3つの柱の1つは「 [___] 」である。",
-    "options": [
-      "人事採用",
-      "ケアの展開",
-      "マニュアル策定",
-      "広報活動"
-    ],
-    "answer": 2,
-    "answer_text": "ケアの展開",
-    "explanation": "図3-16に示される3本柱の一つで、日々の利用者のアセスメントから介護実践・評価を指します。"
-  },
-  {
-    "id": 69,
-    "unit": 3,
-    "unit_title": "第2節 3項 チーム力最大化",
-    "q_number": "3-22",
-    "question_ruby": "<ruby>介護<rt>かいご</rt></ruby>チームにおける<ruby>業務<rt>ぎょうむ</rt></ruby>の3つの<ruby>柱<rt>はしら</rt></ruby>は「ケアの<ruby>展開<rt>てんかい</rt></ruby>」「<ruby>人材育成<rt>じんざいいくせい</rt></ruby>・<ruby>自己研鑽<rt>じこけんさん</rt></ruby>」「 [___] 」である。",
-    "question_plain": "介護チームにおける業務の3つの柱は「ケアの展開」「人材育成・自己研鑽」「 [___] 」である。",
-    "options": [
-      "組織の目標達成",
-      "売上の最大化",
-      "医療費削減",
-      "地域住民の監視"
-    ],
-    "answer": 1,
-    "answer_text": "組織の目標達成",
-    "explanation": "事業所の運営方針やコンプライアンスを守り、組織全体のビジョンを実現する柱です。"
-  },
-  {
-    "id": 70,
-    "unit": 3,
-    "unit_title": "第2節 3項 チーム力最大化",
-    "q_number": "3-23",
-    "question_ruby": "チームマネジメントとは、「リーダーシップとフォロワーシップの [___] をどのように<ruby>高<rt>たか</rt></ruby>めていくのか」を<ruby>考<rt>かんが</rt></ruby>え<ruby>実行<rt>じっこう</rt></ruby>することである。",
-    "question_plain": "チームマネジメントとは、「リーダーシップとフォロワーシップの [___] をどのように高めていくのか」を考え実行することである。",
-    "options": [
-      "双方",
-      "経営陣",
-      "リーダーのみ",
-      "フォロワーのみ"
-    ],
-    "answer": 1,
-    "answer_text": "双方",
-    "explanation": "リーダーだけ、あるいは部下だけを鍛えるのではなく、双方の連携と相乗効果を高めることが肝要です。"
-  },
-  {
-    "id": 71,
-    "unit": 3,
-    "unit_title": "第2節 3項 チーム力最大化",
-    "q_number": "3-24",
-    "question_ruby": "リーダーシップとフォロワーシップの<ruby>力<rt>ちから</rt></ruby>を [___] に<ruby>高<rt>たか</rt></ruby>めていくことが、チームマネジメントの<ruby>本質<rt>ほんしつ</rt></ruby>である。",
-    "question_plain": "リーダーシップとフォロワーシップの力を [___] に高めていくことが、チームマネジメントの本質である。",
-    "options": [
-      "一時的",
-      "強制的",
-      "偶発的",
-      "効果的"
-    ],
-    "answer": 4,
-    "answer_text": "効果的",
-    "explanation": "場当たり的ではなく、計画的・戦略的・効果的に双方の機能を高めていくことが求められます。"
-  },
-  {
-    "id": 72,
-    "unit": 4,
-    "unit_title": "第3節 人材育成・研鑽",
-    "q_number": "4-1",
-    "question_ruby": "<ruby>入職直後<rt>にゅうしょくちょくご</rt></ruby>から2<ruby>年程度<rt>ねんていど</rt></ruby>の [___] は、<ruby>介護実践<rt>かいごじっせん</rt></ruby>に<ruby>必要<rt>ひつよう</rt></ruby>な<ruby>知識<rt>ちしき</rt></ruby>・<ruby>技術<rt>ぎじゅつ</rt></ruby>や<ruby>基本業務<rt>きほんぎょうむ</rt></ruby>を<ruby>習得<rt>しゅうとく</rt></ruby>することに<ruby>重<rt>おも</rt></ruby>きが<ruby>置<rt>お</rt></ruby>かれます。",
-    "question_plain": "入職直後から2年程度の [___] は、介護実践に必要な知識・技術や基本業務を習得することに重きが置かれます。",
-    "options": [
-      "中堅期",
-      "初任期",
-      "管理職期",
-      "ベテラン期"
-    ],
-    "answer": 2,
-    "answer_text": "初任期",
-    "explanation": "キャリアパスの最初の段階であり、基本的な介護技術や職場規律を固める極めて大切な時期です。"
-  },
-  {
-    "id": 73,
-    "unit": 4,
-    "unit_title": "第3節 人材育成・研鑽",
-    "q_number": "4-2",
-    "question_ruby": "<ruby>生活支援<rt>せいかつしえん</rt></ruby>は<ruby>生命<rt>せいめい</rt></ruby>に<ruby>直結<rt>ちょっけつ</rt></ruby>する<ruby>行為<rt>こうい</rt></ruby>であり、<ruby>利用者<rt>りようしゃ</rt></ruby>の [___] と<ruby>深<rt>ふか</rt></ruby>くかかわる<ruby>行為<rt>こうい</rt></ruby>です。",
-    "question_plain": "生活支援は生命に直結する行為であり、利用者の [___] と深くかかわる行為です。",
-    "options": [
-      "尊厳",
-      "財産",
-      "趣味",
-      "家族関係"
-    ],
-    "answer": 1,
-    "answer_text": "尊厳",
-    "explanation": "排泄や入浴など最もプライベートな生活を支えるため、利用者の尊厳の保持が全ての行動の基本です。"
-  },
-  {
-    "id": 74,
-    "unit": 4,
-    "unit_title": "第3節 人材育成・研鑽",
-    "q_number": "4-3",
-    "question_ruby": "<ruby>対人援助<rt>たいじんえんじょ</rt></ruby>を<ruby>専門<rt>せんもん</rt></ruby>とする<ruby>介護福祉職<rt>かいごふくししょく</rt></ruby>には、<ruby>基本的<rt>きほんてき</rt></ruby>な [___] ・マナーが<ruby>欠<rt>か</rt></ruby>かせないものです。",
-    "question_plain": "対人援助を専門とする介護福祉職には、基本的な [___] ・マナーが欠かせないものです。",
-    "options": [
-      "弁論",
-      "接遇",
-      "営業",
-      "交渉"
-    ],
-    "answer": 2,
-    "answer_text": "接遇",
-    "explanation": "挨拶、身だしなみ、言葉遣い、傾聴態度といった基本の接遇マナーが信頼関係の土台となります。"
-  },
-  {
-    "id": 75,
-    "unit": 4,
-    "unit_title": "第3節 人材育成・研鑽",
-    "q_number": "4-4",
-    "question_ruby": "<ruby>他職種<rt>たしょくしゅ</rt></ruby>と<ruby>連携<rt>れんけい</rt></ruby>して、<ruby>多職種<rt>たしょくしゅ</rt></ruby>で [___] して<ruby>利用者<rt>りようしゃ</rt></ruby>を<ruby>支<rt>ささ</rt></ruby>えていく<ruby>必要<rt>ひつよう</rt></ruby>があります。",
-    "question_plain": "他職種と連携して、多職種で [___] して利用者を支えていく必要があります。",
-    "options": [
-      "分担",
-      "監督",
-      "競争",
-      "協働"
-    ],
-    "answer": 4,
-    "answer_text": "協働",
-    "explanation": "他職種を尊重し、共通の目標に向かって対等に力を合わせて働くことを「協働（コラボレーション）」といいます。"
-  },
-  {
-    "id": 76,
-    "unit": 4,
-    "unit_title": "第3節 人材育成・研鑽",
-    "q_number": "4-5",
-    "question_ruby": "<ruby>先輩<rt>せんぱい</rt></ruby>や<ruby>上司<rt>じょうし</rt></ruby>に<ruby>指導<rt>しどう</rt></ruby>を<ruby>受<rt>う</rt></ruby>けるなど、 [___] （<ruby>職務<rt>しょくむ</rt></ruby>を<ruby>通<rt>つう</rt></ruby>じた<ruby>教育訓練<rt>きょういくくんれん</rt></ruby>）の<ruby>機会<rt>きかい</rt></ruby>が<ruby>重要<rt>じゅうよう</rt></ruby>になります。",
-    "question_plain": "先輩や上司に指導を受けるなど、 [___] （職務を通じた教育訓練）の機会が重要になります。",
-    "options": [
-      "OJT",
-      "SDS",
-      "eラーニング",
-      "Off-JT"
-    ],
-    "answer": 1,
-    "answer_text": "OJT",
-    "explanation": "実務現場でのマンツーマン指導や振り返りを行うOJTは初任期教育の主軸です。"
-  },
-  {
-    "id": 77,
-    "unit": 4,
-    "unit_title": "第3節 人材育成・研鑽",
-    "q_number": "4-6",
-    "question_ruby": " [___] は、<ruby>利用者<rt>りようしゃ</rt></ruby>に<ruby>対<rt>たい</rt></ruby>するケアだけでなく、<ruby>家族<rt>かぞく</rt></ruby>との<ruby>面談<rt>めんだん</rt></ruby>や<ruby>後輩指導<rt>こうはいしどう</rt></ruby>が<ruby>求<rt>もと</rt></ruby>められます。",
-    "question_plain": " [___] は、利用者に対するケアだけでなく、家族との面談や後輩指導が求められます。",
-    "options": [
-      "退職期",
-      "中堅期",
-      "見習い期",
-      "初任期"
-    ],
-    "answer": 2,
-    "answer_text": "中堅期",
-    "explanation": "入職後3〜5年程度の中堅期になると、現場のキーパーソンとして家族支援や後輩のOJT指導を担います。"
-  },
-  {
-    "id": 78,
-    "unit": 4,
-    "unit_title": "第3節 人材育成・研鑽",
-    "q_number": "4-7",
-    "question_ruby": "チームでの<ruby>情報共有<rt>じょうほうきょうゆう</rt></ruby>やケアの<ruby>統一化<rt>とういつか</rt></ruby>のためには、<ruby>介護計画<rt>かいごけいかく</rt></ruby>や [___] を<ruby>作成<rt>さくせい</rt></ruby>することは<ruby>必須<rt>ひっす</rt></ruby>です。",
-    "question_plain": "チームでの情報共有やケアの統一化のためには、介護計画や [___] を作成することは必須です。",
-    "options": [
-      "回覧板",
-      "出勤簿",
-      "介護記録",
-      "始末書"
-    ],
-    "answer": 3,
-    "answer_text": "介護記録",
-    "explanation": "客観的で正確な介護記録の蓄積により、24時間の多職種間での確実な情報共有とケアの継続性が保たれます。"
-  },
-  {
-    "id": 79,
-    "unit": 4,
-    "unit_title": "第3節 人材育成・研鑽",
-    "q_number": "4-8",
-    "question_ruby": "<ruby>生涯<rt>しょうがい</rt></ruby>にわたって<ruby>自己研鑽<rt>じこけんさん</rt></ruby>するしくみとして、<ruby>日本介護福祉士会<rt>にほんかいごふくししかい</rt></ruby>は [___] <ruby>体系<rt>たいけい</rt></ruby>を<ruby>整備<rt>せいび</rt></ruby>しています。",
-    "question_plain": "生涯にわたって自己研鑽するしくみとして、日本介護福祉士会は [___] 体系を整備しています。",
-    "options": [
-      "資格更新",
-      "生涯研修",
-      "階層昇進",
-      "実務者試験"
-    ],
-    "answer": 2,
-    "answer_text": "生涯研修",
-    "explanation": "日本介護福祉士会では、ファーストステップ・セカンドステップ等の体系的な生涯研修制度を運用しています。"
-  },
-  {
-    "id": 80,
-    "unit": 4,
-    "unit_title": "第3節 人材育成・研鑽",
-    "q_number": "4-9",
-    "question_ruby": " [___] と<ruby>呼<rt>よ</rt></ruby>ばれる<ruby>時期<rt>じき</rt></ruby>には、1<ruby>対<rt>たい</rt></ruby>1のケアだけでなく、<ruby>地域<rt>ちいき</rt></ruby>でのネットワークづくりなどが<ruby>求<rt>もと</rt></ruby>められます。",
-    "question_plain": " [___] と呼ばれる時期には、1対1のケアだけでなく、地域でのネットワークづくりなどが求められます。",
-    "options": [
-      "初任期",
-      "ベテラン期",
-      "準備期",
-      "学生期"
-    ],
-    "answer": 2,
-    "answer_text": "ベテラン期",
-    "explanation": "10年以上の経験を積んだベテラン期には、事業所を超えた地域全体の課題解決やネットワーク形成を牽引します。"
-  },
-  {
-    "id": 81,
-    "unit": 4,
-    "unit_title": "第3節 人材育成・研鑽",
-    "q_number": "4-10",
-    "question_ruby": "<ruby>管理者<rt>かんりしゃ</rt></ruby>として、<ruby>事故<rt>じこ</rt></ruby>や<ruby>感染症<rt>かんせんしょう</rt></ruby>、<ruby>災害<rt>さいがい</rt></ruby>といった<ruby>危機<rt>きき</rt></ruby>から<ruby>守<rt>まも</rt></ruby>る<ruby>体制<rt>たいせい</rt></ruby>づくりを [___] といいます。",
-    "question_plain": "管理者として、事故や感染症、災害といった危機から守る体制づくりを [___] といいます。",
-    "options": [
-      "財務管理",
-      "タスク管理",
-      "リスクマネジメント",
-      "タイムマネジメント"
-    ],
-    "answer": 3,
-    "answer_text": "リスクマネジメント",
-    "explanation": "事故・感染・災害等の危機を包括的に予測・管理し、利用者と職員の安全を守るマネジメントです。"
-  },
-  {
-    "id": 82,
-    "unit": 4,
-    "unit_title": "第3節 人材育成・研鑽",
-    "q_number": "4-11",
-    "question_ruby": "<ruby>職員<rt>しょくいん</rt></ruby>が<ruby>負<rt>ふ</rt></ruby>のストレスに<ruby>追<rt>お</rt></ruby>いこまれ、 [___] （<ruby>燃<rt>も</rt></ruby>え<ruby>尽<rt>つ</rt></ruby>き<ruby>症候群<rt>しょうこうぐん</rt></ruby>）することがないように<ruby>調整<rt>ちょうせい</rt></ruby>することが<ruby>求<rt>もと</rt></ruby>められます。",
-    "question_plain": "職員が負のストレスに追いこまれ、 [___] （燃え尽き症候群）することがないように調整することが求められます。",
-    "options": [
-      "キャリーオーバー",
-      "バーンアウト",
-      "スランプ",
-      "ドロップアウト"
-    ],
-    "answer": 2,
-    "answer_text": "バーンアウト",
-    "explanation": "献身的に働いていた職員が心身の疲弊から意欲を喪失してしまう現象で、管理者はメンタルヘルス対策が必要です。"
-  },
-  {
-    "id": 83,
-    "unit": 4,
-    "unit_title": "第3節 人材育成・研鑽",
-    "q_number": "4-12",
-    "question_ruby": "キャリアに<ruby>応<rt>おう</rt></ruby>じて<ruby>求<rt>もと</rt></ruby>められる<ruby>実践力<rt>じっせんりょく</rt></ruby>を<ruby>把握<rt>はあく</rt></ruby>し、<ruby>任用要件<rt>にんようようけん</rt></ruby>と<ruby>賃金体系<rt>ちんぎんたいけい</rt></ruby>を<ruby>明文化<rt>めいぶんか</rt></ruby>したものを [___] といいます。",
-    "question_plain": "キャリアに応じて求められる実践力を把握し、任用要件と賃金体系を明文化したものを [___] といいます。",
-    "options": [
-      "就業規則",
-      "組織規程",
-      "求人票",
-      "キャリアパス"
-    ],
-    "answer": 4,
-    "answer_text": "キャリアパス",
-    "explanation": "職員の成長段階ごとの能力要件や評価基準、給与テーブルを連動させ明示した昇進・昇格の道筋です。"
-  },
-  {
-    "id": 84,
-    "unit": 4,
-    "unit_title": "第3節 人材育成・研鑽",
-    "q_number": "4-13",
-    "question_ruby": "<ruby>長期的<rt>ちょうきてき</rt></ruby>で<ruby>計画的<rt>けいかくてき</rt></ruby>な<ruby>能力開発<rt>のうりょくかいはつ</rt></ruby>をおこなう<ruby>取<rt>と</rt></ruby>り<ruby>組<rt>く</rt></ruby>みを [___] と<ruby>呼<rt>よ</rt></ruby>びます。",
-    "question_plain": "長期的で計画的な能力開発をおこなう取り組みを [___] と呼びます。",
-    "options": [
-      "福利厚生",
-      "キャリア開発",
-      "業務ローテーション",
-      "自己啓発"
-    ],
-    "answer": 2,
-    "answer_text": "キャリア開発",
-    "explanation": "組織のニーズと個人の希望を擦り合わせ、中長期的に職員のキャリア向上を計画的に促す取り組みです。"
-  },
-  {
-    "id": 85,
-    "unit": 4,
-    "unit_title": "第3節 人材育成・研鑽",
-    "q_number": "4-14",
-    "question_ruby": "<ruby>職務<rt>しょくむ</rt></ruby>を<ruby>離<rt>はな</rt></ruby>れておこなう<ruby>教育訓練<rt>きょういくくんれん</rt></ruby>のことを [___] といいます。",
-    "question_plain": "職務を離れておこなう教育訓練のことを [___] といいます。",
-    "options": [
-      "Off-JT",
-      "ケーススタディ",
-      "SDS",
-      "OJT"
-    ],
-    "answer": 1,
-    "answer_text": "Off-JT",
-    "explanation": "日常の持ち場を離れ、研修室や外部セミナー等で知識や概念を体系的に受講・学習する形式です。"
-  },
-  {
-    "id": 86,
-    "unit": 4,
-    "unit_title": "第3節 人材育成・研鑽",
-    "q_number": "4-15",
-    "question_ruby": "OJTにより、<ruby>部下<rt>ぶか</rt></ruby>は<ruby>自分<rt>じぶん</rt></ruby>の<ruby>成長<rt>せいちょう</rt></ruby>を<ruby>実感<rt>じっかん</rt></ruby>し、<ruby>専門職<rt>せんもんしょく</rt></ruby>としての<ruby>誇<rt>ほこ</rt></ruby>りや [___] を<ruby>高<rt>たか</rt></ruby>めます。",
-    "question_plain": "OJTにより、部下は自分の成長を実感し、専門職としての誇りや [___] を高めます。",
-    "options": [
-      "プライド",
-      "優越感",
-      "承認欲求",
-      "自己効力感"
-    ],
-    "answer": 4,
-    "answer_text": "自己効力感",
-    "explanation": "「自分にはできる」「うまく業務を遂行できる」という達成感と確信を心理学用語で「自己効力感」といいます。"
-  },
-  {
-    "id": 87,
-    "unit": 4,
-    "unit_title": "第3節 人材育成・研鑽",
-    "q_number": "4-16",
-    "question_ruby": "OJTを<ruby>通<rt>つう</rt></ruby>じて<ruby>主体的<rt>しゅたいてき</rt></ruby>に<ruby>考<rt>かんが</rt></ruby>える<ruby>習慣<rt>しゅうかん</rt></ruby>を<ruby>獲得<rt>かくとく</rt></ruby>し、<ruby>自分<rt>じぶん</rt></ruby>で<ruby>自分<rt>じぶん</rt></ruby>を<ruby>成長<rt>せいちょう</rt></ruby>させられるようになることを [___] といいます。",
-    "question_plain": "OJTを通じて主体的に考える習慣を獲得し、自分で自分を成長させられるようになることを [___] といいます。",
-    "options": [
-      "現場主任",
-      "孤立",
-      "独立採算",
-      "独り立ち"
-    ],
-    "answer": 4,
-    "answer_text": "独り立ち",
-    "explanation": "先輩の指示を待つ段階を脱し、自律的に判断し自己成長のPDCAを回せる状態を「独り立ち」と呼びます。"
-  },
-  {
-    "id": 88,
-    "unit": 4,
-    "unit_title": "第3節 人材育成・研鑽",
-    "q_number": "4-17",
-    "question_ruby": "<ruby>介護福祉職<rt>かいごふくししょく</rt></ruby>などの<ruby>対人援助職<rt>たいじんえんじょしょく</rt></ruby>が<ruby>指導者<rt>しどうしゃ</rt></ruby>から<ruby>受<rt>う</rt></ruby>ける<ruby>指導機会<rt>しどうきかい</rt></ruby>や<ruby>指導過程<rt>しどうかてい</rt></ruby>のことを [___] と<ruby>呼<rt>よ</rt></ruby>びます。",
-    "question_plain": "介護福祉職などの対人援助職が指導者から受ける指導機会や指導過程のことを [___] と呼びます。",
-    "options": [
-      "メンタリング",
-      "コンサルテーション",
-      "カンファレンス",
-      "スーパービジョン"
-    ],
-    "answer": 4,
-    "answer_text": "スーパービジョン",
-    "explanation": "対人援助職としての実践能力と専門的姿勢を高めるため、定期的に行われる専門的指導・教育プロセスです。"
-  },
-  {
-    "id": 89,
-    "unit": 4,
-    "unit_title": "第3節 人材育成・研鑽",
-    "q_number": "4-18",
-    "question_ruby": "スーパービジョンにおいて、<ruby>指導<rt>しどう</rt></ruby>する<ruby>側<rt>がわ</rt></ruby>を [___] と<ruby>呼<rt>よ</rt></ruby>びます。",
-    "question_plain": "スーパービジョンにおいて、指導する側を [___] と呼びます。",
-    "options": [
-      "エバリュエーター",
-      "スーパーバイザー",
-      "スーパーバイジー",
-      "リーダー"
-    ],
-    "answer": 2,
-    "answer_text": "スーパーバイザー",
-    "explanation": "スーパービジョンを提供する熟練者・指導側の専門職をスーパーバイザー（Supervisor）と呼びます。"
-  },
-  {
-    "id": 90,
-    "unit": 4,
-    "unit_title": "第3節 人材育成・研鑽",
-    "q_number": "4-19",
-    "question_ruby": "スーパービジョンにおいて、<ruby>指導<rt>しどう</rt></ruby>を<ruby>受<rt>う</rt></ruby>ける<ruby>側<rt>がわ</rt></ruby>を [___] と<ruby>呼<rt>よ</rt></ruby>びます。",
-    "question_plain": "スーパービジョンにおいて、指導を受ける側を [___] と呼びます。",
-    "options": [
-      "スーパーバイジー",
-      "スーパーバイザー",
-      "トレーニー",
-      "メンティー"
-    ],
-    "answer": 1,
-    "answer_text": "スーパーバイジー",
-    "explanation": "スーパービジョンを受ける受指導者側の職員をスーパーバイジー（Supervisee）と呼びます。"
-  },
-  {
-    "id": 91,
-    "unit": 4,
-    "unit_title": "第3節 人材育成・研鑽",
-    "q_number": "4-20",
-    "question_ruby": "スーパービジョンの<ruby>形態<rt>けいたい</rt></ruby>のうち、<ruby>学生同士<rt>がくせいどうし</rt></ruby>や<ruby>仲間関係<rt>なかまかんけい</rt></ruby>でおこなう<ruby>指導者<rt>しどうしゃ</rt></ruby>が<ruby>参加<rt>さんか</rt></ruby>しないタイプを [___] といいます。",
-    "question_plain": "スーパービジョンの形態のうち、学生同士や仲間関係でおこなう指導者が参加しないタイプを [___] といいます。",
-    "options": [
-      "集団スーパービジョン",
-      "ライブスーパービジョン",
-      "ピアスーパービジョン",
-      "個別スーパービジョン"
-    ],
-    "answer": 3,
-    "answer_text": "ピアスーパービジョン",
-    "explanation": "Peer（仲間・同僚）同士が対等な関係で意見を交換し、気付きや支え合いを得るスーパービジョンです。"
-  },
-  {
-    "id": 92,
-    "unit": 4,
-    "unit_title": "第3節 人材育成・研鑽",
-    "q_number": "4-21",
-    "question_ruby": "スーパービジョンの<ruby>機能<rt>きのう</rt></ruby>のうち、<ruby>不安<rt>ふあん</rt></ruby>や<ruby>葛藤<rt>かっとう</rt></ruby>の<ruby>解消<rt>かいしょう</rt></ruby>が<ruby>期待<rt>きたい</rt></ruby>される<ruby>機能<rt>きのう</rt></ruby>を [___] といいます。",
-    "question_plain": "スーパービジョンの機能のうち、不安や葛藤の解消が期待される機能を [___] といいます。",
-    "options": [
-      "教育的機能",
-      "行政的機能",
-      "評価的機能",
-      "支持的機能"
-    ],
-    "answer": 4,
-    "answer_text": "支持的機能",
-    "explanation": "スーパービジョンの3大機能の一つで、援助者の心理的負担を傾聴・受容し精神的安定を支える機能です。"
-  },
-  {
-    "id": 93,
-    "unit": 4,
-    "unit_title": "第3節 人材育成・研鑽",
-    "q_number": "4-22",
-    "question_ruby": "<ruby>自己啓発<rt>じこけいはつ</rt></ruby>・<ruby>自己研鑽<rt>じこけんさん</rt></ruby>を<ruby>組織的<rt>そしきてき</rt></ruby>に<ruby>支<rt>ささ</rt></ruby>える<ruby>自己啓発援助制度<rt>じこけいはつえんじょせいど</rt></ruby>を [___] といいます。",
-    "question_plain": "自己啓発・自己研鑽を組織的に支える自己啓発援助制度を [___] といいます。",
-    "options": [
-      "MBO",
-      "Off-JT",
-      "SDS",
-      "OJT"
-    ],
-    "answer": 3,
-    "answer_text": "SDS",
-    "explanation": "Self-Development Support（自己啓発援助制度）の略称で、受講料補助や学習休暇の付与などを指します。"
-  },
-  {
-    "id": 94,
-    "unit": 4,
-    "unit_title": "第3節 人材育成・研鑽",
-    "q_number": "4-23",
-    "question_ruby": "<ruby>自身<rt>じしん</rt></ruby>の<ruby>立場<rt>たちば</rt></ruby>や<ruby>役割<rt>やくわり</rt></ruby>に<ruby>応<rt>おう</rt></ruby>じた<ruby>知識<rt>ちしき</rt></ruby>や<ruby>技術<rt>ぎじゅつ</rt></ruby>を、<ruby>学問<rt>がくもん</rt></ruby>を<ruby>通<rt>つう</rt></ruby>じて<ruby>獲得<rt>かくとく</rt></ruby>していくことを [___] と<ruby>重視<rt>じゅうし</rt></ruby>します。",
-    "question_plain": "自身の立場や役割に応じた知識や技術を、学問を通じて獲得していくことを [___] と重視します。",
-    "options": [
-      "自己研鑽",
-      "出世競争",
-      "自己犠牲",
-      "自己満足"
-    ],
-    "answer": 1,
-    "answer_text": "自己研鑽",
-    "explanation": "資格取得にとどまらず、自ら学び続け専門的知見を深める姿勢がプロフェッショナルとしての自己研鑽です。"
-  },
-  {
-    "id": 95,
-    "unit": 4,
-    "unit_title": "第3節 人材育成・研鑽",
-    "q_number": "4-24",
-    "question_ruby": "2007<ruby>年<rt>ねん</rt></ruby>の<ruby>法改正<rt>ほうかいせい</rt></ruby>において、<ruby>介護福祉士<rt>かいごふくしし</rt></ruby>の<ruby>義務<rt>ぎむ</rt></ruby>として「 [___] の<ruby>責務<rt>せきむ</rt></ruby>」が<ruby>追加<rt>ついか</rt></ruby>されました。",
-    "question_plain": "2007年の法改正において、介護福祉士の義務として「 [___] の責務」が追加されました。",
-    "options": [
-      "名称使用制限",
-      "信用失墜行為禁止",
-      "資質向上",
-      "秘密保持"
-    ],
-    "answer": 3,
-    "answer_text": "資質向上",
-    "explanation": "社会福祉士及び介護福祉士法第47条の2に、常に資質向上のための責務（努力義務）が明記されました。"
-  },
-  {
-    "id": 96,
-    "unit": 4,
-    "unit_title": "第3節 人材育成・研鑽",
-    "q_number": "4-25",
-    "question_ruby": "<ruby>質<rt>しつ</rt></ruby>の<ruby>高<rt>たか</rt></ruby>いサービスを<ruby>提供<rt>ていきょう</rt></ruby>するための<ruby>実践力<rt>じっせんりょく</rt></ruby>を<ruby>獲得<rt>かくとく</rt></ruby>していく<ruby>方法<rt>ほうほう</rt></ruby>としては、 [___] の<ruby>活用<rt>かつよう</rt></ruby>が<ruby>有効<rt>ゆうこう</rt></ruby>です。",
-    "question_plain": "質の高いサービスを提供するための実践力を獲得していく方法としては、 [___] の活用が有効です。",
-    "options": [
-      "残業対応",
-      "社内飲み会",
-      "年功序列",
-      "外部研修"
-    ],
-    "answer": 4,
-    "answer_text": "外部研修",
-    "explanation": "他施設の先進事例や専門学会の知見を吸収できる外部研修への参加は、視野を広げる有効な方法です。"
-  },
-  {
-    "id": 97,
-    "unit": 5,
-    "unit_title": "第4節 組織目標達成",
-    "q_number": "5-1",
-    "question_ruby": "<ruby>組織<rt>そしき</rt></ruby>は、<ruby>単<rt>たん</rt></ruby>なる<ruby>集団<rt>しゅうだん</rt></ruby>とは<ruby>異<rt>こと</rt></ruby>なり、①<ruby>共通<rt>きょうつう</rt></ruby>の [___] を<ruby>持<rt>も</rt></ruby>つこと、②<ruby>協力<rt>きょうりょく</rt></ruby>する<ruby>意思<rt>いし</rt></ruby>、③コミュニケーションの3<ruby>要素<rt>ようそ</rt></ruby>が<ruby>特徴<rt>とくちょう</rt></ruby>です。",
-    "question_plain": "組織は、単なる集団とは異なり、①共通の [___] を持つこと、②協力する意思、③コミュニケーションの3要素が特徴です。",
-    "options": [
-      "雇用形態",
-      "年齢",
-      "出身地",
-      "目的"
-    ],
-    "answer": 4,
-    "answer_text": "目的",
-    "explanation": "チェスター・バーナードが定義した組織の3要素は①共通の目的、②貢献意欲（協力意志）、③コミュニケーションです。"
-  },
-  {
-    "id": 98,
-    "unit": 5,
-    "unit_title": "第4節 組織目標達成",
-    "q_number": "5-2",
-    "question_ruby": "<ruby>法人<rt>ほうじん</rt></ruby>とは、<ruby>事業所<rt>じぎょうしょ</rt></ruby>の [___] <ruby>母体<rt>ぼたい</rt></ruby>のことであり、<ruby>複数<rt>ふくすう</rt></ruby>の<ruby>事業所<rt>じぎょうしょ</rt></ruby>を<ruby>一括<rt>いっかつ</rt></ruby>して<ruby>管理<rt>かんり</rt></ruby>・<ruby>運営<rt>うんえい</rt></ruby>する<ruby>役割<rt>やくわり</rt></ruby>を<ruby>果<rt>は</rt></ruby>たします。",
-    "question_plain": "法人とは、事業所の [___] 母体のことであり、複数の事業所を一括して管理・運営する役割を果たします。",
-    "options": [
-      "建築",
-      "ボランティア",
-      "医療",
-      "経営"
-    ],
-    "answer": 4,
-    "answer_text": "経営",
-    "explanation": "社会福祉法人や医療法人など、法的な権利義務の主体として事業所を経営・統括する母体を指します。"
-  },
-  {
-    "id": 99,
-    "unit": 5,
-    "unit_title": "第4節 組織目標達成",
-    "q_number": "5-3",
-    "question_ruby": "<ruby>法人<rt>ほうじん</rt></ruby>の<ruby>階層構造<rt>かいそうこうぞう</rt></ruby>は大別すると、 [___] <ruby>部門<rt>ぶもん</rt></ruby>、<ruby>中間管理部門<rt>ちゅうかんかんりぶもん</rt></ruby>、<ruby>現場部門<rt>げんばぶもん</rt></ruby>の3つで<ruby>構成<rt>こうせい</rt></ruby>されます。",
-    "question_plain": "法人の階層構造は大別すると、 [___] 部門、中間管理部門、現場部門の3つで構成されます。",
-    "options": [
-      "法務・監査",
-      "経営・管理",
-      "広報・宣伝",
-      "営業・販売"
-    ],
-    "answer": 2,
-    "answer_text": "経営・管理",
-    "explanation": "理事長や施設長を中心とする「経営・管理部門」、主任などの「中間管理部門」、直接ケアする「現場部門」の3層構造です。"
-  },
-  {
-    "id": 100,
-    "unit": 5,
-    "unit_title": "第4節 組織目標達成",
-    "q_number": "5-4",
-    "question_ruby": "<ruby>事業<rt>じぎょう</rt></ruby>をおこなううえでの<ruby>資源<rt>しげん</rt></ruby>である「ヒト・ [___] ・カネ」について<ruby>中長期計画<rt>ちゅうちょうきけいかく</rt></ruby>を<ruby>策定<rt>さくてい</rt></ruby>するのは、<ruby>経営・管理部門<rt>けいえいかんりぶもん</rt></ruby>の<ruby>役割<rt>やくわり</rt></ruby>です。",
-    "question_plain": "事業をおこなううえでの資源である「ヒト・ [___] ・カネ」について中長期計画を策定するのは、経営・管理部門の役割です。",
-    "options": [
-      "制度",
-      "時間",
-      "情報",
-      "モノ"
-    ],
-    "answer": 4,
-    "answer_text": "モノ",
-    "explanation": "経営の3大資源「ヒト（人材）・モノ（設備機器）・カネ（資金財源）」を配分・管理します。"
-  },
-  {
-    "id": 101,
-    "unit": 5,
-    "unit_title": "第4節 組織目標達成",
-    "q_number": "5-5",
-    "question_ruby": "<ruby>経営・管理部門<rt>けいえいかんりぶもん</rt></ruby>と<ruby>現場部門<rt>げんばぶもん</rt></ruby>を<ruby>円滑<rt>えんかつ</rt></ruby>につなぐ<ruby>役割<rt>やくわり</rt></ruby>を<ruby>果<rt>は</rt></ruby>たすのが [___] <ruby>部門<rt>ぶもん</rt></ruby>です。",
-    "question_plain": "経営・管理部門と現場部門を円滑につなぐ役割を果たすのが [___] 部門です。",
-    "options": [
-      "相談",
-      "経理",
-      "中間管理",
-      "外部監査"
-    ],
-    "answer": 3,
-    "answer_text": "中間管理",
-    "explanation": "サービス提供責任者やフロアリーダー等の「中間管理部門」が、トップの理念を現場に降ろし、現場の声を吸い上げます。"
-  },
-  {
-    "id": 102,
-    "unit": 5,
-    "unit_title": "第4節 組織目標達成",
-    "q_number": "5-6",
-    "question_ruby": "<ruby>介護<rt>かいご</rt></ruby>サービスに<ruby>直接<rt>ちょくせつ</rt></ruby>かかわり、<ruby>個別<rt>こべつ</rt></ruby>のサービス<ruby>提供<rt>ていきょう</rt></ruby>や<ruby>日々<rt>ひび</rt></ruby>の<ruby>継続性<rt>けいぞくせい</rt></ruby>に<ruby>責任<rt>せきにん</rt></ruby>を<ruby>持<rt>も</rt></ruby>つのが [___] <ruby>部門<rt>ぶもん</rt></ruby>です。",
-    "question_plain": "介護サービスに直接かかわり、個別のサービス提供や日々の継続性に責任を持つのが [___] 部門です。",
-    "options": [
-      "経営",
-      "人事",
-      "財務",
-      "現場"
-    ],
-    "answer": 4,
-    "answer_text": "現場",
-    "explanation": "直接利用者に触れ、生活全般のケアを24時間体制で責任を持って実践する部門が「現場部門」です。"
-  },
-  {
-    "id": 103,
-    "unit": 5,
-    "unit_title": "第4節 組織目標達成",
-    "q_number": "5-7",
-    "question_ruby": "<ruby>専門分野<rt>せんもんぶんや</rt></ruby>による<ruby>職員分<rt>しょくいんわ</rt></ruby>けを [___] と<ruby>呼<rt>よ</rt></ruby>び、<ruby>施設長<rt>しせつちょう</rt></ruby>や<ruby>主任<rt>しゅにん</rt></ruby>といった<ruby>地位<rt>ちい</rt></ruby>による<ruby>区分<rt>くぶん</rt></ruby>を<ruby>職位<rt>しょくい</rt></ruby>と<ruby>呼<rt>よ</rt></ruby>びます。",
-    "question_plain": "専門分野による職員分けを [___] と呼び、施設長や主任といった地位による区分を職位と呼びます。",
-    "options": [
-      "職種",
-      "勤務形態",
-      "学歴",
-      "雇用区分"
-    ],
-    "answer": 1,
-    "answer_text": "職種",
-    "explanation": "介護職、看護職、理学療法士などの業務の専門性による区分を「職種」、主任などの役職を「職位」といいます。"
-  },
-  {
-    "id": 104,
-    "unit": 5,
-    "unit_title": "第4節 組織目標達成",
-    "q_number": "5-8",
-    "question_ruby": "<ruby>職員<rt>しょくいん</rt></ruby>の<ruby>経験年数<rt>けいけんねんすう</rt></ruby>や<ruby>求<rt>もと</rt></ruby>められる<ruby>能力<rt>のうりょく</rt></ruby>、<ruby>取得<rt>しゅとく</rt></ruby>すべき<ruby>資格等<rt>しかくとう</rt></ruby>を<ruby>明示<rt>めいじ</rt></ruby>し、<ruby>成長<rt>せいちょう</rt></ruby>の<ruby>道筋<rt>みちすじ</rt></ruby>を<ruby>示<rt>しめ</rt></ruby>すしくみを [___] と<ruby>呼<rt>よ</rt></ruby>びます。",
-    "question_plain": "職員の経験年数や求められる能力、取得すべき資格等を明示し、成長の道筋を示すしくみを [___] と呼びます。",
-    "options": [
-      "タイムカード",
-      "人事台帳",
-      "名簿",
-      "キャリアパス"
-    ],
-    "answer": 4,
-    "answer_text": "キャリアパス",
-    "explanation": "目指すべき将来像とステップアップの基準を明示することで、職員の離職防止と学習意欲を促進します。"
-  },
-  {
-    "id": 105,
-    "unit": 5,
-    "unit_title": "第4節 組織目標達成",
-    "q_number": "5-9",
-    "question_ruby": "<ruby>組織<rt>そしき</rt></ruby>に<ruby>階層<rt>かいそう</rt></ruby>があり、それが<ruby>指揮命令系統<rt>しきめいれいけいとう</rt></ruby>でつながっていることを<ruby>目<rt>め</rt></ruby>に<ruby>見<rt>み</rt></ruby>える<ruby>形<rt>かたち</rt></ruby>で<ruby>示<rt>しめ</rt></ruby>したものを [___] といいます。",
-    "question_plain": "組織に階層があり、それが指揮命令系統でつながっていることを目に見える形で示したものを [___] といいます。",
-    "options": [
-      "シフト表",
-      "組織図",
-      "タイムテーブル",
-      "見取り図"
-    ],
-    "answer": 2,
-    "answer_text": "組織図",
-    "explanation": "権限と責任の所在、指揮命令のラインをグラフィカルに表現した図を組織図（組織系統図）と呼びます。"
-  },
-  {
-    "id": 106,
-    "unit": 5,
-    "unit_title": "第4節 組織目標達成",
-    "q_number": "5-10",
-    "question_ruby": "<ruby>事業計画<rt>じぎょうけいかく</rt></ruby>とは<ruby>年度目標<rt>ねんどもくひょう</rt></ruby>を<ruby>示<rt>しめ</rt></ruby>した<ruby>管理表<rt>かんりひょう</rt></ruby>であり、Plan-Do-Check-Actionの [___] サイクルを<ruby>用<rt>もち</rt></ruby>いて<ruby>継続的<rt>けいぞくてき</rt></ruby>に<ruby>改善<rt>かいぜん</rt></ruby>していきます。",
-    "question_plain": "事業計画とは年度目標を示した管理表であり、Plan-Do-Check-Actionの [___] サイクルを用いて継続的に改善していきます。",
-    "options": [
-      "SWOT",
-      "PEST",
-      "OODA",
-      "PDCA"
-    ],
-    "answer": 4,
-    "answer_text": "PDCA",
-    "explanation": "計画（Plan）→実行（Do）→評価（Check）→改善（Action）の好循環を回して業務を向上させます。"
-  },
-  {
-    "id": 107,
-    "unit": 5,
-    "unit_title": "第4節 組織目標達成",
-    "q_number": "5-11",
-    "question_ruby": "<ruby>介護<rt>かいご</rt></ruby>サービスを<ruby>持続的<rt>じぞくてき</rt></ruby>に<ruby>提供<rt>ていきょう</rt></ruby>するための<ruby>基盤<rt>きばん</rt></ruby>として、まず [___] <ruby>基盤<rt>きばん</rt></ruby>の<ruby>安定<rt>あんてい</rt></ruby>と<ruby>法令遵守<rt>ほうれいじゅんしゅ</rt></ruby>が<ruby>求<rt>もと</rt></ruby>められます。",
-    "question_plain": "介護サービスを持続的に提供するための基盤として、まず [___] 基盤の安定と法令遵守が求められます。",
-    "options": [
-      "経営",
-      "IT",
-      "広報",
-      "政治"
-    ],
-    "answer": 1,
-    "answer_text": "経営",
-    "explanation": "健全で安定した経営基盤とコンプライアンスが維持されていなければ、安心してケアを提供し続けることはできません。"
-  },
-  {
-    "id": 108,
-    "unit": 5,
-    "unit_title": "第4節 組織目標達成",
-    "q_number": "5-12",
-    "question_ruby": "<ruby>法令<rt>ほうれい</rt></ruby>を<ruby>遵守<rt>じゅんしゅ</rt></ruby>することや、<ruby>透明性<rt>とうめいせい</rt></ruby>のある<ruby>健全<rt>けんぜん</rt></ruby>な<ruby>運営<rt>うんえい</rt></ruby>をおこなう<ruby>姿勢<rt>しせい</rt></ruby>を [___] と<ruby>呼<rt>よ</rt></ruby>びます。",
-    "question_plain": "法令を遵守することや、透明性のある健全な運営をおこなう姿勢を [___] と呼びます。",
-    "options": [
-      "アカウンタビリティ",
-      "コンプライアンス",
-      "ガバナンス",
-      "インフォームドコンセント"
-    ],
-    "answer": 2,
-    "answer_text": "コンプライアンス",
-    "explanation": "法令遵守にとどまらず、社会的な倫理規範や利用者本位の健全なモラルを守る姿勢全般を指します。"
-  },
-  {
-    "id": 109,
-    "unit": 5,
-    "unit_title": "第4節 組織目標達成",
-    "q_number": "5-13",
-    "question_ruby": "<ruby>法人<rt>ほうじん</rt></ruby>や<ruby>事業所<rt>じぎょうしょ</rt></ruby>がめざす<ruby>目的<rt>もくてき</rt></ruby>や<ruby>志<rt>こころざし</rt></ruby>をわかりやすい<ruby>言葉<rt>ことば</rt></ruby>で<ruby>表現<rt>ひょうげん</rt></ruby>したものを [___] や<ruby>運営方針<rt>うんえいほうしん</rt></ruby>といいます。",
-    "question_plain": "法人や事業所がめざす目的や志をわかりやすい言葉で表現したものを [___] や運営方針といいます。",
-    "options": [
-      "定款",
-      "理念",
-      "マニュアル",
-      "スローガン"
-    ],
-    "answer": 2,
-    "answer_text": "理念",
-    "explanation": "組織が何のために存在し、何を最高の価値として社会貢献するのかを掲げたものが「理念（企業理念）」です。"
-  },
-  {
-    "id": 110,
-    "unit": 5,
-    "unit_title": "第4節 組織目標達成",
-    "q_number": "5-14",
-    "question_ruby": "<ruby>介護労働実態調査<rt>かいごろうどうじったいちょうさ</rt></ruby>によると、<ruby>前職<rt>ぜんしょく</rt></ruby>の<ruby>介護職<rt>かいごしょく</rt></ruby>を<ruby>辞<rt>や</rt></ruby>めた<ruby>理由<rt>りゆう</rt></ruby>の<ruby>上位<rt>じょうい</rt></ruby>には「<ruby>職場<rt>しょくば</rt></ruby>の [___] <ruby>関係<rt>かんけい</rt></ruby>に<ruby>問題<rt>もんだい</rt></ruby>があったため」があげられています。",
-    "question_plain": "介護労働実態調査によると、前職の介護職を辞めた理由の上位には「職場の [___] 関係に問題があったため」があげられています。",
-    "options": [
-      "通勤距離",
-      "労働時間",
-      "給与",
-      "人間"
-    ],
-    "answer": 4,
-    "answer_text": "人間",
-    "explanation": "介護現場における離職理由の上位に常に挙がるのが「職場の人間関係の悩み・ストレス」です。"
-  },
-  {
-    "id": 111,
-    "unit": 5,
-    "unit_title": "第4節 組織目標達成",
-    "q_number": "5-15",
-    "question_ruby": "<ruby>専門職<rt>せんもんしょく</rt></ruby>としての<ruby>知識<rt>ちしき</rt></ruby>・<ruby>技術<rt>ぎじゅつ</rt></ruby>を<ruby>高<rt>たか</rt></ruby>め<ruby>熟練<rt>じゅくれん</rt></ruby>したケアを<ruby>提供<rt>ていきょう</rt></ruby>するために、<ruby>介護福祉職自身<rt>かいごふくししょくじしん</rt></ruby>が [___] を<ruby>重<rt>かさ</rt></ruby>ねる<ruby>姿勢<rt>しせい</rt></ruby>も<ruby>重要<rt>じゅうよう</rt></ruby>です。",
-    "question_plain": "専門職としての知識・技術を高め熟練したケアを提供するために、介護福祉職自身が [___] を重ねる姿勢も重要です。",
-    "options": [
-      "自己研鑽",
-      "節約",
-      "自己主張",
-      "残業"
-    ],
-    "answer": 1,
-    "answer_text": "自己研鑽",
-    "explanation": "日々の実践に安住せず、自ら学び続けスキルアップを図る自己研鑽の積み重ねが不可欠です。"
-  },
-  {
-    "id": 112,
-    "unit": 5,
-    "unit_title": "第4節 組織目標達成",
-    "q_number": "5-16",
-    "question_ruby": "<ruby>介護業務<rt>かいごぎょうむ</rt></ruby>の<ruby>改善<rt>かいぜん</rt></ruby>や<ruby>意見交換<rt>いけんこうかん</rt></ruby>をおこなう<ruby>場<rt>ば</rt></ruby>として、<ruby>法人内<rt>ほうじんない</rt></ruby>には<ruby>食事<rt>しょくじ</rt></ruby>・<ruby>排泄<rt>はいせつ</rt></ruby>・<ruby>入浴<rt>にゅうよく</rt></ruby>などの<ruby>各種<rt>かくしゅ</rt></ruby> [___] が<ruby>設置<rt>せっち</rt></ruby>されます。",
-    "question_plain": "介護業務の改善や意見交換をおこなう場として、法人内には食事・排泄・入浴などの各種 [___] が設置されます。",
-    "options": [
-      "派閥",
-      "委員会",
-      "サークル",
-      "労働組合"
-    ],
-    "answer": 2,
-    "answer_text": "委員会",
-    "explanation": "褥瘡対策、感染予防、排泄ケアなど特定のテーマごとに職種横断で改善を進める委員会が設けられます。"
-  },
-  {
-    "id": 113,
-    "unit": 5,
-    "unit_title": "第4節 組織目標達成",
-    "q_number": "5-17",
-    "question_ruby": "<ruby>現場責任者<rt>げんばせきにんしゃ</rt></ruby>が<ruby>作成<rt>さくせい</rt></ruby>する1か<ruby>月単位<rt>げつたんい</rt></ruby>の [___] は、<ruby>人員不足<rt>じんいんふそく</rt></ruby>を<ruby>防<rt>ふせ</rt></ruby>ぎ<ruby>質<rt>しつ</rt></ruby>の<ruby>高<rt>たか</rt></ruby>いサービスを<ruby>提供<rt>ていきょう</rt></ruby>するための<ruby>設計図<rt>せっけいず</rt></ruby>となります。",
-    "question_plain": "現場責任者が作成する1か月単位の [___] は、人員不足を防ぎ質の高いサービスを提供するための設計図となります。",
-    "options": [
-      "給与明細",
-      "日報",
-      "勤務表",
-      "有給届"
-    ],
-    "answer": 3,
-    "answer_text": "勤務表",
-    "explanation": "人員配置基準を遵守しつつ職員のワークライフバランスと適切なケア体制を両立させる設計図です。"
-  },
-  {
-    "id": 114,
-    "unit": 5,
-    "unit_title": "第4節 組織目標達成",
-    "q_number": "5-18",
-    "question_ruby": "<ruby>常時<rt>じょうじ</rt></ruby>50<ruby>名以上<rt>めいいじょう</rt></ruby>を<ruby>使用<rt>しよう</rt></ruby>する<ruby>事業所<rt>じぎょうしょ</rt></ruby>では、<ruby>労働安全衛生法<rt>ろうどうあんぜんえいせいほう</rt></ruby>により<ruby>毎年<rt>まいとし</rt></ruby>1<ruby>回<rt>かい</rt></ruby>の [___] チェックが<ruby>義務<rt>ぎむ</rt></ruby>づけられています。",
-    "question_plain": "常時50名以上を使用する事業所では、労働安全衛生法により毎年1回の [___] チェックが義務づけられています。",
-    "options": [
-      "体力",
-      "適性",
-      "健康診断",
-      "ストレス"
-    ],
-    "answer": 4,
-    "answer_text": "ストレス",
-    "explanation": "労働者のメンタルヘルス不調を未然に防止（一次予防）するため、ストレスチェックの実施が法定義務となっています。"
-  },
-  {
-    "id": 115,
-    "unit": 5,
-    "unit_title": "第4節 組織目標達成",
-    "q_number": "5-19",
-    "question_ruby": "<ruby>言葉<rt>ことば</rt></ruby>や<ruby>行動<rt>こうどう</rt></ruby>による<ruby>嫌<rt>いや</rt></ruby>がらせ<ruby>行為<rt>こうい</rt></ruby>を [___] と<ruby>呼<rt>よ</rt></ruby>び、パワハラやセクハラ<ruby>等<rt>とう</rt></ruby>の<ruby>防止対策<rt>ぼうしたいさく</rt></ruby>が<ruby>求<rt>もと</rt></ruby>められます。",
-    "question_plain": "言葉や行動による嫌がらせ行為を [___] と呼び、パワハラやセクハラ等の防止対策が求められます。",
-    "options": [
-      "ネグレクト",
-      "コンフリクト",
-      "ハラスメント",
-      "モラルハザード"
-    ],
-    "answer": 3,
-    "answer_text": "ハラスメント",
-    "explanation": "優越的な関係を背景とした暴言や性的な言動など、他者の人格を傷つけ就業環境を害する嫌がらせです。"
-  },
-  {
-    "id": 116,
-    "unit": 5,
-    "unit_title": "第4節 組織目標達成",
-    "q_number": "5-20",
-    "question_ruby": "<ruby>非常事態<rt>ひじょうじたい</rt></ruby>が<ruby>発生<rt>はっせい</rt></ruby>した<ruby>場合<rt>ばあい</rt></ruby>でも、<ruby>必要<rt>ひつよう</rt></ruby>なサービスを<ruby>継続的<rt>けいぞくてき</rt></ruby>に<ruby>提供<rt>ていきょう</rt></ruby>するためにすべての<ruby>事業者<rt>じぎょうしゃ</rt></ruby>に<ruby>策定<rt>さくてい</rt></ruby>が<ruby>義務<rt>ぎむ</rt></ruby>づけられた<ruby>計画<rt>けいかく</rt></ruby>を [___] といいます。",
-    "question_plain": "非常事態が発生した場合でも、必要なサービスを継続的に提供するためにすべての事業者に策定が義務づけられた計画を [___] といいます。",
-    "options": [
-      "SDS",
-      "PDCA",
-      "BCP",
-      "OJT"
-    ],
-    "answer": 3,
-    "answer_text": "BCP",
-    "explanation": "介護報酬改定により、全介護サービス事業者に感染症および自然災害に係る業務継続計画（BCP）の策定が義務化されました。"
-  },
-  {
-    "id": 117,
-    "unit": 5,
-    "unit_title": "第4節 組織目標達成",
-    "q_number": "5-21",
-    "question_ruby": "<ruby>生命<rt>せいめい</rt></ruby>・<ruby>生活<rt>せいかつ</rt></ruby>・<ruby>人生<rt>じんせい</rt></ruby>の<ruby>質<rt>しつ</rt></ruby>を<ruby>意味<rt>いみ</rt></ruby>する [___] の<ruby>向上<rt>こうじょう</rt></ruby>を<ruby>目指<rt>めざ</rt></ruby>します。",
-    "question_plain": "生命・生活・人生の質を意味する [___] の向上を目指します。",
-    "options": [
-      "ICF",
-      "ADL",
-      "IADL",
-      "QOL"
-    ],
-    "answer": 4,
-    "answer_text": "QOL",
-    "explanation": "Quality of Life（生活の質・生命の質）の略称で、単なる生存にとどまらず心豊かに自分らしく生きる質です。"
-  },
-  {
-    "id": 118,
-    "unit": 5,
-    "unit_title": "第4節 組織目標達成",
-    "q_number": "5-22",
-    "question_ruby": "<ruby>地域<rt>ちいき</rt></ruby>の<ruby>独居高齢者<rt>どっきょこうれいしゃ</rt></ruby>への<ruby>買<rt>か</rt></ruby>い<ruby>物支援<rt>ものしえん</rt></ruby>や<ruby>食事提供支援<rt>しょくじていきょうしえん</rt></ruby>など、<ruby>地域<rt>ちいき</rt></ruby>に<ruby>貢献<rt>こうけん</rt></ruby>する<ruby>取<rt>と</rt></ruby>り<ruby>組<rt>く</rt></ruby>みを [___] <ruby>活動<rt>かつどう</rt></ruby>といいます。",
-    "question_plain": "地域の独居高齢者への買い物支援や食事提供支援など、地域に貢献する取り組みを [___] 活動といいます。",
-    "options": [
-      "政治運動",
-      "営利追求",
-      "自己実現",
-      "地域貢献"
-    ],
-    "answer": 4,
-    "answer_text": "地域貢献",
-    "explanation": "社会福祉法人等の責務として、制度の狭間にある生活困窮者や孤立高齢者を見守り支援する地域貢献活動が期待されます。"
-  }
+    {
+        "id": 1,
+        "unit": 1,
+        "unit_title": "第1節 介護実践マネジメント",
+        "q_number": "1-1",
+        "question_ruby": "<ruby>介護<rt>かいご</rt></ruby>サービスには<ruby>物質的<rt>ぶっしつてき</rt></ruby>な「かたち」がないという [___] の<ruby>特性<rt>とくせい</rt></ruby>がある。",
+        "question_plain": "介護サービスには物質的な「かたち」がないという [___] の特性がある。",
+        "options": [
+            "無形性",
+            "不可分性",
+            "品質の変動性",
+            "消滅性"
+        ],
+        "answer": 1,
+        "answer_text": "無形性",
+        "explanation": "介護サービスは形として目に見えず、手に取ることができない「無形性（不可視性）」という特性を持ちます。",
+        "unitTitle": "第1節 介護実践マネジメント",
+        "qNumber": "1-1",
+        "stem": "<ruby>介護<rt>かいご</rt></ruby>サービスには<ruby>物質的<rt>ぶっしつてき</rt></ruby>な「かたち」がないという [___] の<ruby>特性<rt>とくせい</rt></ruby>がある。",
+        "stem_plain": "介護サービスには物質的な「かたち」がないという [___] の特性がある。"
+    },
+    {
+        "id": 2,
+        "unit": 1,
+        "unit_title": "第1節 介護実践マネジメント",
+        "q_number": "1-2",
+        "question_ruby": "<ruby>介護<rt>かいご</rt></ruby>サービスは<ruby>生産<rt>せいさん</rt></ruby>と<ruby>消費<rt>しょうひ</rt></ruby>を<ruby>切<rt>き</rt></ruby>り<ruby>離<rt>はな</rt></ruby>すことができない [___] の<ruby>特性<rt>とくせい</rt></ruby>をもつ。",
+        "question_plain": "介護サービスは生産と消費を切り離すことができない [___] の特性をもつ。",
+        "options": [
+            "不可分性",
+            "無形性",
+            "消滅性",
+            "即時性"
+        ],
+        "answer": 1,
+        "answer_text": "不可分性",
+        "explanation": "利用者にサービスが提供されたその瞬間に消費されるため、生産と消費を切り離せない「不可分性（同時性）」があります。",
+        "unitTitle": "第1節 介護実践マネジメント",
+        "qNumber": "1-2",
+        "stem": "<ruby>介護<rt>かいご</rt></ruby>サービスは<ruby>生産<rt>せいさん</rt></ruby>と<ruby>消費<rt>しょうひ</rt></ruby>を<ruby>切<rt>き</rt></ruby>り<ruby>離<rt>はな</rt></ruby>すことができない [___] の<ruby>特性<rt>とくせい</rt></ruby>をもつ。",
+        "stem_plain": "介護サービスは生産と消費を切り離すことができない [___] の特性をもつ。"
+    },
+    {
+        "id": 3,
+        "unit": 1,
+        "unit_title": "第1節 介護実践マネジメント",
+        "q_number": "1-3",
+        "question_ruby": "<ruby>提供<rt>ていきょう</rt></ruby>する<ruby>人<rt>ひと</rt></ruby>やタイミングによって<ruby>内容<rt>ないよう</rt></ruby>が<ruby>異<rt>こと</rt></ruby>なる<ruby>性質<rt>せいしつ</rt></ruby>を [___] という。",
+        "question_plain": "提供する人やタイミングによって内容が異なる性質を [___] という。",
+        "options": [
+            "品質の変動性",
+            "無形性",
+            "個別化",
+            "不可分性"
+        ],
+        "answer": 1,
+        "answer_text": "品質の変動性",
+        "explanation": "提供する職員の技能や利用者のその日の心身状況・タイミングによって質が変わりやすい特性を「品質の変動性（異質性）」と呼びます。",
+        "unitTitle": "第1節 介護実践マネジメント",
+        "qNumber": "1-3",
+        "stem": "<ruby>提供<rt>ていきょう</rt></ruby>する<ruby>人<rt>ひと</rt></ruby>やタイミングによって<ruby>内容<rt>ないよう</rt></ruby>が<ruby>異<rt>こと</rt></ruby>なる<ruby>性質<rt>せいしつ</rt></ruby>を [___] という。",
+        "stem_plain": "提供する人やタイミングによって内容が異なる性質を [___] という。"
+    },
+    {
+        "id": 4,
+        "unit": 1,
+        "unit_title": "第1節 介護実践マネジメント",
+        "q_number": "1-4",
+        "question_ruby": "サービスを<ruby>保管<rt>ほかん</rt></ruby>してためておくことができない<ruby>性質<rt>せいしつ</rt></ruby>を [___] という。",
+        "question_plain": "サービスを保管してためておくことができない性質を [___] という。",
+        "options": [
+            "消滅性",
+            "不可分性",
+            "無形性",
+            "有限性"
+        ],
+        "answer": 1,
+        "answer_text": "消滅性",
+        "explanation": "物質的な製品のように倉庫に在庫として貯蔵・保管できず、提供されたその場で消費・消滅する性質を「消滅性」といいます。",
+        "unitTitle": "第1節 介護実践マネジメント",
+        "qNumber": "1-4",
+        "stem": "サービスを<ruby>保管<rt>ほかん</rt></ruby>してためておくことができない<ruby>性質<rt>せいしつ</rt></ruby>を [___] という。",
+        "stem_plain": "サービスを保管してためておくことができない性質を [___] という。"
+    },
+    {
+        "id": 5,
+        "unit": 1,
+        "unit_title": "第1節 介護実践マネジメント",
+        "q_number": "1-5",
+        "question_ruby": "「<ruby>人<rt>ひと</rt></ruby>が<ruby>人<rt>ひと</rt></ruby>に<ruby>対<rt>たい</rt></ruby>しておこなうサービス」のことを [___] という。",
+        "question_plain": "「人が人に対しておこなうサービス」のことを [___] という。",
+        "options": [
+            "ヒューマンサービス",
+            "ソーシャルワーク",
+            "パブリックケア",
+            "パーソナルサポート"
+        ],
+        "answer": 1,
+        "answer_text": "ヒューマンサービス",
+        "explanation": "人間が人間に対して深い関わりを持って行う支援や対人福祉サービスを広く「ヒューマンサービス」と総称します。",
+        "unitTitle": "第1節 介護実践マネジメント",
+        "qNumber": "1-5",
+        "stem": "「<ruby>人<rt>ひと</rt></ruby>が<ruby>人<rt>ひと</rt></ruby>に<ruby>対<rt>たい</rt></ruby>しておこなうサービス」のことを [___] という。",
+        "stem_plain": "「人が人に対しておこなうサービス」のことを [___] という。"
+    },
+    {
+        "id": 6,
+        "unit": 1,
+        "unit_title": "第1節 介護実践マネジメント",
+        "q_number": "1-6",
+        "question_ruby": "<ruby>利用者<rt>りようしゃ</rt></ruby>の<ruby>身体面<rt>しんたいめん</rt></ruby>・<ruby>精神面<rt>せいしんめん</rt></ruby>・<ruby>社会環境面<rt>しゃかいかんきょうめん</rt></ruby>を<ruby>含<rt>ふく</rt></ruby>めた<ruby>全体<rt>ぜんたい</rt></ruby>をとらえる [___] が<ruby>重要<rt>じゅうよう</rt></ruby>である。",
+        "question_plain": "利用者の身体面・精神面・社会環境面を含めた全体をとらえる [___] が重要である。",
+        "options": [
+            "全体をとらえる視点",
+            "医学的視点",
+            "生活歴の視点",
+            "リスク回避の視点"
+        ],
+        "answer": 1,
+        "answer_text": "全体をとらえる視点",
+        "explanation": "病気や身体の不自由さだけでなく、本人の想いや人間関係、暮らしてきた地域や環境を包括的・全人的にとらえる姿勢です。",
+        "unitTitle": "第1節 介護実践マネジメント",
+        "qNumber": "1-6",
+        "stem": "<ruby>利用者<rt>りようしゃ</rt></ruby>の<ruby>身体面<rt>しんたいめん</rt></ruby>・<ruby>精神面<rt>せいしんめん</rt></ruby>・<ruby>社会環境面<rt>しゃかいかんきょうめん</rt></ruby>を<ruby>含<rt>ふく</rt></ruby>めた<ruby>全体<rt>ぜんたい</rt></ruby>をとらえる [___] が<ruby>重要<rt>じゅうよう</rt></ruby>である。",
+        "stem_plain": "利用者の身体面・精神面・社会環境面を含めた全体をとらえる [___] が重要である。"
+    },
+    {
+        "id": 7,
+        "unit": 1,
+        "unit_title": "第1節 介護実践マネジメント",
+        "q_number": "1-7",
+        "question_ruby": "<ruby>利用者<rt>りようしゃ</rt></ruby>の<ruby>過去<rt>かこ</rt></ruby>から<ruby>現在<rt>げんざい</rt></ruby>、<ruby>将来<rt>しょうらい</rt></ruby>にわたる<ruby>生活<rt>せいかつ</rt></ruby>に [___] にかかわる<ruby>視点<rt>してん</rt></ruby>が<ruby>求<rt>もと</rt></ruby>められる。",
+        "question_plain": "利用者の過去から現在、将来にわたる生活に [___] にかかわる視点が求められる。",
+        "options": [
+            "継続的",
+            "断続的",
+            "局所的",
+            "一時的"
+        ],
+        "answer": 1,
+        "answer_text": "継続的",
+        "explanation": "一時点のぶつ切りの支援ではなく、利用者が歩んできた人生とこれからの未来を見据えた「継続的」な関わりが不可欠です。",
+        "unitTitle": "第1節 介護実践マネジメント",
+        "qNumber": "1-7",
+        "stem": "<ruby>利用者<rt>りようしゃ</rt></ruby>の<ruby>過去<rt>かこ</rt></ruby>から<ruby>現在<rt>げんざい</rt></ruby>、<ruby>将来<rt>しょうらい</rt></ruby>にわたる<ruby>生活<rt>せいかつ</rt></ruby>に [___] にかかわる<ruby>視点<rt>してん</rt></ruby>が<ruby>求<rt>もと</rt></ruby>められる。",
+        "stem_plain": "利用者の過去から現在、将来にわたる生活に [___] にかかわる視点が求められる。"
+    },
+    {
+        "id": 8,
+        "unit": 1,
+        "unit_title": "第1節 介護実践マネジメント",
+        "q_number": "1-8",
+        "question_ruby": "<ruby>介護現場<rt>かいごげんば</rt></ruby>において<ruby>危険<rt>きけん</rt></ruby>や<ruby>事故<rt>じこ</rt></ruby>を<ruby>予測<rt>よそく</rt></ruby>し<ruby>未然<rt>みぜん</rt></ruby>に<ruby>防<rt>ふせ</rt></ruby>ぐ<ruby>取<rt>と</rt></ruby>り<ruby>組<rt>く</rt></ruby>みを [___] という。",
+        "question_plain": "介護現場において危険や事故を予測し未然に防ぐ取り組みを [___] という。",
+        "options": [
+            "リスクマネジメント",
+            "ヒヤリハット",
+            "インシデント管理",
+            "BCP策定"
+        ],
+        "answer": 1,
+        "answer_text": "リスクマネジメント",
+        "explanation": "事故や感染症などのリスクを事前に把握・分析し、未然に防ぎ再発を予防する組織的取り組みをリスクマネジメントといいます。",
+        "unitTitle": "第1節 介護実践マネジメント",
+        "qNumber": "1-8",
+        "stem": "<ruby>介護現場<rt>かいごげんば</rt></ruby>において<ruby>危険<rt>きけん</rt></ruby>や<ruby>事故<rt>じこ</rt></ruby>を<ruby>予測<rt>よそく</rt></ruby>し<ruby>未然<rt>みぜん</rt></ruby>に<ruby>防<rt>ふせ</rt></ruby>ぐ<ruby>取<rt>と</rt></ruby>り<ruby>組<rt>く</rt></ruby>みを [___] という。",
+        "stem_plain": "介護現場において危険や事故を予測し未然に防ぐ取り組みを [___] という。"
+    },
+    {
+        "id": 9,
+        "unit": 1,
+        "unit_title": "第1節 介護実践マネジメント",
+        "q_number": "1-9",
+        "question_ruby": "アセスメントや<ruby>計画作成<rt>けいかくさくせい</rt></ruby>などを<ruby>通<rt>つう</rt></ruby>じて<ruby>自立<rt>じりつ</rt></ruby>を<ruby>支援<rt>しえん</rt></ruby>する<ruby>対人援助<rt>たいじんえんじょ</rt></ruby>を [___] という。",
+        "question_plain": "アセスメントや計画作成などを通じて自立を支援する対人援助を [___] という。",
+        "options": [
+            "ケアマネジメント",
+            "ケースワーク",
+            "モニタリング",
+            "スーパービジョン"
+        ],
+        "answer": 1,
+        "answer_text": "ケアマネジメント",
+        "explanation": "利用者の生活課題を把握（アセスメント）し、ケアプランの作成や調整を通じて自立支援を行う一連のプロセスです。",
+        "unitTitle": "第1節 介護実践マネジメント",
+        "qNumber": "1-9",
+        "stem": "アセスメントや<ruby>計画作成<rt>けいかくさくせい</rt></ruby>などを<ruby>通<rt>つう</rt></ruby>じて<ruby>自立<rt>じりつ</rt></ruby>を<ruby>支援<rt>しえん</rt></ruby>する<ruby>対人援助<rt>たいじんえんじょ</rt></ruby>を [___] という。",
+        "stem_plain": "アセスメントや計画作成などを通じて自立を支援する対人援助を [___] という。"
+    },
+    {
+        "id": 10,
+        "unit": 1,
+        "unit_title": "第1節 介護実践マネジメント",
+        "q_number": "1-10",
+        "question_ruby": "<ruby>多職種連携<rt>たしょくしゅれんけい</rt></ruby>と<ruby>同義<rt>どうぎ</rt></ruby>で<ruby>用<rt>もち</rt></ruby>いられ、<ruby>対象者<rt>たいしょうしゃ</rt></ruby>の<ruby>理解<rt>りかい</rt></ruby>や<ruby>課題整理<rt>かだいせいり</rt></ruby>を<ruby>深<rt>ふか</rt></ruby>めるかかわりを [___] という。",
+        "question_plain": "多職種連携と同義で用いられ、対象者の理解や課題整理を深めるかかわりを [___] という。",
+        "options": [
+            "チームアプローチ",
+            "チームビルディング",
+            "グループワーク",
+            "ケアカンファレンス"
+        ],
+        "answer": 1,
+        "answer_text": "チームアプローチ",
+        "explanation": "多職種が専門性を持ち寄り、利用者の全体像や生活課題の整理を深めて協働する姿勢・枠組みをチームアプローチと呼びます。",
+        "unitTitle": "第1節 介護実践マネジメント",
+        "qNumber": "1-10",
+        "stem": "<ruby>多職種連携<rt>たしょくしゅれんけい</rt></ruby>と<ruby>同義<rt>どうぎ</rt></ruby>で<ruby>用<rt>もち</rt></ruby>いられ、<ruby>対象者<rt>たいしょうしゃ</rt></ruby>の<ruby>理解<rt>りかい</rt></ruby>や<ruby>課題整理<rt>かだいせいり</rt></ruby>を<ruby>深<rt>ふか</rt></ruby>めるかかわりを [___] という。",
+        "stem_plain": "多職種連携と同義で用いられ、対象者の理解や課題整理を深めるかかわりを [___] という。"
+    },
+    {
+        "id": 11,
+        "unit": 1,
+        "unit_title": "第1節 介護実践マネジメント",
+        "q_number": "1-11",
+        "question_ruby": "<ruby>職種<rt>しょくしゅ</rt></ruby>や<ruby>役割<rt>やくわり</rt></ruby>の<ruby>枠<rt>わく</rt></ruby>を<ruby>超<rt>こ</rt></ruby>えた<ruby>多職種協働<rt>たしょくしゅきょうどう</rt></ruby>による<ruby>一体的<rt>いったいてき</rt></ruby>・<ruby>包括的<rt>ほうかつてき</rt></ruby>なケアを [___] という。",
+        "question_plain": "職種や役割の枠を超えた多職種協働による一体的・包括的なケアを [___] という。",
+        "options": [
+            "チームケア",
+            "個別ケア",
+            "ユニットケア",
+            "プライマリケア"
+        ],
+        "answer": 1,
+        "answer_text": "チームケア",
+        "explanation": "職種ごとの縦割りを脱し、チーム全員が目的を共有して一体となって提供する包括的なケアを「チームケア」と呼びます。",
+        "unitTitle": "第1節 介護実践マネジメント",
+        "qNumber": "1-11",
+        "stem": "<ruby>職種<rt>しょくしゅ</rt></ruby>や<ruby>役割<rt>やくわり</rt></ruby>の<ruby>枠<rt>わく</rt></ruby>を<ruby>超<rt>こ</rt></ruby>えた<ruby>多職種協働<rt>たしょくしゅきょうどう</rt></ruby>による<ruby>一体的<rt>いったいてき</rt></ruby>・<ruby>包括的<rt>ほうかつてき</rt></ruby>なケアを [___] という。",
+        "stem_plain": "職種や役割の枠を超えた多職種協働による一体的・包括的なケアを [___] という。"
+    },
+    {
+        "id": 12,
+        "unit": 1,
+        "unit_title": "第1節 介護実践マネジメント",
+        "q_number": "1-12",
+        "question_ruby": "2025<ruby>年度<rt>ねんど</rt></ruby>には<ruby>約<rt>やく</rt></ruby> [___] <ruby>万人<rt>まんにん</rt></ruby>の<ruby>介護人材<rt>かいごじんざい</rt></ruby>が<ruby>不足<rt>ふそく</rt></ruby>する<ruby>見通<rt>みとお</rt></ruby>しである。",
+        "question_plain": "2025年度には約 [___] 万人の介護人材が不足する見通しである。",
+        "options": [
+            "37.7",
+            "25.0",
+            "50.5",
+            "18.2"
+        ],
+        "answer": 1,
+        "answer_text": "37.7",
+        "explanation": "厚生労働省の需給推計において、団塊の世代が75歳以上となる2025年度には約37.7万人の介護人材不足が見込まれています。",
+        "unitTitle": "第1節 介護実践マネジメント",
+        "qNumber": "1-12",
+        "stem": "2025<ruby>年度<rt>ねんど</rt></ruby>には<ruby>約<rt>やく</rt></ruby> [___] <ruby>万人<rt>まんにん</rt></ruby>の<ruby>介護人材<rt>かいごじんざい</rt></ruby>が<ruby>不足<rt>ふそく</rt></ruby>する<ruby>見通<rt>みとお</rt></ruby>しである。",
+        "stem_plain": "2025年度には約 [___] 万人の介護人材が不足する見通しである。"
+    },
+    {
+        "id": 13,
+        "unit": 1,
+        "unit_title": "第1節 介護実践マネジメント",
+        "q_number": "1-13",
+        "question_ruby": "チーム<ruby>全員<rt>ぜんいん</rt></ruby>が<ruby>協力<rt>きょうりょく</rt></ruby>し<ruby>合<rt>あ</rt></ruby>い、<ruby>主体性<rt>しゅたいせい</rt></ruby>と<ruby>補佐的役<rt>ほさてきやく</rt></ruby>割を<ruby>果<rt>は</rt></ruby>たす [___] とフォロワーシップの<ruby>発揮<rt>はっき</rt></ruby>が<ruby>求<rt>もと</rt></ruby>められる。",
+        "question_plain": "チーム全員が協力し合い、主体性と補佐的役割を果たす [___] とフォロワーシップの発揮が求められる。",
+        "options": [
+            "リーダーシップ",
+            "メンバーシップ",
+            "オーナーシップ",
+            "パートナーシップ"
+        ],
+        "answer": 1,
+        "answer_text": "リーダーシップ",
+        "explanation": "リーダーシップとフォロワーシップは表裏一体であり、チームの全員が状況に応じて双方を発揮することが求められます。",
+        "unitTitle": "第1節 介護実践マネジメント",
+        "qNumber": "1-13",
+        "stem": "チーム<ruby>全員<rt>ぜんいん</rt></ruby>が<ruby>協力<rt>きょうりょく</rt></ruby>し<ruby>合<rt>あ</rt></ruby>い、<ruby>主体性<rt>しゅたいせい</rt></ruby>と<ruby>補佐的役<rt>ほさてきやく</rt></ruby>割を<ruby>果<rt>は</rt></ruby>たす [___] とフォロワーシップの<ruby>発揮<rt>はっき</rt></ruby>が<ruby>求<rt>もと</rt></ruby>められる。",
+        "stem_plain": "チーム全員が協力し合い、主体性と補佐的役割を果たす [___] とフォロワーシップの発揮が求められる。"
+    },
+    {
+        "id": 14,
+        "unit": 1,
+        "unit_title": "第1節 介護実践マネジメント",
+        "q_number": "1-14",
+        "question_ruby": "<ruby>新任職員<rt>しんにんしょくいん</rt></ruby>や<ruby>多様<rt>たよう</rt></ruby>な<ruby>背景<rt>はいけい</rt></ruby>をもつ<ruby>介護人材<rt>かいごじんざい</rt></ruby>のリーダーとして<ruby>期待<rt>きたい</rt></ruby>されるのが [___] である。",
+        "question_plain": "新任職員や多様な背景をもつ介護人材のリーダーとして期待されるのが [___] である。",
+        "options": [
+            "介護福祉士",
+            "看護師",
+            "作業療法士",
+            "社会福祉主事"
+        ],
+        "answer": 1,
+        "answer_text": "介護福祉士",
+        "explanation": "国家資格である介護福祉士には、チームのリーダーや初任者の指導役として質の高いケアを主導する役割が期待されています。",
+        "unitTitle": "第1節 介護実践マネジメント",
+        "qNumber": "1-14",
+        "stem": "<ruby>新任職員<rt>しんにんしょくいん</rt></ruby>や<ruby>多様<rt>たよう</rt></ruby>な<ruby>背景<rt>はいけい</rt></ruby>をもつ<ruby>介護人材<rt>かいごじんざい</rt></ruby>のリーダーとして<ruby>期待<rt>きたい</rt></ruby>されるのが [___] である。",
+        "stem_plain": "新任職員や多様な背景をもつ介護人材のリーダーとして期待されるのが [___] である。"
+    },
+    {
+        "id": 15,
+        "unit": 1,
+        "unit_title": "第1節 介護実践マネジメント",
+        "q_number": "1-15",
+        "question_ruby": "チームマネジメントの3つの<ruby>柱<rt>はしら</rt></ruby>の1つ<ruby>目<rt>め</rt></ruby>は、<ruby>個別<rt>こべつ</rt></ruby>の<ruby>支援計画<rt>しえんけいかく</rt></ruby>に<ruby>基<rt>もと</rt></ruby>づきケアを<ruby>提供<rt>ていきょう</rt></ruby>する [___] である。",
+        "question_plain": "チームマネジメントの3つの柱の1つ目は、個別の支援計画に基づきケアを提供する [___] である。",
+        "options": [
+            "ケアの展開",
+            "人材育成・自己研鑽",
+            "組織の目標達成",
+            "リスクマネジメント"
+        ],
+        "answer": 1,
+        "answer_text": "ケアの展開",
+        "explanation": "チームマネジメントの3つの柱は①「ケアの展開」、②「人材育成・自己研鑽」、③「組織の目標達成」です。",
+        "unitTitle": "第1節 介護実践マネジメント",
+        "qNumber": "1-15",
+        "stem": "チームマネジメントの3つの<ruby>柱<rt>はしら</rt></ruby>の1つ<ruby>目<rt>め</rt></ruby>は、<ruby>個別<rt>こべつ</rt></ruby>の<ruby>支援計画<rt>しえんけいかく</rt></ruby>に<ruby>基<rt>もと</rt></ruby>づきケアを<ruby>提供<rt>ていきょう</rt></ruby>する [___] である。",
+        "stem_plain": "チームマネジメントの3つの柱の1つ目は、個別の支援計画に基づきケアを提供する [___] である。"
+    },
+    {
+        "id": 16,
+        "unit": 1,
+        "unit_title": "第1節 介護実践マネジメント",
+        "q_number": "1-16",
+        "question_ruby": "チームマネジメントの3つの<ruby>柱<rt>はしら</rt></ruby>の2つ<ruby>目<rt>め</rt></ruby>は、<ruby>学<rt>まな</rt></ruby>びや<ruby>学<rt>まな</rt></ruby>び<ruby>合<rt>あ</rt></ruby>いを<ruby>通<rt>つう</rt></ruby>じて<ruby>成長<rt>せいちょう</rt></ruby>する [___] である。",
+        "question_plain": "チームマネジメントの3つの柱の2つ目は、学びや学び合いを通じて成長する [___] である。",
+        "options": [
+            "人材育成・自己研鑽",
+            "ケアの展開",
+            "組織の目標達成",
+            "コンプライアンス"
+        ],
+        "answer": 1,
+        "answer_text": "人材育成・自己研鑽",
+        "explanation": "職員一人ひとりの成長を組織として支え、互いに高め合う柱が「人材育成・自己研鑽」です。",
+        "unitTitle": "第1節 介護実践マネジメント",
+        "qNumber": "1-16",
+        "stem": "チームマネジメントの3つの<ruby>柱<rt>はしら</rt></ruby>の2つ<ruby>目<rt>め</rt></ruby>は、<ruby>学<rt>まな</rt></ruby>びや<ruby>学<rt>まな</rt></ruby>び<ruby>合<rt>あ</rt></ruby>いを<ruby>通<rt>つう</rt></ruby>じて<ruby>成長<rt>せいちょう</rt></ruby>する [___] である。",
+        "stem_plain": "チームマネジメントの3つの柱の2つ目は、学びや学び合いを通じて成長する [___] である。"
+    },
+    {
+        "id": 17,
+        "unit": 1,
+        "unit_title": "第1節 介護実践マネジメント",
+        "q_number": "1-17",
+        "question_ruby": "チームマネジメントの3つの<ruby>柱<rt>はしら</rt></ruby>の3つ<ruby>目<rt>め</rt></ruby>は、<ruby>理念<rt>りねん</rt></ruby>や<ruby>目標<rt>もくひょう</rt></ruby>の<ruby>具体化<rt>ぐたいか</rt></ruby>と<ruby>達成<rt>たっせい</rt></ruby>をめざす [___] である。",
+        "question_plain": "チームマネジメントの3つの柱の3つ目は、理念や目標の具体化と達成をめざす [___] である。",
+        "options": [
+            "組織の目標達成",
+            "ケアの展開",
+            "人材育成・自己研鑽",
+            "業務マニュアル化"
+        ],
+        "answer": 1,
+        "answer_text": "組織の目標達成",
+        "explanation": "法人の理念や事業計画を現場で実現し、持続可能な運営を行うための柱が「組織の目標達成」です。",
+        "unitTitle": "第1節 介護実践マネジメント",
+        "qNumber": "1-17",
+        "stem": "チームマネジメントの3つの<ruby>柱<rt>はしら</rt></ruby>の3つ<ruby>目<rt>め</rt></ruby>は、<ruby>理念<rt>りねん</rt></ruby>や<ruby>目標<rt>もくひょう</rt></ruby>の<ruby>具体化<rt>ぐたいか</rt></ruby>と<ruby>達成<rt>たっせい</rt></ruby>をめざす [___] である。",
+        "stem_plain": "チームマネジメントの3つの柱の3つ目は、理念や目標の具体化と達成をめざす [___] である。"
+    },
+    {
+        "id": 18,
+        "unit": 1,
+        "unit_title": "第1節 介護実践マネジメント",
+        "q_number": "1-18",
+        "question_ruby": "<ruby>実際<rt>じっさい</rt></ruby>の<ruby>仕事<rt>しごと</rt></ruby>を<ruby>通<rt>とお</rt></ruby>しておこなわれる<ruby>訓練<rt>くんれん</rt></ruby>や<ruby>学<rt>まな</rt></ruby>びを [___] という。",
+        "question_plain": "実際の仕事を通しておこなわれる訓練や学びを [___] という。",
+        "options": [
+            "OJT",
+            "Off-JT",
+            "SDS",
+            "スーパービジョン"
+        ],
+        "answer": 1,
+        "answer_text": "OJT",
+        "explanation": "職場内訓練（On-the-Job Training）の略で、現場の実務を通じて指導者から指導・教育を受ける手法です。",
+        "unitTitle": "第1節 介護実践マネジメント",
+        "qNumber": "1-18",
+        "stem": "<ruby>実際<rt>じっさい</rt></ruby>の<ruby>仕事<rt>しごと</rt></ruby>を<ruby>通<rt>とお</rt></ruby>しておこなわれる<ruby>訓練<rt>くんれん</rt></ruby>や<ruby>学<rt>まな</rt></ruby>びを [___] という。",
+        "stem_plain": "実際の仕事を通しておこなわれる訓練や学びを [___] という。"
+    },
+    {
+        "id": 19,
+        "unit": 1,
+        "unit_title": "第1節 介護実践マネジメント",
+        "q_number": "1-19",
+        "question_ruby": "<ruby>研修会<rt>けんしゅうかい</rt></ruby>や<ruby>通信教育<rt>つうしんきょういく</rt></ruby>など<ruby>現場<rt>げんば</rt></ruby>を<ruby>離<rt>はな</rt></ruby>れておこなわれる<ruby>学<rt>まな</rt></ruby>びを [___] という。",
+        "question_plain": "研修会や通信教育など現場を離れておこなわれる学びを [___] という。",
+        "options": [
+            "Off-JT",
+            "OJT",
+            "SDS",
+            "リカレント教育"
+        ],
+        "answer": 1,
+        "answer_text": "Off-JT",
+        "explanation": "職場外訓練（Off-the-Job Training）の略で、通常の実務を離れて集合研修やセミナー等で体系的な理論や知識を学びます。",
+        "unitTitle": "第1節 介護実践マネジメント",
+        "qNumber": "1-19",
+        "stem": "<ruby>研修会<rt>けんしゅうかい</rt></ruby>や<ruby>通信教育<rt>つうしんきょういく</rt></ruby>など<ruby>現場<rt>げんば</rt></ruby>を<ruby>離<rt>はな</rt></ruby>れておこなわれる<ruby>学<rt>まな</rt></ruby>びを [___] という。",
+        "stem_plain": "研修会や通信教育など現場を離れておこなわれる学びを [___] という。"
+    },
+    {
+        "id": 20,
+        "unit": 1,
+        "unit_title": "第1節 介護実践マネジメント",
+        "q_number": "1-20",
+        "question_ruby": "<ruby>関係者<rt>かんけいしゃ</rt></ruby>が<ruby>集<rt>あつ</rt></ruby>まり<ruby>情報共有<rt>じょうほうきょうゆう</rt></ruby>や<ruby>共通理解<rt>きょうつうりかい</rt></ruby>をはかり<ruby>課題解決<rt>かだいかいけつ</rt></ruby>を<ruby>行<rt>おこな</rt></ruby>う<ruby>会議<rt>かいぎ</rt></ruby>を [___] という。",
+        "question_plain": "関係者が集まり情報共有や共通理解をはかり課題解決を行う会議を [___] という。",
+        "options": [
+            "ケアカンファレンス",
+            "運営委員会",
+            "朝礼",
+            "スーパービジョン"
+        ],
+        "answer": 1,
+        "answer_text": "ケアカンファレンス",
+        "explanation": "ケアに関する課題をチームで話し合い、方針の統一やよりよい支援方法を検討する専門会議です。",
+        "unitTitle": "第1節 介護実践マネジメント",
+        "qNumber": "1-20",
+        "stem": "<ruby>関係者<rt>かんけいしゃ</rt></ruby>が<ruby>集<rt>あつ</rt></ruby>まり<ruby>情報共有<rt>じょうほうきょうゆう</rt></ruby>や<ruby>共通理解<rt>きょうつうりかい</rt></ruby>をはかり<ruby>課題解決<rt>かだいかいけつ</rt></ruby>を<ruby>行<rt>おこな</rt></ruby>う<ruby>会議<rt>かいぎ</rt></ruby>を [___] という。",
+        "stem_plain": "関係者が集まり情報共有や共通理解をはかり課題解決を行う会議を [___] という。"
+    },
+    {
+        "id": 21,
+        "unit": 1,
+        "unit_title": "第1節 介護実践マネジメント",
+        "q_number": "1-21",
+        "question_ruby": "<ruby>介護<rt>かいご</rt></ruby>サービスの<ruby>質<rt>しつ</rt></ruby>を<ruby>高<rt>たか</rt></ruby>めるために、チーム<ruby>全体<rt>ぜんたい</rt></ruby>で<ruby>取<rt>と</rt></ruby>り<ruby>組<rt>く</rt></ruby>む<ruby>活動<rt>かつどう</rt></ruby>を [___] という。",
+        "question_plain": "介護サービスの質を高めるために、チーム全体で取り組む活動を [___] という。",
+        "options": [
+            "チームマネジメント",
+            "業務改善運動",
+            "リスクマネジメント",
+            "人事考課"
+        ],
+        "answer": 1,
+        "answer_text": "チームマネジメント",
+        "explanation": "個々の力を結集し、理念やケア方針の実現に向けてチームを効果的に導き統括する活動全体を指します。",
+        "unitTitle": "第1節 介護実践マネジメント",
+        "qNumber": "1-21",
+        "stem": "<ruby>介護<rt>かいご</rt></ruby>サービスの<ruby>質<rt>しつ</rt></ruby>を<ruby>高<rt>たか</rt></ruby>めるために、チーム<ruby>全体<rt>ぜんたい</rt></ruby>で<ruby>取<rt>と</rt></ruby>り<ruby>組<rt>く</rt></ruby>む<ruby>活動<rt>かつどう</rt></ruby>を [___] という。",
+        "stem_plain": "介護サービスの質を高めるために、チーム全体で取り組む活動を [___] という。"
+    },
+    {
+        "id": 22,
+        "unit": 1,
+        "unit_title": "第1節 介護実践マネジメント",
+        "q_number": "1-22",
+        "question_ruby": "サービスの<ruby>内容<rt>ないよう</rt></ruby>や<ruby>効果<rt>こうか</rt></ruby>を<ruby>確認<rt>かくにん</rt></ruby>・<ruby>再評価<rt>さいひょうか</rt></ruby>するプロセスのことを [___] という。",
+        "question_plain": "サービスの内容や効果を確認・再評価するプロセスのことを [___] という。",
+        "options": [
+            "モニタリング",
+            "アセスメント",
+            "プランニング",
+            "スーパービジョン"
+        ],
+        "answer": 1,
+        "answer_text": "モニタリング",
+        "explanation": "提供したケアプランやサービスが目標に向けて適切に機能しているかを定期的に把握・点検する過程です。",
+        "unitTitle": "第1節 介護実践マネジメント",
+        "qNumber": "1-22",
+        "stem": "サービスの<ruby>内容<rt>ないよう</rt></ruby>や<ruby>効果<rt>こうか</rt></ruby>を<ruby>確認<rt>かくにん</rt></ruby>・<ruby>再評価<rt>さいひょうか</rt></ruby>するプロセスのことを [___] という。",
+        "stem_plain": "サービスの内容や効果を確認・再評価するプロセスのことを [___] という。"
+    },
+    {
+        "id": 23,
+        "unit": 1,
+        "unit_title": "第1節 介護実践マネジメント",
+        "q_number": "1-23",
+        "question_ruby": "ケアプランの<ruby>立案<rt>りつあん</rt></ruby>において<ruby>中心的<rt>ちゅうしんてき</rt></ruby>な<ruby>役割<rt>やくわり</rt></ruby>を<ruby>担<rt>にな</rt></ruby>う<ruby>職種<rt>しょくしゅ</rt></ruby>は [___] である。",
+        "question_plain": "ケアプランの立案において中心的な役割を担う職種は [___] である。",
+        "options": [
+            "介護支援専門員",
+            "介護福祉士",
+            "生活相談員",
+            "理学療法士"
+        ],
+        "answer": 1,
+        "answer_text": "介護支援専門員",
+        "explanation": "ケアマネジャー（介護支援専門員）は、利用者の意向やアセスメントに基づきケアプランを統括立案する専門職です。",
+        "unitTitle": "第1節 介護実践マネジメント",
+        "qNumber": "1-23",
+        "stem": "ケアプランの<ruby>立案<rt>りつあん</rt></ruby>において<ruby>中心的<rt>ちゅうしんてき</rt></ruby>な<ruby>役割<rt>やくわり</rt></ruby>を<ruby>担<rt>にな</rt></ruby>う<ruby>職種<rt>しょくしゅ</rt></ruby>は [___] である。",
+        "stem_plain": "ケアプランの立案において中心的な役割を担う職種は [___] である。"
+    },
+    {
+        "id": 24,
+        "unit": 1,
+        "unit_title": "第1節 介護実践マネジメント",
+        "q_number": "1-24",
+        "question_ruby": "<ruby>利用者<rt>りようしゃ</rt></ruby>の<ruby>自立<rt>じりつ</rt></ruby>に<ruby>向<rt>む</rt></ruby>けた<ruby>目標<rt>もくひょう</rt></ruby>を<ruby>設定<rt>せってい</rt></ruby>し、<ruby>個別<rt>こべつ</rt></ruby>の<ruby>支援内容<rt>しえんないよう</rt></ruby>をまとめた<ruby>計画<rt>けいかく</rt></ruby>を [___] という。",
+        "question_plain": "利用者の自立に向けた目標を設定し、個別の支援内容をまとめた計画を [___] という。",
+        "options": [
+            "介護計画",
+            "業務手順書",
+            "施設運営計画",
+            "BCP"
+        ],
+        "answer": 1,
+        "answer_text": "介護計画",
+        "explanation": "ケアプランに基づき、介護現場で実践する具体的な援助内容・手順を定めたものが「個別援助計画（介護計画）」です。",
+        "unitTitle": "第1節 介護実践マネジメント",
+        "qNumber": "1-24",
+        "stem": "<ruby>利用者<rt>りようしゃ</rt></ruby>の<ruby>自立<rt>じりつ</rt></ruby>に<ruby>向<rt>む</rt></ruby>けた<ruby>目標<rt>もくひょう</rt></ruby>を<ruby>設定<rt>せってい</rt></ruby>し、<ruby>個別<rt>こべつ</rt></ruby>の<ruby>支援内容<rt>しえんないよう</rt></ruby>をまとめた<ruby>計画<rt>けいかく</rt></ruby>を [___] という。",
+        "stem_plain": "利用者の自立に向けた目標を設定し、個別の支援内容をまとめた計画を [___] という。"
+    },
+    {
+        "id": 25,
+        "unit": 1,
+        "unit_title": "第1節 介護実践マネジメント",
+        "q_number": "1-25",
+        "question_ruby": "チームでケアを<ruby>展開<rt>てんかい</rt></ruby>するプロセスのことを [___] という。",
+        "question_plain": "チームでケアを展開するプロセスのことを [___] という。",
+        "options": [
+            "介護過程",
+            "PDCAサイクル",
+            "ケアアセスメント",
+            "リスクアセスメント"
+        ],
+        "answer": 1,
+        "answer_text": "介護過程",
+        "explanation": "アセスメント→計画立案→実施→評価という一連の科学的・論理的なケア展開プロセスを「介護過程」と呼びます。",
+        "unitTitle": "第1節 介護実践マネジメント",
+        "qNumber": "1-25",
+        "stem": "チームでケアを<ruby>展開<rt>てんかい</rt></ruby>するプロセスのことを [___] という。",
+        "stem_plain": "チームでケアを展開するプロセスのことを [___] という。"
+    },
+    {
+        "id": 26,
+        "unit": 2,
+        "unit_title": "第2節 1,2項 ケア展開",
+        "q_number": "2-1",
+        "question_ruby": "<ruby>介護実践<rt>かいごじっせん</rt></ruby>の<ruby>場<rt>ば</rt></ruby>は、<ruby>介護施設<rt>かいごしせつ</rt></ruby>や<ruby>病院<rt>びょういん</rt></ruby>、<ruby>利用者<rt>りようしゃ</rt></ruby>の [___] など<ruby>多様<rt>たよう</rt></ruby>であり、その<ruby>場<rt>ば</rt></ruby>の<ruby>特性<rt>とくせい</rt></ruby>に<ruby>応<rt>おう</rt></ruby>じたチームが<ruby>作<rt>つく</rt></ruby>られる。",
+        "question_plain": "介護実践の場は、介護施設や病院、利用者の [___] など多様であり、その場の特性に応じたチームが作られる。",
+        "options": [
+            "居宅",
+            "職場",
+            "地域サロン",
+            "公共施設"
+        ],
+        "answer": 1,
+        "answer_text": "居宅",
+        "explanation": "介護が実践される場は施設や病院のみならず、利用者の生活拠点である居宅（自宅）など極めて多様です。",
+        "unitTitle": "第2節 1,2項 ケア展開",
+        "qNumber": "2-1",
+        "stem": "<ruby>介護実践<rt>かいごじっせん</rt></ruby>の<ruby>場<rt>ば</rt></ruby>は、<ruby>介護施設<rt>かいごしせつ</rt></ruby>や<ruby>病院<rt>びょういん</rt></ruby>、<ruby>利用者<rt>りようしゃ</rt></ruby>の [___] など<ruby>多様<rt>たよう</rt></ruby>であり、その<ruby>場<rt>ば</rt></ruby>の<ruby>特性<rt>とくせい</rt></ruby>に<ruby>応<rt>おう</rt></ruby>じたチームが<ruby>作<rt>つく</rt></ruby>られる。",
+        "stem_plain": "介護実践の場は、介護施設や病院、利用者の [___] など多様であり、その場の特性に応じたチームが作られる。"
+    },
+    {
+        "id": 27,
+        "unit": 2,
+        "unit_title": "第2節 1,2項 ケア展開",
+        "q_number": "2-2",
+        "question_ruby": "<ruby>介護福祉職<rt>かいごふくししょく</rt></ruby>のみで<ruby>構成<rt>こうせい</rt></ruby>され、<ruby>食事<rt>しょくじ</rt></ruby>・<ruby>排泄<rt>はいせつ</rt></ruby>・<ruby>入浴<rt>にゅうよく</rt></ruby>ケアチームや<ruby>研修委員会<rt>けんしゅういいんかい</rt></ruby>などを<ruby>行<rt>おこな</rt></ruby>うチームを [___] チームという。",
+        "question_plain": "介護福祉職のみで構成され、食事・排泄・入浴ケアチームや研修委員会などを行うチームを [___] チームという。",
+        "options": [
+            "同職種",
+            "多職種",
+            "専門職",
+            "地域包括"
+        ],
+        "answer": 1,
+        "answer_text": "同職種",
+        "explanation": "同じ職種（介護職同士）で共通の専門技術や業務手順の統一を行うチームを同職種チームと呼びます。",
+        "unitTitle": "第2節 1,2項 ケア展開",
+        "qNumber": "2-2",
+        "stem": "<ruby>介護福祉職<rt>かいごふくししょく</rt></ruby>のみで<ruby>構成<rt>こうせい</rt></ruby>され、<ruby>食事<rt>しょくじ</rt></ruby>・<ruby>排泄<rt>はいせつ</rt></ruby>・<ruby>入浴<rt>にゅうよく</rt></ruby>ケアチームや<ruby>研修委員会<rt>けんしゅういいんかい</rt></ruby>などを<ruby>行<rt>おこな</rt></ruby>うチームを [___] チームという。",
+        "stem_plain": "介護福祉職のみで構成され、食事・排泄・入浴ケアチームや研修委員会などを行うチームを [___] チームという。"
+    },
+    {
+        "id": 28,
+        "unit": 2,
+        "unit_title": "第2節 1,2項 ケア展開",
+        "q_number": "2-3",
+        "question_ruby": "<ruby>医療職<rt>いりょうしょく</rt></ruby>、<ruby>相談職<rt>そうだんしょく</rt></ruby>、<ruby>地域<rt>ちいき</rt></ruby>の<ruby>関係者<rt>かんけいしゃ</rt></ruby>など、<ruby>異<rt>こと</rt></ruby>なる<ruby>専門<rt>せんもん</rt></ruby>を<ruby>持<rt>も</rt></ruby>つ<ruby>職種<rt>しょくしゅ</rt></ruby>が<ruby>連携<rt>れんけい</rt></ruby>するチームを [___] チームという。",
+        "question_plain": "医療職、相談職、地域の関係者など、異なる専門を持つ職種が連携するチームを [___] チームという。",
+        "options": [
+            "多職種",
+            "同職種",
+            "総合",
+            "複眼"
+        ],
+        "answer": 1,
+        "answer_text": "多職種",
+        "explanation": "看護師・リハビリ職・相談員・ケアマネなど、異なる専門性を持つ職種が連携・協働するチームを多職種チームと呼びます。",
+        "unitTitle": "第2節 1,2項 ケア展開",
+        "qNumber": "2-3",
+        "stem": "<ruby>医療職<rt>いりょうしょく</rt></ruby>、<ruby>相談職<rt>そうだんしょく</rt></ruby>、<ruby>地域<rt>ちいき</rt></ruby>の<ruby>関係者<rt>かんけいしゃ</rt></ruby>など、<ruby>異<rt>こと</rt></ruby>なる<ruby>専門<rt>せんもん</rt></ruby>を<ruby>持<rt>も</rt></ruby>つ<ruby>職種<rt>しょくしゅ</rt></ruby>が<ruby>連携<rt>れんけい</rt></ruby>するチームを [___] チームという。",
+        "stem_plain": "医療職、相談職、地域の関係者など、異なる専門を持つ職種が連携するチームを [___] チームという。"
+    },
+    {
+        "id": 29,
+        "unit": 2,
+        "unit_title": "第2節 1,2項 ケア展開",
+        "q_number": "2-4",
+        "question_ruby": "<ruby>連携<rt>れんけい</rt></ruby>の<ruby>取<rt>と</rt></ruby>り<ruby>組<rt>く</rt></ruby>みには、<ruby>事故<rt>じこ</rt></ruby>や<ruby>危険<rt>きけん</rt></ruby>を<ruby>未然<rt>みぜん</rt></ruby>に<ruby>防<rt>ふせ</rt></ruby>ぐための [___] マネジメント<ruby>委員会<rt>いいんかい</rt></ruby>や<ruby>感染症対策委員会<rt>かんせんしょうたいさくいいんかい</rt></ruby>がある。",
+        "question_plain": "連携の取り組みには、事故や危険を未然に防ぐための [___] マネジメント委員会や感染症対策委員会がある。",
+        "options": [
+            "リスク",
+            "タイム",
+            "コスト",
+            "キャリア"
+        ],
+        "answer": 1,
+        "answer_text": "リスク",
+        "explanation": "ヒヤリハット報告の集約や安全対策基準を作成するリスクマネジメント委員会が代表的です。",
+        "unitTitle": "第2節 1,2項 ケア展開",
+        "qNumber": "2-4",
+        "stem": "<ruby>連携<rt>れんけい</rt></ruby>の<ruby>取<rt>と</rt></ruby>り<ruby>組<rt>く</rt></ruby>みには、<ruby>事故<rt>じこ</rt></ruby>や<ruby>危険<rt>きけん</rt></ruby>を<ruby>未然<rt>みぜん</rt></ruby>に<ruby>防<rt>ふせ</rt></ruby>ぐための [___] マネジメント<ruby>委員会<rt>いいんかい</rt></ruby>や<ruby>感染症対策委員会<rt>かんせんしょうたいさくいいんかい</rt></ruby>がある。",
+        "stem_plain": "連携の取り組みには、事故や危険を未然に防ぐための [___] マネジメント委員会や感染症対策委員会がある。"
+    },
+    {
+        "id": 30,
+        "unit": 2,
+        "unit_title": "第2節 1,2項 ケア展開",
+        "q_number": "2-5",
+        "question_ruby": "<ruby>地域包括<rt>ちいきほうかつ</rt></ruby>ケアの<ruby>展開<rt>てんかい</rt></ruby>においては、<ruby>個別<rt>こべつ</rt></ruby>の<ruby>課題解決<rt>かだいかいけつ</rt></ruby>やネットワーク<ruby>構築<rt>こうちく</rt></ruby>の<ruby>場<rt>ば</rt></ruby>として [___] ケア<ruby>会議<rt>かいぎ</rt></ruby>が<ruby>重要<rt>じゅうよう</rt></ruby>である。",
+        "question_plain": "地域包括ケアの展開においては、個別の課題解決やネットワーク構築の場として [___] ケア会議が重要である。",
+        "options": [
+            "地域",
+            "サービス担当者",
+            "運営",
+            "倫理"
+        ],
+        "answer": 1,
+        "answer_text": "地域",
+        "explanation": "地域ケア会議は、個別の自立支援策の検討から地域課題の発見、地域包括支援体制の基盤構築までを担います。",
+        "unitTitle": "第2節 1,2項 ケア展開",
+        "qNumber": "2-5",
+        "stem": "<ruby>地域包括<rt>ちいきほうかつ</rt></ruby>ケアの<ruby>展開<rt>てんかい</rt></ruby>においては、<ruby>個別<rt>こべつ</rt></ruby>の<ruby>課題解決<rt>かだいかいけつ</rt></ruby>やネットワーク<ruby>構築<rt>こうちく</rt></ruby>の<ruby>場<rt>ば</rt></ruby>として [___] ケア<ruby>会議<rt>かいぎ</rt></ruby>が<ruby>重要<rt>じゅうよう</rt></ruby>である。",
+        "stem_plain": "地域包括ケアの展開においては、個別の課題解決やネットワーク構築の場として [___] ケア会議が重要である。"
+    },
+    {
+        "id": 31,
+        "unit": 2,
+        "unit_title": "第2節 1,2項 ケア展開",
+        "q_number": "2-6",
+        "question_ruby": "<ruby>人<rt>ひと</rt></ruby>の<ruby>行動<rt>こうどう</rt></ruby>や<ruby>考<rt>かんが</rt></ruby>え<ruby>方<rt>かた</rt></ruby>は<ruby>集団<rt>しゅうだん</rt></ruby>から<ruby>影響<rt>えいきょう</rt></ruby>を<ruby>受<rt>う</rt></ruby>け、<ruby>個人<rt>こじん</rt></ruby>の<ruby>行動<rt>こうどう</rt></ruby>も<ruby>集団<rt>しゅうだん</rt></ruby>に<ruby>影響<rt>えいきょう</rt></ruby>を<ruby>与<rt>あた</rt></ruby>えるという<ruby>特性<rt>とくせい</rt></ruby>を [___] （グループ・ダイナミクス）という。",
+        "question_plain": "人の行動や考え方は集団から影響を受け、個人の行動も集団に影響を与えるという特性を [___] （グループ・ダイナミクス）という。",
+        "options": [
+            "集団力学",
+            "行動心理学",
+            "相互扶助",
+            "組織統制"
+        ],
+        "answer": 1,
+        "answer_text": "集団力学",
+        "explanation": "集団内の力関係や相互作用によって人と集団が互いに及ぼし合う影響を「集団力学（グループ・ダイナミクス）」といいます。",
+        "unitTitle": "第2節 1,2項 ケア展開",
+        "qNumber": "2-6",
+        "stem": "<ruby>人<rt>ひと</rt></ruby>の<ruby>行動<rt>こうどう</rt></ruby>や<ruby>考<rt>かんが</rt></ruby>え<ruby>方<rt>かた</rt></ruby>は<ruby>集団<rt>しゅうだん</rt></ruby>から<ruby>影響<rt>えいきょう</rt></ruby>を<ruby>受<rt>う</rt></ruby>け、<ruby>個人<rt>こじん</rt></ruby>の<ruby>行動<rt>こうどう</rt></ruby>も<ruby>集団<rt>しゅうだん</rt></ruby>に<ruby>影響<rt>えいきょう</rt></ruby>を<ruby>与<rt>あた</rt></ruby>えるという<ruby>特性<rt>とくせい</rt></ruby>を [___] （グループ・ダイナミクス）という。",
+        "stem_plain": "人の行動や考え方は集団から影響を受け、個人の行動も集団に影響を与えるという特性を [___] （グループ・ダイナミクス）という。"
+    },
+    {
+        "id": 32,
+        "unit": 2,
+        "unit_title": "第2節 1,2項 ケア展開",
+        "q_number": "2-7",
+        "question_ruby": "クルト・レヴィンは、<ruby>集団<rt>しゅうだん</rt></ruby>における<ruby>人<rt>ひと</rt></ruby>の<ruby>行動<rt>こうどう</rt></ruby>や<ruby>考<rt>かんが</rt></ruby>え<ruby>方<rt>かた</rt></ruby>を<ruby>分析<rt>ぶんせき</rt></ruby>する<ruby>際<rt>さい</rt></ruby>に「 [___] の<ruby>力<rt>ちから</rt></ruby>」をとらえることの<ruby>重要性<rt>じゅうようせい</rt></ruby>を<ruby>指摘<rt>してき</rt></ruby>した。",
+        "question_plain": "クルト・レヴィンは、集団における人の行動や考え方を分析する際に「 [___] の力」をとらえることの重要性を指摘した。",
+        "options": [
+            "場",
+            "運",
+            "命",
+            "絆"
+        ],
+        "answer": 1,
+        "answer_text": "場",
+        "explanation": "社会心理学者クルト・レヴィンは、行動は人と環境の相互作用（生活空間＝場の力）によって生じると論じました。",
+        "unitTitle": "第2節 1,2項 ケア展開",
+        "qNumber": "2-7",
+        "stem": "クルト・レヴィンは、<ruby>集団<rt>しゅうだん</rt></ruby>における<ruby>人<rt>ひと</rt></ruby>の<ruby>行動<rt>こうどう</rt></ruby>や<ruby>考<rt>かんが</rt></ruby>え<ruby>方<rt>かた</rt></ruby>を<ruby>分析<rt>ぶんせき</rt></ruby>する<ruby>際<rt>さい</rt></ruby>に「 [___] の<ruby>力<rt>ちから</rt></ruby>」をとらえることの<ruby>重要性<rt>じゅうようせい</rt></ruby>を<ruby>指摘<rt>してき</rt></ruby>した。",
+        "stem_plain": "クルト・レヴィンは、集団における人の行動や考え方を分析する際に「 [___] の力」をとらえることの重要性を指摘した。"
+    },
+    {
+        "id": 33,
+        "unit": 2,
+        "unit_title": "第2節 1,2項 ケア展開",
+        "q_number": "2-8",
+        "question_ruby": "<ruby>三隅二不二<rt>みすみじゅうじ</rt></ruby>が<ruby>提唱<rt>ていしょう</rt></ruby>したリーダーシップ<ruby>理論<rt>りろん</rt></ruby>であり、2つの<ruby>機能<rt>きのう</rt></ruby>の<ruby>頭文字<rt>かしらもじ</rt></ruby>をとったものを [___] <ruby>理論<rt>りろん</rt></ruby>という。",
+        "question_plain": "三隅二不二が提唱したリーダーシップ理論であり、2つの機能の頭文字をとったものを [___] 理論という。",
+        "options": [
+            "ＰＭ",
+            "ＭＢＯ",
+            "ＳＷＯＴ",
+            "３Ｃ"
+        ],
+        "answer": 1,
+        "answer_text": "ＰＭ",
+        "explanation": "日本の心理学者・三隅二不二が確立したリーダーシップ理論で、目標達成機能（P）と集団維持機能（M）から構成されます。",
+        "unitTitle": "第2節 1,2項 ケア展開",
+        "qNumber": "2-8",
+        "stem": "<ruby>三隅二不二<rt>みすみじゅうじ</rt></ruby>が<ruby>提唱<rt>ていしょう</rt></ruby>したリーダーシップ<ruby>理論<rt>りろん</rt></ruby>であり、2つの<ruby>機能<rt>きのう</rt></ruby>の<ruby>頭文字<rt>かしらもじ</rt></ruby>をとったものを [___] <ruby>理論<rt>りろん</rt></ruby>という。",
+        "stem_plain": "三隅二不二が提唱したリーダーシップ理論であり、2つの機能の頭文字をとったものを [___] 理論という。"
+    },
+    {
+        "id": 34,
+        "unit": 2,
+        "unit_title": "第2節 1,2項 ケア展開",
+        "q_number": "2-9",
+        "question_ruby": "PM<ruby>理論<rt>りろん</rt></ruby>において、<ruby>組織<rt>そしき</rt></ruby>の<ruby>目的<rt>もくてき</rt></ruby>を<ruby>達成<rt>たっせい</rt></ruby>させる「<ruby>職務<rt>しょくむ</rt></ruby>を<ruby>遂行<rt>すいこう</rt></ruby>させる<ruby>機能<rt>きのう</rt></ruby>」を [___] <ruby>機能<rt>きのう</rt></ruby>という。",
+        "question_plain": "PM理論において、組織の目的を達成させる「職務を遂行させる機能」を [___] 機能という。",
+        "options": [
+            "Ｐ（パフォーマンス）",
+            "Ｍ（メンテナンス）",
+            "Ｌ（リーダー）",
+            "Ｓ（サポート）"
+        ],
+        "answer": 1,
+        "answer_text": "Ｐ（パフォーマンス）",
+        "explanation": "Performance（目標達成・課題解決能力）の頭文字Pをとった機能で、計画立案や指示、規則遵守の促進などを含みます。",
+        "unitTitle": "第2節 1,2項 ケア展開",
+        "qNumber": "2-9",
+        "stem": "PM<ruby>理論<rt>りろん</rt></ruby>において、<ruby>組織<rt>そしき</rt></ruby>の<ruby>目的<rt>もくてき</rt></ruby>を<ruby>達成<rt>たっせい</rt></ruby>させる「<ruby>職務<rt>しょくむ</rt></ruby>を<ruby>遂行<rt>すいこう</rt></ruby>させる<ruby>機能<rt>きのう</rt></ruby>」を [___] <ruby>機能<rt>きのう</rt></ruby>という。",
+        "stem_plain": "PM理論において、組織の目的を達成させる「職務を遂行させる機能」を [___] 機能という。"
+    },
+    {
+        "id": 35,
+        "unit": 2,
+        "unit_title": "第2節 1,2項 ケア展開",
+        "q_number": "2-10",
+        "question_ruby": "PM<ruby>理論<rt>りろん</rt></ruby>において、メンバー<ruby>間<rt>かん</rt></ruby>の<ruby>摩擦<rt>まさつ</rt></ruby>や<ruby>葛藤<rt>かっとう</rt></ruby>を<ruby>回避<rt>かいひ</rt></ruby>しチーム<ruby>意識<rt>いしき</rt></ruby>を<ruby>醸成<rt>じょうせい</rt></ruby>させる「<ruby>集団<rt>しゅうだん</rt></ruby>を<ruby>維持<rt>いじ</rt></ruby>させる<ruby>機能<rt>きのう</rt></ruby>」を [___] <ruby>機能<rt>きのう</rt></ruby>という。",
+        "question_plain": "PM理論において、メンバー間の摩擦や葛藤を回避しチーム意識を醸成させる「集団を維持させる機能」を [___] 機能という。",
+        "options": [
+            "Ｍ（メンテナンス）",
+            "Ｐ（パフォーマンス）",
+            "Ｃ（ケア）",
+            "Ｔ（チーム）"
+        ],
+        "answer": 1,
+        "answer_text": "Ｍ（メンテナンス）",
+        "explanation": "Maintenance（集団維持機能）の頭文字Mをとった機能で、人間関係の調整やチームワークの向上を促します。",
+        "unitTitle": "第2節 1,2項 ケア展開",
+        "qNumber": "2-10",
+        "stem": "PM<ruby>理論<rt>りろん</rt></ruby>において、メンバー<ruby>間<rt>かん</rt></ruby>の<ruby>摩擦<rt>まさつ</rt></ruby>や<ruby>葛藤<rt>かっとう</rt></ruby>を<ruby>回避<rt>かいひ</rt></ruby>しチーム<ruby>意識<rt>いしき</rt></ruby>を<ruby>醸成<rt>じょうせい</rt></ruby>させる「<ruby>集団<rt>しゅうだん</rt></ruby>を<ruby>維持<rt>いじ</rt></ruby>させる<ruby>機能<rt>きのう</rt></ruby>」を [___] <ruby>機能<rt>きのう</rt></ruby>という。",
+        "stem_plain": "PM理論において、メンバー間の摩擦や葛藤を回避しチーム意識を醸成させる「集団を維持させる機能」を [___] 機能という。"
+    },
+    {
+        "id": 36,
+        "unit": 2,
+        "unit_title": "第2節 1,2項 ケア展開",
+        "q_number": "2-11",
+        "question_ruby": "<ruby>災害<rt>さいがい</rt></ruby>や<ruby>緊急事態<rt>きんきゅうじたい</rt></ruby>に<ruby>備<rt>そな</rt></ruby>え、<ruby>介護<rt>かいご</rt></ruby>サービスの<ruby>提供<rt>ていきょう</rt></ruby>を<ruby>継続<rt>けいぞく</rt></ruby>するために<ruby>策定<rt>さくてい</rt></ruby>が<ruby>求<rt>もと</rt></ruby>められる<ruby>計画<rt>けいかく</rt></ruby>を [___] （<ruby>業務継続計画<rt>ぎょうむけいぞくけいかく</rt></ruby>）という。",
+        "question_plain": "災害や緊急事態に備え、介護サービスの提供を継続するために策定が求められる計画を [___] （業務継続計画）という。",
+        "options": [
+            "ＢＣＰ",
+            "ＰＤＣＡ",
+            "ＳＤＳ",
+            "ＯＪＴ"
+        ],
+        "answer": 1,
+        "answer_text": "ＢＣＰ",
+        "explanation": "Business Continuity Plan（事業継続計画）の略称で、感染症や自然災害発生時にも重要業務を中断させない計画です。",
+        "unitTitle": "第2節 1,2項 ケア展開",
+        "qNumber": "2-11",
+        "stem": "<ruby>災害<rt>さいがい</rt></ruby>や<ruby>緊急事態<rt>きんきゅうじたい</rt></ruby>に<ruby>備<rt>そな</rt></ruby>え、<ruby>介護<rt>かいご</rt></ruby>サービスの<ruby>提供<rt>ていきょう</rt></ruby>を<ruby>継続<rt>けいぞく</rt></ruby>するために<ruby>策定<rt>さくてい</rt></ruby>が<ruby>求<rt>もと</rt></ruby>められる<ruby>計画<rt>けいかく</rt></ruby>を [___] （<ruby>業務継続計画<rt>ぎょうむけいぞくけいかく</rt></ruby>）という。",
+        "stem_plain": "災害や緊急事態に備え、介護サービスの提供を継続するために策定が求められる計画を [___] （業務継続計画）という。"
+    },
+    {
+        "id": 37,
+        "unit": 2,
+        "unit_title": "第2節 1,2項 ケア展開",
+        "q_number": "2-12",
+        "question_ruby": "チームで<ruby>目標<rt>もくひょう</rt></ruby>を<ruby>共有<rt>きょうゆう</rt></ruby>し、<ruby>目標達成<rt>もくひょうたっせい</rt></ruby>のためにメンバー<ruby>全員<rt>ぜんいん</rt></ruby>で<ruby>協働<rt>きょうどう</rt></ruby>することをチーム [___] という。",
+        "question_plain": "チームで目標を共有し、目標達成のためにメンバー全員で協働することをチーム [___] という。",
+        "options": [
+            "ワーク",
+            "リーダー",
+            "ビルド",
+            "コーチ"
+        ],
+        "answer": 1,
+        "answer_text": "ワーク",
+        "explanation": "共通の目標に向かって各自が専門性を発揮しながら協力し合う協働行動をチームワークと呼びます。",
+        "unitTitle": "第2節 1,2項 ケア展開",
+        "qNumber": "2-12",
+        "stem": "チームで<ruby>目標<rt>もくひょう</rt></ruby>を<ruby>共有<rt>きょうゆう</rt></ruby>し、<ruby>目標達成<rt>もくひょうたっせい</rt></ruby>のためにメンバー<ruby>全員<rt>ぜんいん</rt></ruby>で<ruby>協働<rt>きょうどう</rt></ruby>することをチーム [___] という。",
+        "stem_plain": "チームで目標を共有し、目標達成のためにメンバー全員で協働することをチーム [___] という。"
+    },
+    {
+        "id": 38,
+        "unit": 2,
+        "unit_title": "第2節 1,2項 ケア展開",
+        "q_number": "2-13",
+        "question_ruby": "<ruby>複数<rt>ふくすう</rt></ruby>の<ruby>職員<rt>しょくいん</rt></ruby>が<ruby>把握<rt>はあく</rt></ruby>した<ruby>情報<rt>じょうほう</rt></ruby>をつなぎ<ruby>合<rt>あ</rt></ruby>わせることで、<ruby>利用者<rt>りようしゃ</rt></ruby>の [___] <ruby>像<rt>ぞう</rt></ruby>をより<ruby>広<rt>ひろ</rt></ruby>く<ruby>理解<rt>りかい</rt></ruby>することができる。",
+        "question_plain": "複数の職員が把握した情報をつなぎ合わせることで、利用者の [___] 像をより広く理解することができる。",
+        "options": [
+            "全体",
+            "理想",
+            "過去",
+            "病態"
+        ],
+        "answer": 1,
+        "answer_text": "全体",
+        "explanation": "各職員の断片的な気付きや情報を持ち寄ることで、利用者の全人的な「全体像」が鮮明に浮かび上がります。",
+        "unitTitle": "第2節 1,2項 ケア展開",
+        "qNumber": "2-13",
+        "stem": "<ruby>複数<rt>ふくすう</rt></ruby>の<ruby>職員<rt>しょくいん</rt></ruby>が<ruby>把握<rt>はあく</rt></ruby>した<ruby>情報<rt>じょうほう</rt></ruby>をつなぎ<ruby>合<rt>あ</rt></ruby>わせることで、<ruby>利用者<rt>りようしゃ</rt></ruby>の [___] <ruby>像<rt>ぞう</rt></ruby>をより<ruby>広<rt>ひろ</rt></ruby>く<ruby>理解<rt>りかい</rt></ruby>することができる。",
+        "stem_plain": "複数の職員が把握した情報をつなぎ合わせることで、利用者の [___] 像をより広く理解することができる。"
+    },
+    {
+        "id": 39,
+        "unit": 2,
+        "unit_title": "第2節 1,2項 ケア展開",
+        "q_number": "2-14",
+        "question_ruby": "<ruby>介護保険<rt>かいごほけん</rt></ruby>のケアマネジメントにおいて、ケアマネジャーがケアプランを<ruby>立案<rt>りつあん</rt></ruby>・モニタリングする<ruby>際<rt>さい</rt></ruby>に<ruby>開催<rt>かいさい</rt></ruby>される<ruby>会議<rt>かいぎ</rt></ruby>をサービス [___] <ruby>会議<rt>かいぎ</rt></ruby>という。",
+        "question_plain": "介護保険のケアマネジメントにおいて、ケアマネジャーがケアプランを立案・モニタリングする際に開催される会議をサービス [___] 会議という。",
+        "options": [
+            "担当者",
+            "調整",
+            "検討",
+            "評価"
+        ],
+        "answer": 1,
+        "answer_text": "担当者",
+        "explanation": "利用者本人や家族、関わる全サービス事業所の担当者を招集して開催する公式な会議です。",
+        "unitTitle": "第2節 1,2項 ケア展開",
+        "qNumber": "2-14",
+        "stem": "<ruby>介護保険<rt>かいごほけん</rt></ruby>のケアマネジメントにおいて、ケアマネジャーがケアプランを<ruby>立案<rt>りつあん</rt></ruby>・モニタリングする<ruby>際<rt>さい</rt></ruby>に<ruby>開催<rt>かいさい</rt></ruby>される<ruby>会議<rt>かいぎ</rt></ruby>をサービス [___] <ruby>会議<rt>かいぎ</rt></ruby>という。",
+        "stem_plain": "介護保険のケアマネジメントにおいて、ケアマネジャーがケアプランを立案・モニタリングする際に開催される会議をサービス [___] 会議という。"
+    },
+    {
+        "id": 40,
+        "unit": 2,
+        "unit_title": "第2節 1,2項 ケア展開",
+        "q_number": "2-15",
+        "question_ruby": "サービス<ruby>担当者会議<rt>たんとうしゃかいぎ</rt></ruby>で<ruby>立案<rt>りつあん</rt></ruby>されるケアプランはサービス<ruby>全体<rt>ぜんたい</rt></ruby>を<ruby>網羅<rt>もうら</rt></ruby>したものであり、<ruby>介護過程<rt>かいごかてい</rt></ruby>で<ruby>作成<rt>さくせい</rt></ruby>される [___] <ruby>計画<rt>けいかく</rt></ruby>とは<ruby>異<rt>こと</rt></ruby>なる。",
+        "question_plain": "サービス担当者会議で立案されるケアプランはサービス全体を網羅したものであり、介護過程で作成される [___] 計画とは異なる。",
+        "options": [
+            "介護",
+            "生活支援",
+            "リハビリ",
+            "看護"
+        ],
+        "answer": 1,
+        "answer_text": "介護",
+        "explanation": "居宅サービス計画（ケアプラン）と、介護職が現場で具体化する個別援助計画（介護計画）の相違点です。",
+        "unitTitle": "第2節 1,2項 ケア展開",
+        "qNumber": "2-15",
+        "stem": "サービス<ruby>担当者会議<rt>たんとうしゃかいぎ</rt></ruby>で<ruby>立案<rt>りつあん</rt></ruby>されるケアプランはサービス<ruby>全体<rt>ぜんたい</rt></ruby>を<ruby>網羅<rt>もうら</rt></ruby>したものであり、<ruby>介護過程<rt>かいごかてい</rt></ruby>で<ruby>作成<rt>さくせい</rt></ruby>される [___] <ruby>計画<rt>けいかく</rt></ruby>とは<ruby>異<rt>こと</rt></ruby>なる。",
+        "stem_plain": "サービス担当者会議で立案されるケアプランはサービス全体を網羅したものであり、介護過程で作成される [___] 計画とは異なる。"
+    },
+    {
+        "id": 41,
+        "unit": 2,
+        "unit_title": "第2節 1,2項 ケア展開",
+        "q_number": "2-16",
+        "question_ruby": "<ruby>入所<rt>にゅうしょ</rt></ruby>サービスなどの<ruby>交代制勤務<rt>こうたいせいきんむ</rt></ruby>において、<ruby>勤務交代時<rt>きんむこうたいじ</rt></ruby>に<ruby>次<rt>つぎ</rt></ruby>の<ruby>勤務者<rt>きんむしゃ</rt></ruby>へ<ruby>情報<rt>じょうほう</rt></ruby>をひきつぐことを [___] という。",
+        "question_plain": "入所サービスなどの交代制勤務において、勤務交代時に次の勤務者へ情報をひきつぐことを [___] という。",
+        "options": [
+            "申し送り",
+            "引き継ぎ書",
+            "カンファレンス",
+            "報告書"
+        ],
+        "answer": 1,
+        "answer_text": "申し送り",
+        "explanation": "24時間連続するケアにおいて、利用者の体調変化や特記事項を正確に次の勤務帯に伝える業務を「申し送り」といいます。",
+        "unitTitle": "第2節 1,2項 ケア展開",
+        "qNumber": "2-16",
+        "stem": "<ruby>入所<rt>にゅうしょ</rt></ruby>サービスなどの<ruby>交代制勤務<rt>こうたいせいきんむ</rt></ruby>において、<ruby>勤務交代時<rt>きんむこうたいじ</rt></ruby>に<ruby>次<rt>つぎ</rt></ruby>の<ruby>勤務者<rt>きんむしゃ</rt></ruby>へ<ruby>情報<rt>じょうほう</rt></ruby>をひきつぐことを [___] という。",
+        "stem_plain": "入所サービスなどの交代制勤務において、勤務交代時に次の勤務者へ情報をひきつぐことを [___] という。"
+    },
+    {
+        "id": 42,
+        "unit": 2,
+        "unit_title": "第2節 1,2項 ケア展開",
+        "q_number": "2-17",
+        "question_ruby": "<ruby>同<rt>おな</rt></ruby>じ「<ruby>食事量<rt>しょくじりょう</rt></ruby>の<ruby>低下<rt>ていか</rt></ruby>」という<ruby>事実<rt>じじつ</rt></ruby>に<ruby>対<rt>たい</rt></ruby>しても、<ruby>職種<rt>しょくしゅ</rt></ruby>によってその<ruby>情報<rt>じょうほう</rt></ruby>への「 [___] づけ」が<ruby>異<rt>こと</rt></ruby>なる。",
+        "question_plain": "同じ「食事量の低下」という事実に対しても、職種によってその情報への「 [___] づけ」が異なる。",
+        "options": [
+            "意味",
+            "位置",
+            "順位",
+            "価値"
+        ],
+        "answer": 1,
+        "answer_text": "意味",
+        "explanation": "医師は病状、看護師は脱水やバイタル、栄養士は摂取カロリー、介護職は嗜好や姿勢など、意味づけの視点が異なります。",
+        "unitTitle": "第2節 1,2項 ケア展開",
+        "qNumber": "2-17",
+        "stem": "<ruby>同<rt>おな</rt></ruby>じ「<ruby>食事量<rt>しょくじりょう</rt></ruby>の<ruby>低下<rt>ていか</rt></ruby>」という<ruby>事実<rt>じじつ</rt></ruby>に<ruby>対<rt>たい</rt></ruby>しても、<ruby>職種<rt>しょくしゅ</rt></ruby>によってその<ruby>情報<rt>じょうほう</rt></ruby>への「 [___] づけ」が<ruby>異<rt>こと</rt></ruby>なる。",
+        "stem_plain": "同じ「食事量の低下」という事実に対しても、職種によってその情報への「 [___] づけ」が異なる。"
+    },
+    {
+        "id": 43,
+        "unit": 2,
+        "unit_title": "第2節 1,2項 ケア展開",
+        "q_number": "2-18",
+        "question_ruby": "<ruby>職種<rt>しょくしゅ</rt></ruby>による<ruby>視点<rt>してん</rt></ruby>の<ruby>違<rt>ちが</rt></ruby>いはどれが<ruby>正<rt>ただ</rt></ruby>しいかではなく、<ruby>各専門性<rt>かくせんもんせい</rt></ruby>の<ruby>情報<rt>じょうほう</rt></ruby>を [___] することが<ruby>求<rt>もと</rt></ruby>められる。",
+        "question_plain": "職種による視点の違いはどれが正しいかではなく、各専門性の情報を [___] することが求められる。",
+        "options": [
+            "統合",
+            "選別",
+            "平均化",
+            "集約"
+        ],
+        "answer": 1,
+        "answer_text": "統合",
+        "explanation": "互いの視点の優劣を決めるのではなく、それぞれの専門的知見を統合して利用者の最善の支援に結びつけます。",
+        "unitTitle": "第2節 1,2項 ケア展開",
+        "qNumber": "2-18",
+        "stem": "<ruby>職種<rt>しょくしゅ</rt></ruby>による<ruby>視点<rt>してん</rt></ruby>の<ruby>違<rt>ちが</rt></ruby>いはどれが<ruby>正<rt>ただ</rt></ruby>しいかではなく、<ruby>各専門性<rt>かくせんもんせい</rt></ruby>の<ruby>情報<rt>じょうほう</rt></ruby>を [___] することが<ruby>求<rt>もと</rt></ruby>められる。",
+        "stem_plain": "職種による視点の違いはどれが正しいかではなく、各専門性の情報を [___] することが求められる。"
+    },
+    {
+        "id": 44,
+        "unit": 2,
+        "unit_title": "第2節 1,2項 ケア展開",
+        "q_number": "2-19",
+        "question_ruby": "チームという<ruby>集団<rt>しゅうだん</rt></ruby>が<ruby>一体<rt>いったい</rt></ruby>となって「<ruby>何<rt>なに</rt></ruby>をめざすのか」を<ruby>示<rt>しめ</rt></ruby>す<ruby>道標<rt>みちしるべ</rt></ruby>となるものを、ケアの [___] という。",
+        "question_plain": "チームという集団が一体となって「何をめざすのか」を示す道標となるものを、ケアの [___] という。",
+        "options": [
+            "方針",
+            "基準",
+            "マニュアル",
+            "記録"
+        ],
+        "answer": 1,
+        "answer_text": "方針",
+        "explanation": "チーム全体が目指す理念や方向性を共有するための指針を「ケアの方針」と呼びます。",
+        "unitTitle": "第2節 1,2項 ケア展開",
+        "qNumber": "2-19",
+        "stem": "チームという<ruby>集団<rt>しゅうだん</rt></ruby>が<ruby>一体<rt>いったい</rt></ruby>となって「<ruby>何<rt>なに</rt></ruby>をめざすのか」を<ruby>示<rt>しめ</rt></ruby>す<ruby>道標<rt>みちしるべ</rt></ruby>となるものを、ケアの [___] という。",
+        "stem_plain": "チームという集団が一体となって「何をめざすのか」を示す道標となるものを、ケアの [___] という。"
+    },
+    {
+        "id": 45,
+        "unit": 2,
+        "unit_title": "第2節 1,2項 ケア展開",
+        "q_number": "2-20",
+        "question_ruby": "ケアの<ruby>方針<rt>ほうしん</rt></ruby>が<ruby>明確<rt>めいかく</rt></ruby>でないと、それぞれの<ruby>介護職<rt>かいごしょく</rt></ruby>が<ruby>思<rt>おも</rt></ruby>い<ruby>思<rt>おも</rt></ruby>いのケアを<ruby>展開<rt>てんかい</rt></ruby>し、ケアの [___] <ruby>性<rt>せい</rt></ruby>がなくなってしまう。",
+        "question_plain": "ケアの方針が明確でないと、それぞれの介護職が思い思いのケアを展開し、ケアの [___] 性がなくなってしまう。",
+        "options": [
+            "一貫",
+            "多様",
+            "効率",
+            "専門"
+        ],
+        "answer": 1,
+        "answer_text": "一貫",
+        "explanation": "方針がないと担当者ごとに対応がバラバラになり、利用者を混乱させケアの一貫性が失われてしまいます。",
+        "unitTitle": "第2節 1,2項 ケア展開",
+        "qNumber": "2-20",
+        "stem": "ケアの<ruby>方針<rt>ほうしん</rt></ruby>が<ruby>明確<rt>めいかく</rt></ruby>でないと、それぞれの<ruby>介護職<rt>かいごしょく</rt></ruby>が<ruby>思<rt>おも</rt></ruby>い<ruby>思<rt>おも</rt></ruby>いのケアを<ruby>展開<rt>てんかい</rt></ruby>し、ケアの [___] <ruby>性<rt>せい</rt></ruby>がなくなってしまう。",
+        "stem_plain": "ケアの方針が明確でないと、それぞれの介護職が思い思いのケアを展開し、ケアの [___] 性がなくなってしまう。"
+    },
+    {
+        "id": 46,
+        "unit": 2,
+        "unit_title": "第2節 1,2項 ケア展開",
+        "q_number": "2-21",
+        "question_ruby": "よりよいケアを<ruby>行<rt>おこな</rt></ruby>うためには、チームでおこなったケアを「 [___] ・<ruby>修正<rt>しゅうせい</rt></ruby>」する<ruby>機会<rt>きかい</rt></ruby>を<ruby>設<rt>もう</rt></ruby>けることが<ruby>必要<rt>ひつよう</rt></ruby>である。",
+        "question_plain": "よりよいケアを行うためには、チームでおこなったケアを「 [___] ・修正」する機会を設けることが必要である。",
+        "options": [
+            "評価",
+            "承認",
+            "記録",
+            "報告"
+        ],
+        "answer": 1,
+        "answer_text": "評価",
+        "explanation": "やりっぱなしにせず、カンファレンス等で成果や問題点を振り返り「評価・修正」することが質の向上に不可欠です。",
+        "unitTitle": "第2節 1,2項 ケア展開",
+        "qNumber": "2-21",
+        "stem": "よりよいケアを<ruby>行<rt>おこな</rt></ruby>うためには、チームでおこなったケアを「 [___] ・<ruby>修正<rt>しゅうせい</rt></ruby>」する<ruby>機会<rt>きかい</rt></ruby>を<ruby>設<rt>もう</rt></ruby>けることが<ruby>必要<rt>ひつよう</rt></ruby>である。",
+        "stem_plain": "よりよいケアを行うためには、チームでおこなったケアを「 [___] ・修正」する機会を設けることが必要である。"
+    },
+    {
+        "id": 47,
+        "unit": 2,
+        "unit_title": "第2節 1,2項 ケア展開",
+        "q_number": "2-22",
+        "question_ruby": "<ruby>無意識<rt>むいしき</rt></ruby>のうちに<ruby>展開<rt>てんかい</rt></ruby>している<ruby>質<rt>しつ</rt></ruby>の<ruby>高<rt>たか</rt></ruby>いケアをチーム<ruby>全体<rt>ぜんたい</rt></ruby>で<ruby>共有<rt>きょうゆう</rt></ruby>するため、 [___] <ruby>化<rt>か</rt></ruby>して<ruby>業務体制<rt>ぎょうむたいせい</rt></ruby>をととのえることが<ruby>有効<rt>ゆうこう</rt></ruby>である。",
+        "question_plain": "無意識のうちに展開している質の高いケアをチーム全体で共有するため、 [___] 化して業務体制をととのえることが有効である。",
+        "options": [
+            "マニュアル",
+            "システム",
+            "ペーパーレス",
+            "デジタル"
+        ],
+        "answer": 1,
+        "answer_text": "マニュアル",
+        "explanation": "ベテランの暗黙知や質の高い支援技術を手順書（マニュアル）化することで、チーム全員で標準化して共有できます。",
+        "unitTitle": "第2節 1,2項 ケア展開",
+        "qNumber": "2-22",
+        "stem": "<ruby>無意識<rt>むいしき</rt></ruby>のうちに<ruby>展開<rt>てんかい</rt></ruby>している<ruby>質<rt>しつ</rt></ruby>の<ruby>高<rt>たか</rt></ruby>いケアをチーム<ruby>全体<rt>ぜんたい</rt></ruby>で<ruby>共有<rt>きょうゆう</rt></ruby>するため、 [___] <ruby>化<rt>か</rt></ruby>して<ruby>業務体制<rt>ぎょうむたいせい</rt></ruby>をととのえることが<ruby>有効<rt>ゆうこう</rt></ruby>である。",
+        "stem_plain": "無意識のうちに展開している質の高いケアをチーム全体で共有するため、 [___] 化して業務体制をととのえることが有効である。"
+    },
+    {
+        "id": 48,
+        "unit": 3,
+        "unit_title": "第2節 3項 チーム力最大化",
+        "q_number": "3-1",
+        "question_ruby": "チームの<ruby>力<rt>ちから</rt></ruby>を<ruby>最大化<rt>さいだいか</rt></ruby>するには、<ruby>職種<rt>しょくしゅ</rt></ruby>に<ruby>応<rt>おう</rt></ruby>じた<ruby>役割分担<rt>やくわりぶんたん</rt></ruby>だけでなく、メンバー<ruby>同士<rt>どうし</rt></ruby>の [___] や<ruby>協働<rt>きょうどう</rt></ruby>が<ruby>重要<rt>じゅうよう</rt></ruby>である。",
+        "question_plain": "チームの力を最大化するには、職種に応じた役割分担だけでなく、メンバー同士の [___] や協働が重要である。",
+        "options": [
+            "連携",
+            "競争",
+            "監視",
+            "分断"
+        ],
+        "answer": 1,
+        "answer_text": "連携",
+        "explanation": "単なる仕事の切り分けだけでなく、密接な連携と協力し合う関係性が基盤となります。",
+        "unitTitle": "第2節 3項 チーム力最大化",
+        "qNumber": "3-1",
+        "stem": "チームの<ruby>力<rt>ちから</rt></ruby>を<ruby>最大化<rt>さいだいか</rt></ruby>するには、<ruby>職種<rt>しょくしゅ</rt></ruby>に<ruby>応<rt>おう</rt></ruby>じた<ruby>役割分担<rt>やくわりぶんたん</rt></ruby>だけでなく、メンバー<ruby>同士<rt>どうし</rt></ruby>の [___] や<ruby>協働<rt>きょうどう</rt></ruby>が<ruby>重要<rt>じゅうよう</rt></ruby>である。",
+        "stem_plain": "チームの力を最大化するには、職種に応じた役割分担だけでなく、メンバー同士の [___] や協働が重要である。"
+    },
+    {
+        "id": 49,
+        "unit": 3,
+        "unit_title": "第2節 3項 チーム力最大化",
+        "q_number": "3-2",
+        "question_ruby": "メンバー<ruby>同士<rt>どうし</rt></ruby>の<ruby>連携<rt>れんけい</rt></ruby>や<ruby>協働<rt>きょうどう</rt></ruby>によって、単なる<ruby>足<rt>た</rt></ruby>し<ruby>算<rt>ざん</rt></ruby>を<ruby>超<rt>こ</rt></ruby>えた [___] を<ruby>生<rt>う</rt></ruby>み<ruby>出<rt>だ</rt></ruby>すことが<ruby>重要<rt>じゅうよう</rt></ruby>である。",
+        "question_plain": "メンバー同士の連携や協働によって、単なる足し算を超えた [___] を生み出すことが重要である。",
+        "options": [
+            "相乗効果",
+            "コスト削減",
+            "時間短縮",
+            "業務分担"
+        ],
+        "answer": 1,
+        "answer_text": "相乗効果",
+        "explanation": "個々の能力の総和以上の大きな成果（シナジー＝相乗効果）を生み出すことがチームの真髄です。",
+        "unitTitle": "第2節 3項 チーム力最大化",
+        "qNumber": "3-2",
+        "stem": "メンバー<ruby>同士<rt>どうし</rt></ruby>の<ruby>連携<rt>れんけい</rt></ruby>や<ruby>協働<rt>きょうどう</rt></ruby>によって、単なる<ruby>足<rt>た</rt></ruby>し<ruby>算<rt>ざん</rt></ruby>を<ruby>超<rt>こ</rt></ruby>えた [___] を<ruby>生<rt>う</rt></ruby>み<ruby>出<rt>だ</rt></ruby>すことが<ruby>重要<rt>じゅうよう</rt></ruby>である。",
+        "stem_plain": "メンバー同士の連携や協働によって、単なる足し算を超えた [___] を生み出すことが重要である。"
+    },
+    {
+        "id": 50,
+        "unit": 3,
+        "unit_title": "第2節 3項 チーム力最大化",
+        "q_number": "3-3",
+        "question_ruby": "<ruby>目標達成<rt>もくひょうたっせい</rt></ruby>のためにチームに<ruby>貢献<rt>こうけん</rt></ruby>し、<ruby>協力<rt>きょうりょく</rt></ruby>する<ruby>意識<rt>いしき</rt></ruby>や<ruby>行動<rt>こうどう</rt></ruby>を [___] という。",
+        "question_plain": "目標達成のためにチームに貢献し、協力する意識や行動を [___] という。",
+        "options": [
+            "メンバーシップ",
+            "リーダーシップ",
+            "オーナーシップ",
+            "パートナーシップ"
+        ],
+        "answer": 1,
+        "answer_text": "メンバーシップ",
+        "explanation": "チームの一員としての責任感と連帯感を持ち、目標達成に主体的に参画する姿勢をメンバーシップといいます。",
+        "unitTitle": "第2節 3項 チーム力最大化",
+        "qNumber": "3-3",
+        "stem": "<ruby>目標達成<rt>もくひょうたっせい</rt></ruby>のためにチームに<ruby>貢献<rt>こうけん</rt></ruby>し、<ruby>協力<rt>きょうりょく</rt></ruby>する<ruby>意識<rt>いしき</rt></ruby>や<ruby>行動<rt>こうどう</rt></ruby>を [___] という。",
+        "stem_plain": "目標達成のためにチームに貢献し、協力する意識や行動を [___] という。"
+    },
+    {
+        "id": 51,
+        "unit": 3,
+        "unit_title": "第2節 3項 チーム力最大化",
+        "q_number": "3-4",
+        "question_ruby": "リーダーシップはチームをまとめ<ruby>目標<rt>もくひょう</rt></ruby>へと<ruby>導<rt>みちび</rt></ruby>く [___] や<ruby>統率力<rt>とうそつりょく</rt></ruby>などが<ruby>中心的<rt>ちゅうしんてき</rt></ruby>な<ruby>機能<rt>きのう</rt></ruby>である。",
+        "question_plain": "リーダーシップはチームをまとめ目標へと導く [___] や統率力などが中心的な機能である。",
+        "options": [
+            "指導力",
+            "強制力",
+            "発言力",
+            "交渉力"
+        ],
+        "answer": 1,
+        "answer_text": "指導力",
+        "explanation": "チームメンバーの意欲を引き出し、方向性を示して導く指導力・統率力が中心的な役割です。",
+        "unitTitle": "第2節 3項 チーム力最大化",
+        "qNumber": "3-4",
+        "stem": "リーダーシップはチームをまとめ<ruby>目標<rt>もくひょう</rt></ruby>へと<ruby>導<rt>みちび</rt></ruby>く [___] や<ruby>統率力<rt>とうそつりょく</rt></ruby>などが<ruby>中心的<rt>ちゅうしんてき</rt></ruby>な<ruby>機能<rt>きのう</rt></ruby>である。",
+        "stem_plain": "リーダーシップはチームをまとめ目標へと導く [___] や統率力などが中心的な機能である。"
+    },
+    {
+        "id": 52,
+        "unit": 3,
+        "unit_title": "第2節 3項 チーム力最大化",
+        "q_number": "3-5",
+        "question_ruby": "<ruby>経験<rt>けいけん</rt></ruby>の<ruby>浅<rt>あさ</rt></ruby>いメンバーが<ruby>多<rt>おお</rt></ruby>いチームや<ruby>緊急時<rt>きんきゅうじ</rt></ruby>には、 [___] な<ruby>導<rt>みちび</rt></ruby>きが<ruby>効果的<rt>こうかてき</rt></ruby>である。",
+        "question_plain": "経験の浅いメンバーが多いチームや緊急時には、 [___] な導きが効果的である。",
+        "options": [
+            "明確で強い",
+            "放任的",
+            "緩やかな",
+            "参加型"
+        ],
+        "answer": 1,
+        "answer_text": "明確で強い",
+        "explanation": "新任期が多い現場や事故・災害などの非常時には、迷いをなくす明確で力強い指示・リーダーシップが有効です。",
+        "unitTitle": "第2節 3項 チーム力最大化",
+        "qNumber": "3-5",
+        "stem": "<ruby>経験<rt>けいけん</rt></ruby>の<ruby>浅<rt>あさ</rt></ruby>いメンバーが<ruby>多<rt>おお</rt></ruby>いチームや<ruby>緊急時<rt>きんきゅうじ</rt></ruby>には、 [___] な<ruby>導<rt>みちび</rt></ruby>きが<ruby>効果的<rt>こうかてき</rt></ruby>である。",
+        "stem_plain": "経験の浅いメンバーが多いチームや緊急時には、 [___] な導きが効果的である。"
+    },
+    {
+        "id": 53,
+        "unit": 3,
+        "unit_title": "第2節 3項 チーム力最大化",
+        "q_number": "3-6",
+        "question_ruby": "<ruby>専門職<rt>せんもんしょく</rt></ruby>が<ruby>集<rt>あつ</rt></ruby>まったチームではメンバーの<ruby>主体性<rt>しゅたいせい</rt></ruby>を<ruby>重視<rt>じゅうし</rt></ruby>した [___] <ruby>中心<rt>ちゅうしん</rt></ruby>のリーダーシップが<ruby>効果的<rt>こうかてき</rt></ruby>である。",
+        "question_plain": "専門職が集まったチームではメンバーの主体性を重視した [___] 中心のリーダーシップが効果的である。",
+        "options": [
+            "調整",
+            "命令",
+            "監視",
+            "指導"
+        ],
+        "answer": 1,
+        "answer_text": "調整",
+        "explanation": "高い専門性を持つメンバー間では、一方的な命令ではなく意見をつなぎ合議をまとめる調整型リーダーシップが適しています。",
+        "unitTitle": "第2節 3項 チーム力最大化",
+        "qNumber": "3-6",
+        "stem": "<ruby>専門職<rt>せんもんしょく</rt></ruby>が<ruby>集<rt>あつ</rt></ruby>まったチームではメンバーの<ruby>主体性<rt>しゅたいせい</rt></ruby>を<ruby>重視<rt>じゅうし</rt></ruby>した [___] <ruby>中心<rt>ちゅうしん</rt></ruby>のリーダーシップが<ruby>効果的<rt>こうかてき</rt></ruby>である。",
+        "stem_plain": "専門職が集まったチームではメンバーの主体性を重視した [___] 中心のリーダーシップが効果的である。"
+    },
+    {
+        "id": 54,
+        "unit": 3,
+        "unit_title": "第2節 3項 チーム力最大化",
+        "q_number": "3-7",
+        "question_ruby": "チームの<ruby>目標達成<rt>もくひょうたっせい</rt></ruby>のためにフォロワーがリーダーを<ruby>支<rt>ささ</rt></ruby>える<ruby>機能<rt>きのう</rt></ruby>を [___] という。",
+        "question_plain": "チームの目標達成のためにフォロワーがリーダーを支える機能を [___] という。",
+        "options": [
+            "フォロワーシップ",
+            "メンバーシップ",
+            "サブリーダーシップ",
+            "アライアンス"
+        ],
+        "answer": 1,
+        "answer_text": "フォロワーシップ",
+        "explanation": "リーダーの独走を防ぎ、自立的に支援・補佐してチームの成果を高める機能をフォロワーシップといいます。",
+        "unitTitle": "第2節 3項 チーム力最大化",
+        "qNumber": "3-7",
+        "stem": "チームの<ruby>目標達成<rt>もくひょうたっせい</rt></ruby>のためにフォロワーがリーダーを<ruby>支<rt>ささ</rt></ruby>える<ruby>機能<rt>きのう</rt></ruby>を [___] という。",
+        "stem_plain": "チームの目標達成のためにフォロワーがリーダーを支える機能を [___] という。"
+    },
+    {
+        "id": 55,
+        "unit": 3,
+        "unit_title": "第2節 3項 チーム力最大化",
+        "q_number": "3-8",
+        "question_ruby": "フォロワーシップとは<ruby>単<rt>たん</rt></ruby>に<ruby>指示<rt>しじ</rt></ruby>に<ruby>従<rt>したが</rt></ruby>うだけでなく、<ruby>自発的<rt>じはつてき</rt></ruby>に<ruby>意見<rt>いけん</rt></ruby>を<ruby>述<rt>の</rt></ruby>べ [___] に<ruby>行動<rt>こうどう</rt></ruby>することである。",
+        "question_plain": "フォロワーシップとは単に指示に従うだけでなく、自発的に意見を述べ [___] に行動することである。",
+        "options": [
+            "自律的",
+            "受動的",
+            "追従的",
+            "無批判"
+        ],
+        "answer": 1,
+        "answer_text": "自律的",
+        "explanation": "指示待ちではなく、自分の頭で考え状況を判断して自律的に行動する姿勢が健全なフォロワーシップです。",
+        "unitTitle": "第2節 3項 チーム力最大化",
+        "qNumber": "3-8",
+        "stem": "フォロワーシップとは<ruby>単<rt>たん</rt></ruby>に<ruby>指示<rt>しじ</rt></ruby>に<ruby>従<rt>したが</rt></ruby>うだけでなく、<ruby>自発的<rt>じはつてき</rt></ruby>に<ruby>意見<rt>いけん</rt></ruby>を<ruby>述<rt>の</rt></ruby>べ [___] に<ruby>行動<rt>こうどう</rt></ruby>することである。",
+        "stem_plain": "フォロワーシップとは単に指示に従うだけでなく、自発的に意見を述べ [___] に行動することである。"
+    },
+    {
+        "id": 56,
+        "unit": 3,
+        "unit_title": "第2節 3項 チーム力最大化",
+        "q_number": "3-9",
+        "question_ruby": "フォロワーシップには、リーダーやチーム<ruby>全体<rt>ぜんたい</rt></ruby>の<ruby>誤<rt>あやま</rt></ruby>りを [___] する<ruby>機能<rt>きのう</rt></ruby>も<ruby>包括<rt>ほうかつ</rt></ruby>される。",
+        "question_plain": "フォロワーシップには、リーダーやチーム全体の誤りを [___] する機能も包括される。",
+        "options": [
+            "修正",
+            "隠蔽",
+            "容認",
+            "告発"
+        ],
+        "answer": 1,
+        "answer_text": "修正",
+        "explanation": "リーダーの方針に盲従するのではなく、誤りや危険があれば建設的な提言で軌道修正を促す重要な役割です。",
+        "unitTitle": "第2節 3項 チーム力最大化",
+        "qNumber": "3-9",
+        "stem": "フォロワーシップには、リーダーやチーム<ruby>全体<rt>ぜんたい</rt></ruby>の<ruby>誤<rt>あやま</rt></ruby>りを [___] する<ruby>機能<rt>きのう</rt></ruby>も<ruby>包括<rt>ほうかつ</rt></ruby>される。",
+        "stem_plain": "フォロワーシップには、リーダーやチーム全体の誤りを [___] する機能も包括される。"
+    },
+    {
+        "id": 57,
+        "unit": 3,
+        "unit_title": "第2節 3項 チーム力最大化",
+        "q_number": "3-10",
+        "question_ruby": "リーダーシップとフォロワーシップは、 [___] の<ruby>関係<rt>かんけい</rt></ruby>にある。",
+        "question_plain": "リーダーシップとフォロワーシップは、 [___] の関係にある。",
+        "options": [
+            "表裏一体",
+            "主従",
+            "対立",
+            "無関係"
+        ],
+        "answer": 1,
+        "answer_text": "表裏一体",
+        "explanation": "どちらか一方だけでは成立せず、状況によって役割が入れ替わる補完的かつ表裏一体の関係です。",
+        "unitTitle": "第2節 3項 チーム力最大化",
+        "qNumber": "3-10",
+        "stem": "リーダーシップとフォロワーシップは、 [___] の<ruby>関係<rt>かんけい</rt></ruby>にある。",
+        "stem_plain": "リーダーシップとフォロワーシップは、 [___] の関係にある。"
+    },
+    {
+        "id": 58,
+        "unit": 3,
+        "unit_title": "第2節 3項 チーム力最大化",
+        "q_number": "3-11",
+        "question_ruby": "<ruby>介護福祉士<rt>かいごふくしし</rt></ruby>は、<ruby>介護福祉職<rt>かいごふくししょく</rt></ruby>チームの [___] としてリーダーシップを<ruby>発揮<rt>はっき</rt></ruby>する。",
+        "question_plain": "介護福祉士は、介護福祉職チームの [___] としてリーダーシップを発揮する。",
+        "options": [
+            "リーダー",
+            "フォロワー",
+            "アドバイザー",
+            "監査役"
+        ],
+        "answer": 1,
+        "answer_text": "リーダー",
+        "explanation": "介護現場の同職種チーム内では、介護福祉士がリーダーとしてケアの質の標準化や指導を担います。",
+        "unitTitle": "第2節 3項 チーム力最大化",
+        "qNumber": "3-11",
+        "stem": "<ruby>介護福祉士<rt>かいごふくしし</rt></ruby>は、<ruby>介護福祉職<rt>かいごふくししょく</rt></ruby>チームの [___] としてリーダーシップを<ruby>発揮<rt>はっき</rt></ruby>する。",
+        "stem_plain": "介護福祉士は、介護福祉職チームの [___] としてリーダーシップを発揮する。"
+    },
+    {
+        "id": 59,
+        "unit": 3,
+        "unit_title": "第2節 3項 チーム力最大化",
+        "q_number": "3-12",
+        "question_ruby": "<ruby>介護福祉士<rt>かいごふくしし</rt></ruby>は、<ruby>多職種<rt>たしょくしゅ</rt></ruby>チームにおいては<ruby>専門性<rt>せんもんせい</rt></ruby>を<ruby>発揮<rt>はっき</rt></ruby>して [___] としての<ruby>役割<rt>やくわり</rt></ruby>を<ruby>果<rt>は</rt></ruby>たす。",
+        "question_plain": "介護福祉士は、多職種チームにおいては専門性を発揮して [___] としての役割を果たす。",
+        "options": [
+            "フォロワー",
+            "経営責任者",
+            "最終決定者",
+            "部外者"
+        ],
+        "answer": 1,
+        "answer_text": "フォロワー",
+        "explanation": "医師やケアマネジャーが主導する多職種チームにおいては、生活の専門家としてチームを支える良きフォロワーとなります。",
+        "unitTitle": "第2節 3項 チーム力最大化",
+        "qNumber": "3-12",
+        "stem": "<ruby>介護福祉士<rt>かいごふくしし</rt></ruby>は、<ruby>多職種<rt>たしょくしゅ</rt></ruby>チームにおいては<ruby>専門性<rt>せんもんせい</rt></ruby>を<ruby>発揮<rt>はっき</rt></ruby>して [___] としての<ruby>役割<rt>やくわり</rt></ruby>を<ruby>果<rt>は</rt></ruby>たす。",
+        "stem_plain": "介護福祉士は、多職種チームにおいては専門性を発揮して [___] としての役割を果たす。"
+    },
+    {
+        "id": 60,
+        "unit": 3,
+        "unit_title": "第2節 3項 チーム力最大化",
+        "q_number": "3-13",
+        "question_ruby": "<ruby>介護福祉士<rt>かいごふくしし</rt></ruby>は、<ruby>所属<rt>しょぞく</rt></ruby>チームや<ruby>活動場面<rt>かつどうばめん</rt></ruby>に<ruby>応<rt>おう</rt></ruby>じて<ruby>役割<rt>やくわり</rt></ruby>を [___] <ruby>発揮<rt>はっき</rt></ruby>することが<ruby>求<rt>もと</rt></ruby>められる。",
+        "question_plain": "介護福祉士は、所属チームや活動場面に応じて役割を [___] 発揮することが求められる。",
+        "options": [
+            "バランスよく",
+            "固定的に",
+            "控えめに",
+            "画一的に"
+        ],
+        "answer": 1,
+        "answer_text": "バランスよく",
+        "explanation": "場面に応じてリーダーとフォロワーの立ち位置を柔軟かつバランスよく切り替える柔軟性が求められます。",
+        "unitTitle": "第2節 3項 チーム力最大化",
+        "qNumber": "3-13",
+        "stem": "<ruby>介護福祉士<rt>かいごふくしし</rt></ruby>は、<ruby>所属<rt>しょぞく</rt></ruby>チームや<ruby>活動場面<rt>かつどうばめん</rt></ruby>に<ruby>応<rt>おう</rt></ruby>じて<ruby>役割<rt>やくわり</rt></ruby>を [___] <ruby>発揮<rt>はっき</rt></ruby>することが<ruby>求<rt>もと</rt></ruby>められる。",
+        "stem_plain": "介護福祉士は、所属チームや活動場面に応じて役割を [___] 発揮することが求められる。"
+    },
+    {
+        "id": 61,
+        "unit": 3,
+        "unit_title": "第2節 3項 チーム力最大化",
+        "q_number": "3-14",
+        "question_ruby": "ロバート・グリーンリーフが<ruby>提唱<rt>ていしょう</rt></ruby>した [___] は、リーダーはまずフォロワーに<ruby>奉仕<rt>ほうし</rt></ruby>する<ruby>存在<rt>そんざい</rt></ruby>であるとする<ruby>理論<rt>りろん</rt></ruby>である。",
+        "question_plain": "ロバート・グリーンリーフが提唱した [___] は、リーダーはまずフォロワーに奉仕する存在であるとする理論である。",
+        "options": [
+            "サーバントリーダーシップ",
+            "オーセンティック理論",
+            "専制型リーダーシップ",
+            "状況適応理論"
+        ],
+        "answer": 1,
+        "answer_text": "サーバントリーダーシップ",
+        "explanation": "「支援型リーダーシップ」とも訳され、メンバーのニーズを第一に考え奉仕・サポートする姿勢を説きます。",
+        "unitTitle": "第2節 3項 チーム力最大化",
+        "qNumber": "3-14",
+        "stem": "ロバート・グリーンリーフが<ruby>提唱<rt>ていしょう</rt></ruby>した [___] は、リーダーはまずフォロワーに<ruby>奉仕<rt>ほうし</rt></ruby>する<ruby>存在<rt>そんざい</rt></ruby>であるとする<ruby>理論<rt>りろん</rt></ruby>である。",
+        "stem_plain": "ロバート・グリーンリーフが提唱した [___] は、リーダーはまずフォロワーに奉仕する存在であるとする理論である。"
+    },
+    {
+        "id": 62,
+        "unit": 3,
+        "unit_title": "第2節 3項 チーム力最大化",
+        "q_number": "3-15",
+        "question_ruby": "サーバントリーダーシップでは、「 [___] 」という<ruby>姿勢<rt>しせい</rt></ruby>がチームの<ruby>行動力<rt>こうどうりょく</rt></ruby>を<ruby>高<rt>たか</rt></ruby>めるとしている。",
+        "question_plain": "サーバントリーダーシップでは、「 [___] 」という姿勢がチームの行動力を高めるとしている。",
+        "options": [
+            "相手に奉仕する",
+            "強い命令を下す",
+            "規則を厳守させる",
+            "成果を独占する"
+        ],
+        "answer": 1,
+        "answer_text": "相手に奉仕する",
+        "explanation": "支配ではなく、相手への奉仕と傾聴を通じて自発的な貢献意欲を引き出します。",
+        "unitTitle": "第2節 3項 チーム力最大化",
+        "qNumber": "3-15",
+        "stem": "サーバントリーダーシップでは、「 [___] 」という<ruby>姿勢<rt>しせい</rt></ruby>がチームの<ruby>行動力<rt>こうどうりょく</rt></ruby>を<ruby>高<rt>たか</rt></ruby>めるとしている。",
+        "stem_plain": "サーバントリーダーシップでは、「 [___] 」という姿勢がチームの行動力を高めるとしている。"
+    },
+    {
+        "id": 63,
+        "unit": 3,
+        "unit_title": "第2節 3項 チーム力最大化",
+        "q_number": "3-16",
+        "question_ruby": "リーダーとフォロワーが<ruby>互<rt>たが</rt></ruby>いに [___] されてこそ、それぞれの<ruby>機能<rt>きのう</rt></ruby>が<ruby>最大限<rt>さいだいげん</rt></ruby>に<ruby>発揮<rt>はっき</rt></ruby>される。",
+        "question_plain": "リーダーとフォロワーが互いに [___] されてこそ、それぞれの機能が最大限に発揮される。",
+        "options": [
+            "信頼",
+            "監視",
+            "評価",
+            "契約"
+        ],
+        "answer": 1,
+        "answer_text": "信頼",
+        "explanation": "チームワークの基盤には、心理的安全性と相互の深い信頼関係が不可欠です。",
+        "unitTitle": "第2節 3項 チーム力最大化",
+        "qNumber": "3-16",
+        "stem": "リーダーとフォロワーが<ruby>互<rt>たが</rt></ruby>いに [___] されてこそ、それぞれの<ruby>機能<rt>きのう</rt></ruby>が<ruby>最大限<rt>さいだいげん</rt></ruby>に<ruby>発揮<rt>はっき</rt></ruby>される。",
+        "stem_plain": "リーダーとフォロワーが互いに [___] されてこそ、それぞれの機能が最大限に発揮される。"
+    },
+    {
+        "id": 64,
+        "unit": 3,
+        "unit_title": "第2節 3項 チーム力最大化",
+        "q_number": "3-17",
+        "question_ruby": "リーダーシップとフォロワーシップは、<ruby>確実<rt>かくじつ</rt></ruby>な<ruby>介護実践<rt>かいごじっせん</rt></ruby>や [___] を<ruby>積<rt>つ</rt></ruby>み<ruby>重<rt>かさ</rt></ruby>ねることで<ruby>強化<rt>きょうか</rt></ruby>される。",
+        "question_plain": "リーダーシップとフォロワーシップは、確実な介護実践や [___] を積み重ねることで強化される。",
+        "options": [
+            "業務",
+            "試験",
+            "議論",
+            "研修"
+        ],
+        "answer": 1,
+        "answer_text": "業務",
+        "explanation": "日々の着実な介護業務の積み重ねと協働を通じて、双方の機能が実践的に鍛えられます。",
+        "unitTitle": "第2節 3項 チーム力最大化",
+        "qNumber": "3-17",
+        "stem": "リーダーシップとフォロワーシップは、<ruby>確実<rt>かくじつ</rt></ruby>な<ruby>介護実践<rt>かいごじっせん</rt></ruby>や [___] を<ruby>積<rt>つ</rt></ruby>み<ruby>重<rt>かさ</rt></ruby>ねることで<ruby>強化<rt>きょうか</rt></ruby>される。",
+        "stem_plain": "リーダーシップとフォロワーシップは、確実な介護実践や [___] を積み重ねることで強化される。"
+    },
+    {
+        "id": 65,
+        "unit": 3,
+        "unit_title": "第2節 3項 チーム力最大化",
+        "q_number": "3-18",
+        "question_ruby": "<ruby>日<rt>ひ</rt></ruby>々の<ruby>業務<rt>ぎょうむ</rt></ruby>の<ruby>積<rt>つ</rt></ruby>み<ruby>重<rt>かさ</rt></ruby>ねにより<ruby>介護<rt>かいご</rt></ruby>の [___] が<ruby>高<rt>たか</rt></ruby>まり、<ruby>利用者<rt>りようしゃ</rt></ruby>の<ruby>幸福<rt>こうふく</rt></ruby>へとつながる。",
+        "question_plain": "日々の業務の積み重ねにより介護の [___] が高まり、利用者の幸福へとつながる。",
+        "options": [
+            "質",
+            "量",
+            "速さ",
+            "コスト"
+        ],
+        "answer": 1,
+        "answer_text": "質",
+        "explanation": "個々のケアの質の向上が、施設や事業所全体のケア品質の向上と利用者の満足に直結します。",
+        "unitTitle": "第2節 3項 チーム力最大化",
+        "qNumber": "3-18",
+        "stem": "<ruby>日<rt>ひ</rt></ruby>々の<ruby>業務<rt>ぎょうむ</rt></ruby>の<ruby>積<rt>つ</rt></ruby>み<ruby>重<rt>かさ</rt></ruby>ねにより<ruby>介護<rt>かいご</rt></ruby>の [___] が<ruby>高<rt>たか</rt></ruby>まり、<ruby>利用者<rt>りようしゃ</rt></ruby>の<ruby>幸福<rt>こうふく</rt></ruby>へとつながる。",
+        "stem_plain": "日々の業務の積み重ねにより介護の [___] が高まり、利用者の幸福へとつながる。"
+    },
+    {
+        "id": 66,
+        "unit": 3,
+        "unit_title": "第2節 3項 チーム力最大化",
+        "q_number": "3-19",
+        "question_ruby": "<ruby>介護<rt>かいご</rt></ruby>の<ruby>質<rt>しつ</rt></ruby>の<ruby>向上<rt>こうじょう</rt></ruby>は、<ruby>最終的<rt>さいしゅうてき</rt></ruby>に<ruby>利用者<rt>りようしゃ</rt></ruby>の<ruby>望<rt>のぞ</rt></ruby>む [___] の<ruby>実現<rt>じつげん</rt></ruby>へと<ruby>発展<rt>はってん</rt></ruby>する。",
+        "question_plain": "介護の質の向上は、最終的に利用者の望む [___] の実現へと発展する。",
+        "options": [
+            "暮らし",
+            "回復",
+            "施設利用",
+            "服薬"
+        ],
+        "answer": 1,
+        "answer_text": "暮らし",
+        "explanation": "ケアマネジメントや介護の究極の目的は、利用者がその人らしく望む「暮らし（生活）」の実現です。",
+        "unitTitle": "第2節 3項 チーム力最大化",
+        "qNumber": "3-19",
+        "stem": "<ruby>介護<rt>かいご</rt></ruby>の<ruby>質<rt>しつ</rt></ruby>の<ruby>向上<rt>こうじょう</rt></ruby>は、<ruby>最終的<rt>さいしゅうてき</rt></ruby>に<ruby>利用者<rt>りようしゃ</rt></ruby>の<ruby>望<rt>のぞ</rt></ruby>む [___] の<ruby>実現<rt>じつげん</rt></ruby>へと<ruby>発展<rt>はってん</rt></ruby>する。",
+        "stem_plain": "介護の質の向上は、最終的に利用者の望む [___] の実現へと発展する。"
+    },
+    {
+        "id": 67,
+        "unit": 3,
+        "unit_title": "第2節 3項 チーム力最大化",
+        "q_number": "3-20",
+        "question_ruby": "リーダーシップとフォロワーシップは<ruby>別々<rt>べつべつ</rt></ruby>に<ruby>存在<rt>そんざい</rt></ruby>するのではなく、 [___] な<ruby>機能<rt>きのう</rt></ruby>として<ruby>存在<rt>そんざい</rt></ruby>する。",
+        "question_plain": "リーダーシップとフォロワーシップは別々に存在するのではなく、 [___] な機能として存在する。",
+        "options": [
+            "一体的",
+            "排他的",
+            "階層的",
+            "孤立的"
+        ],
+        "answer": 1,
+        "answer_text": "一体的",
+        "explanation": "組織の中で切り離せるものではなく、両者が調和し一体的に機能して初めてチームが機能します。",
+        "unitTitle": "第2節 3項 チーム力最大化",
+        "qNumber": "3-20",
+        "stem": "リーダーシップとフォロワーシップは<ruby>別々<rt>べつべつ</rt></ruby>に<ruby>存在<rt>そんざい</rt></ruby>するのではなく、 [___] な<ruby>機能<rt>きのう</rt></ruby>として<ruby>存在<rt>そんざい</rt></ruby>する。",
+        "stem_plain": "リーダーシップとフォロワーシップは別々に存在するのではなく、 [___] な機能として存在する。"
+    },
+    {
+        "id": 68,
+        "unit": 3,
+        "unit_title": "第2節 3項 チーム力最大化",
+        "q_number": "3-21",
+        "question_ruby": "<ruby>介護<rt>かいご</rt></ruby>チームにおける<ruby>業務<rt>ぎょうむ</rt></ruby>の3つの<ruby>柱<rt>はしら</rt></ruby>の1つは「 [___] 」である。",
+        "question_plain": "介護チームにおける業務の3つの柱の1つは「 [___] 」である。",
+        "options": [
+            "ケアの展開",
+            "マニュアル策定",
+            "広報活動",
+            "人事採用"
+        ],
+        "answer": 1,
+        "answer_text": "ケアの展開",
+        "explanation": "図3-16に示される3本柱の一つで、日々の利用者のアセスメントから介護実践・評価を指します。",
+        "unitTitle": "第2節 3項 チーム力最大化",
+        "qNumber": "3-21",
+        "stem": "<ruby>介護<rt>かいご</rt></ruby>チームにおける<ruby>業務<rt>ぎょうむ</rt></ruby>の3つの<ruby>柱<rt>はしら</rt></ruby>の1つは「 [___] 」である。",
+        "stem_plain": "介護チームにおける業務の3つの柱の1つは「 [___] 」である。"
+    },
+    {
+        "id": 69,
+        "unit": 3,
+        "unit_title": "第2節 3項 チーム力最大化",
+        "q_number": "3-22",
+        "question_ruby": "<ruby>介護<rt>かいご</rt></ruby>チームにおける<ruby>業務<rt>ぎょうむ</rt></ruby>の3つの<ruby>柱<rt>はしら</rt></ruby>は「ケアの<ruby>展開<rt>てんかい</rt></ruby>」「<ruby>人材育成<rt>じんざいいくせい</rt></ruby>・<ruby>自己研鑽<rt>じこけんさん</rt></ruby>」「 [___] 」である。",
+        "question_plain": "介護チームにおける業務の3つの柱は「ケアの展開」「人材育成・自己研鑽」「 [___] 」である。",
+        "options": [
+            "組織の目標達成",
+            "売上の最大化",
+            "地域住民の監視",
+            "医療費削減"
+        ],
+        "answer": 1,
+        "answer_text": "組織の目標達成",
+        "explanation": "事業所の運営方針やコンプライアンスを守り、組織全体のビジョンを実現する柱です。",
+        "unitTitle": "第2節 3項 チーム力最大化",
+        "qNumber": "3-22",
+        "stem": "<ruby>介護<rt>かいご</rt></ruby>チームにおける<ruby>業務<rt>ぎょうむ</rt></ruby>の3つの<ruby>柱<rt>はしら</rt></ruby>は「ケアの<ruby>展開<rt>てんかい</rt></ruby>」「<ruby>人材育成<rt>じんざいいくせい</rt></ruby>・<ruby>自己研鑽<rt>じこけんさん</rt></ruby>」「 [___] 」である。",
+        "stem_plain": "介護チームにおける業務の3つの柱は「ケアの展開」「人材育成・自己研鑽」「 [___] 」である。"
+    },
+    {
+        "id": 70,
+        "unit": 3,
+        "unit_title": "第2節 3項 チーム力最大化",
+        "q_number": "3-23",
+        "question_ruby": "チームマネジメントとは、「リーダーシップとフォロワーシップの [___] をどのように<ruby>高<rt>たか</rt></ruby>めていくのか」を<ruby>考<rt>かんが</rt></ruby>え<ruby>実行<rt>じっこう</rt></ruby>することである。",
+        "question_plain": "チームマネジメントとは、「リーダーシップとフォロワーシップの [___] をどのように高めていくのか」を考え実行することである。",
+        "options": [
+            "双方",
+            "リーダーのみ",
+            "フォロワーのみ",
+            "経営陣"
+        ],
+        "answer": 1,
+        "answer_text": "双方",
+        "explanation": "リーダーだけ、あるいは部下だけを鍛えるのではなく、双方の連携と相乗効果を高めることが肝要です。",
+        "unitTitle": "第2節 3項 チーム力最大化",
+        "qNumber": "3-23",
+        "stem": "チームマネジメントとは、「リーダーシップとフォロワーシップの [___] をどのように<ruby>高<rt>たか</rt></ruby>めていくのか」を<ruby>考<rt>かんが</rt></ruby>え<ruby>実行<rt>じっこう</rt></ruby>することである。",
+        "stem_plain": "チームマネジメントとは、「リーダーシップとフォロワーシップの [___] をどのように高めていくのか」を考え実行することである。"
+    },
+    {
+        "id": 71,
+        "unit": 3,
+        "unit_title": "第2節 3項 チーム力最大化",
+        "q_number": "3-24",
+        "question_ruby": "リーダーシップとフォロワーシップの<ruby>力<rt>ちから</rt></ruby>を [___] に<ruby>高<rt>たか</rt></ruby>めていくことが、チームマネジメントの<ruby>本質<rt>ほんしつ</rt></ruby>である。",
+        "question_plain": "リーダーシップとフォロワーシップの力を [___] に高めていくことが、チームマネジメントの本質である。",
+        "options": [
+            "効果的",
+            "一時的",
+            "偶発的",
+            "強制的"
+        ],
+        "answer": 1,
+        "answer_text": "効果的",
+        "explanation": "場当たり的ではなく、計画的・戦略的・効果的に双方の機能を高めていくことが求められます。",
+        "unitTitle": "第2節 3項 チーム力最大化",
+        "qNumber": "3-24",
+        "stem": "リーダーシップとフォロワーシップの<ruby>力<rt>ちから</rt></ruby>を [___] に<ruby>高<rt>たか</rt></ruby>めていくことが、チームマネジメントの<ruby>本質<rt>ほんしつ</rt></ruby>である。",
+        "stem_plain": "リーダーシップとフォロワーシップの力を [___] に高めていくことが、チームマネジメントの本質である。"
+    },
+    {
+        "id": 72,
+        "unit": 4,
+        "unit_title": "第3節 人材育成・研鑽",
+        "q_number": "4-1",
+        "question_ruby": "<ruby>入職直後<rt>にゅうしょくちょくご</rt></ruby>から2<ruby>年程度<rt>ねんていど</rt></ruby>の [___] は、<ruby>介護実践<rt>かいごじっせん</rt></ruby>に<ruby>必要<rt>ひつよう</rt></ruby>な<ruby>知識<rt>ちしき</rt></ruby>・<ruby>技術<rt>ぎじゅつ</rt></ruby>や<ruby>基本業務<rt>きほんぎょうむ</rt></ruby>を<ruby>習得<rt>しゅうとく</rt></ruby>することに<ruby>重<rt>おも</rt></ruby>きが<ruby>置<rt>お</rt></ruby>かれます。",
+        "question_plain": "入職直後から2年程度の [___] は、介護実践に必要な知識・技術や基本業務を習得することに重きが置かれます。",
+        "options": [
+            "初任期",
+            "中堅期",
+            "ベテラン期",
+            "管理職期"
+        ],
+        "answer": 1,
+        "answer_text": "初任期",
+        "explanation": "キャリアパスの最初の段階であり、基本的な介護技術や職場規律を固める極めて大切な時期です。",
+        "unitTitle": "第3節 人材育成・研鑽",
+        "qNumber": "4-1",
+        "stem": "<ruby>入職直後<rt>にゅうしょくちょくご</rt></ruby>から2<ruby>年程度<rt>ねんていど</rt></ruby>の [___] は、<ruby>介護実践<rt>かいごじっせん</rt></ruby>に<ruby>必要<rt>ひつよう</rt></ruby>な<ruby>知識<rt>ちしき</rt></ruby>・<ruby>技術<rt>ぎじゅつ</rt></ruby>や<ruby>基本業務<rt>きほんぎょうむ</rt></ruby>を<ruby>習得<rt>しゅうとく</rt></ruby>することに<ruby>重<rt>おも</rt></ruby>きが<ruby>置<rt>お</rt></ruby>かれます。",
+        "stem_plain": "入職直後から2年程度の [___] は、介護実践に必要な知識・技術や基本業務を習得することに重きが置かれます。"
+    },
+    {
+        "id": 73,
+        "unit": 4,
+        "unit_title": "第3節 人材育成・研鑽",
+        "q_number": "4-2",
+        "question_ruby": "<ruby>生活支援<rt>せいかつしえん</rt></ruby>は<ruby>生命<rt>せいめい</rt></ruby>に<ruby>直結<rt>ちょっけつ</rt></ruby>する<ruby>行為<rt>こうい</rt></ruby>であり、<ruby>利用者<rt>りようしゃ</rt></ruby>の [___] と<ruby>深<rt>ふか</rt></ruby>くかかわる<ruby>行為<rt>こうい</rt></ruby>です。",
+        "question_plain": "生活支援は生命に直結する行為であり、利用者の [___] と深くかかわる行為です。",
+        "options": [
+            "尊厳",
+            "財産",
+            "家族関係",
+            "趣味"
+        ],
+        "answer": 1,
+        "answer_text": "尊厳",
+        "explanation": "排泄や入浴など最もプライベートな生活を支えるため、利用者の尊厳の保持が全ての行動の基本です。",
+        "unitTitle": "第3節 人材育成・研鑽",
+        "qNumber": "4-2",
+        "stem": "<ruby>生活支援<rt>せいかつしえん</rt></ruby>は<ruby>生命<rt>せいめい</rt></ruby>に<ruby>直結<rt>ちょっけつ</rt></ruby>する<ruby>行為<rt>こうい</rt></ruby>であり、<ruby>利用者<rt>りようしゃ</rt></ruby>の [___] と<ruby>深<rt>ふか</rt></ruby>くかかわる<ruby>行為<rt>こうい</rt></ruby>です。",
+        "stem_plain": "生活支援は生命に直結する行為であり、利用者の [___] と深くかかわる行為です。"
+    },
+    {
+        "id": 74,
+        "unit": 4,
+        "unit_title": "第3節 人材育成・研鑽",
+        "q_number": "4-3",
+        "question_ruby": "<ruby>対人援助<rt>たいじんえんじょ</rt></ruby>を<ruby>専門<rt>せんもん</rt></ruby>とする<ruby>介護福祉職<rt>かいごふくししょく</rt></ruby>には、<ruby>基本的<rt>きほんてき</rt></ruby>な [___] ・マナーが<ruby>欠<rt>か</rt></ruby>かせないものです。",
+        "question_plain": "対人援助を専門とする介護福祉職には、基本的な [___] ・マナーが欠かせないものです。",
+        "options": [
+            "接遇",
+            "弁論",
+            "営業",
+            "交渉"
+        ],
+        "answer": 1,
+        "answer_text": "接遇",
+        "explanation": "挨拶、身だしなみ、言葉遣い、傾聴態度といった基本の接遇マナーが信頼関係の土台となります。",
+        "unitTitle": "第3節 人材育成・研鑽",
+        "qNumber": "4-3",
+        "stem": "<ruby>対人援助<rt>たいじんえんじょ</rt></ruby>を<ruby>専門<rt>せんもん</rt></ruby>とする<ruby>介護福祉職<rt>かいごふくししょく</rt></ruby>には、<ruby>基本的<rt>きほんてき</rt></ruby>な [___] ・マナーが<ruby>欠<rt>か</rt></ruby>かせないものです。",
+        "stem_plain": "対人援助を専門とする介護福祉職には、基本的な [___] ・マナーが欠かせないものです。"
+    },
+    {
+        "id": 75,
+        "unit": 4,
+        "unit_title": "第3節 人材育成・研鑽",
+        "q_number": "4-4",
+        "question_ruby": "<ruby>他職種<rt>たしょくしゅ</rt></ruby>と<ruby>連携<rt>れんけい</rt></ruby>して、<ruby>多職種<rt>たしょくしゅ</rt></ruby>で [___] して<ruby>利用者<rt>りようしゃ</rt></ruby>を<ruby>支<rt>ささ</rt></ruby>えていく<ruby>必要<rt>ひつよう</rt></ruby>があります。",
+        "question_plain": "他職種と連携して、多職種で [___] して利用者を支えていく必要があります。",
+        "options": [
+            "協働",
+            "競争",
+            "監督",
+            "分担"
+        ],
+        "answer": 1,
+        "answer_text": "協働",
+        "explanation": "他職種を尊重し、共通の目標に向かって対等に力を合わせて働くことを「協働（コラボレーション）」といいます。",
+        "unitTitle": "第3節 人材育成・研鑽",
+        "qNumber": "4-4",
+        "stem": "<ruby>他職種<rt>たしょくしゅ</rt></ruby>と<ruby>連携<rt>れんけい</rt></ruby>して、<ruby>多職種<rt>たしょくしゅ</rt></ruby>で [___] して<ruby>利用者<rt>りようしゃ</rt></ruby>を<ruby>支<rt>ささ</rt></ruby>えていく<ruby>必要<rt>ひつよう</rt></ruby>があります。",
+        "stem_plain": "他職種と連携して、多職種で [___] して利用者を支えていく必要があります。"
+    },
+    {
+        "id": 76,
+        "unit": 4,
+        "unit_title": "第3節 人材育成・研鑽",
+        "q_number": "4-5",
+        "question_ruby": "<ruby>先輩<rt>せんぱい</rt></ruby>や<ruby>上司<rt>じょうし</rt></ruby>に<ruby>指導<rt>しどう</rt></ruby>を<ruby>受<rt>う</rt></ruby>けるなど、 [___] （<ruby>職務<rt>しょくむ</rt></ruby>を<ruby>通<rt>つう</rt></ruby>じた<ruby>教育訓練<rt>きょういくくんれん</rt></ruby>）の<ruby>機会<rt>きかい</rt></ruby>が<ruby>重要<rt>じゅうよう</rt></ruby>になります。",
+        "question_plain": "先輩や上司に指導を受けるなど、 [___] （職務を通じた教育訓練）の機会が重要になります。",
+        "options": [
+            "OJT",
+            "Off-JT",
+            "SDS",
+            "eラーニング"
+        ],
+        "answer": 1,
+        "answer_text": "OJT",
+        "explanation": "実務現場でのマンツーマン指導や振り返りを行うOJTは初任期教育の主軸です。",
+        "unitTitle": "第3節 人材育成・研鑽",
+        "qNumber": "4-5",
+        "stem": "<ruby>先輩<rt>せんぱい</rt></ruby>や<ruby>上司<rt>じょうし</rt></ruby>に<ruby>指導<rt>しどう</rt></ruby>を<ruby>受<rt>う</rt></ruby>けるなど、 [___] （<ruby>職務<rt>しょくむ</rt></ruby>を<ruby>通<rt>つう</rt></ruby>じた<ruby>教育訓練<rt>きょういくくんれん</rt></ruby>）の<ruby>機会<rt>きかい</rt></ruby>が<ruby>重要<rt>じゅうよう</rt></ruby>になります。",
+        "stem_plain": "先輩や上司に指導を受けるなど、 [___] （職務を通じた教育訓練）の機会が重要になります。"
+    },
+    {
+        "id": 77,
+        "unit": 4,
+        "unit_title": "第3節 人材育成・研鑽",
+        "q_number": "4-6",
+        "question_ruby": " [___] は、<ruby>利用者<rt>りようしゃ</rt></ruby>に<ruby>対<rt>たい</rt></ruby>するケアだけでなく、<ruby>家族<rt>かぞく</rt></ruby>との<ruby>面談<rt>めんだん</rt></ruby>や<ruby>後輩指導<rt>こうはいしどう</rt></ruby>が<ruby>求<rt>もと</rt></ruby>められます。",
+        "question_plain": " [___] は、利用者に対するケアだけでなく、家族との面談や後輩指導が求められます。",
+        "options": [
+            "中堅期",
+            "初任期",
+            "見習い期",
+            "退職期"
+        ],
+        "answer": 1,
+        "answer_text": "中堅期",
+        "explanation": "入職後3〜5年程度の中堅期になると、現場のキーパーソンとして家族支援や後輩のOJT指導を担います。",
+        "unitTitle": "第3節 人材育成・研鑽",
+        "qNumber": "4-6",
+        "stem": " [___] は、<ruby>利用者<rt>りようしゃ</rt></ruby>に<ruby>対<rt>たい</rt></ruby>するケアだけでなく、<ruby>家族<rt>かぞく</rt></ruby>との<ruby>面談<rt>めんだん</rt></ruby>や<ruby>後輩指導<rt>こうはいしどう</rt></ruby>が<ruby>求<rt>もと</rt></ruby>められます。",
+        "stem_plain": " [___] は、利用者に対するケアだけでなく、家族との面談や後輩指導が求められます。"
+    },
+    {
+        "id": 78,
+        "unit": 4,
+        "unit_title": "第3節 人材育成・研鑽",
+        "q_number": "4-7",
+        "question_ruby": "チームでの<ruby>情報共有<rt>じょうほうきょうゆう</rt></ruby>やケアの<ruby>統一化<rt>とういつか</rt></ruby>のためには、<ruby>介護計画<rt>かいごけいかく</rt></ruby>や [___] を<ruby>作成<rt>さくせい</rt></ruby>することは<ruby>必須<rt>ひっす</rt></ruby>です。",
+        "question_plain": "チームでの情報共有やケアの統一化のためには、介護計画や [___] を作成することは必須です。",
+        "options": [
+            "介護記録",
+            "出勤簿",
+            "始末書",
+            "回覧板"
+        ],
+        "answer": 1,
+        "answer_text": "介護記録",
+        "explanation": "客観的で正確な介護記録の蓄積により、24時間の多職種間での確実な情報共有とケアの継続性が保たれます。",
+        "unitTitle": "第3節 人材育成・研鑽",
+        "qNumber": "4-7",
+        "stem": "チームでの<ruby>情報共有<rt>じょうほうきょうゆう</rt></ruby>やケアの<ruby>統一化<rt>とういつか</rt></ruby>のためには、<ruby>介護計画<rt>かいごけいかく</rt></ruby>や [___] を<ruby>作成<rt>さくせい</rt></ruby>することは<ruby>必須<rt>ひっす</rt></ruby>です。",
+        "stem_plain": "チームでの情報共有やケアの統一化のためには、介護計画や [___] を作成することは必須です。"
+    },
+    {
+        "id": 79,
+        "unit": 4,
+        "unit_title": "第3節 人材育成・研鑽",
+        "q_number": "4-8",
+        "question_ruby": "<ruby>生涯<rt>しょうがい</rt></ruby>にわたって<ruby>自己研鑽<rt>じこけんさん</rt></ruby>するしくみとして、<ruby>日本介護福祉士会<rt>にほんかいごふくししかい</rt></ruby>は [___] <ruby>体系<rt>たいけい</rt></ruby>を<ruby>整備<rt>せいび</rt></ruby>しています。",
+        "question_plain": "生涯にわたって自己研鑽するしくみとして、日本介護福祉士会は [___] 体系を整備しています。",
+        "options": [
+            "生涯研修",
+            "階層昇進",
+            "資格更新",
+            "実務者試験"
+        ],
+        "answer": 1,
+        "answer_text": "生涯研修",
+        "explanation": "日本介護福祉士会では、ファーストステップ・セカンドステップ等の体系的な生涯研修制度を運用しています。",
+        "unitTitle": "第3節 人材育成・研鑽",
+        "qNumber": "4-8",
+        "stem": "<ruby>生涯<rt>しょうがい</rt></ruby>にわたって<ruby>自己研鑽<rt>じこけんさん</rt></ruby>するしくみとして、<ruby>日本介護福祉士会<rt>にほんかいごふくししかい</rt></ruby>は [___] <ruby>体系<rt>たいけい</rt></ruby>を<ruby>整備<rt>せいび</rt></ruby>しています。",
+        "stem_plain": "生涯にわたって自己研鑽するしくみとして、日本介護福祉士会は [___] 体系を整備しています。"
+    },
+    {
+        "id": 80,
+        "unit": 4,
+        "unit_title": "第3節 人材育成・研鑽",
+        "q_number": "4-9",
+        "question_ruby": " [___] と<ruby>呼<rt>よ</rt></ruby>ばれる<ruby>時期<rt>じき</rt></ruby>には、1<ruby>対<rt>たい</rt></ruby>1のケアだけでなく、<ruby>地域<rt>ちいき</rt></ruby>でのネットワークづくりなどが<ruby>求<rt>もと</rt></ruby>められます。",
+        "question_plain": " [___] と呼ばれる時期には、1対1のケアだけでなく、地域でのネットワークづくりなどが求められます。",
+        "options": [
+            "ベテラン期",
+            "初任期",
+            "学生期",
+            "準備期"
+        ],
+        "answer": 1,
+        "answer_text": "ベテラン期",
+        "explanation": "10年以上の経験を積んだベテラン期には、事業所を超えた地域全体の課題解決やネットワーク形成を牽引します。",
+        "unitTitle": "第3節 人材育成・研鑽",
+        "qNumber": "4-9",
+        "stem": " [___] と<ruby>呼<rt>よ</rt></ruby>ばれる<ruby>時期<rt>じき</rt></ruby>には、1<ruby>対<rt>たい</rt></ruby>1のケアだけでなく、<ruby>地域<rt>ちいき</rt></ruby>でのネットワークづくりなどが<ruby>求<rt>もと</rt></ruby>められます。",
+        "stem_plain": " [___] と呼ばれる時期には、1対1のケアだけでなく、地域でのネットワークづくりなどが求められます。"
+    },
+    {
+        "id": 81,
+        "unit": 4,
+        "unit_title": "第3節 人材育成・研鑽",
+        "q_number": "4-10",
+        "question_ruby": "<ruby>管理者<rt>かんりしゃ</rt></ruby>として、<ruby>事故<rt>じこ</rt></ruby>や<ruby>感染症<rt>かんせんしょう</rt></ruby>、<ruby>災害<rt>さいがい</rt></ruby>といった<ruby>危機<rt>きき</rt></ruby>から<ruby>守<rt>まも</rt></ruby>る<ruby>体制<rt>たいせい</rt></ruby>づくりを [___] といいます。",
+        "question_plain": "管理者として、事故や感染症、災害といった危機から守る体制づくりを [___] といいます。",
+        "options": [
+            "リスクマネジメント",
+            "タイムマネジメント",
+            "タスク管理",
+            "財務管理"
+        ],
+        "answer": 1,
+        "answer_text": "リスクマネジメント",
+        "explanation": "事故・感染・災害等の危機を包括的に予測・管理し、利用者と職員の安全を守るマネジメントです。",
+        "unitTitle": "第3節 人材育成・研鑽",
+        "qNumber": "4-10",
+        "stem": "<ruby>管理者<rt>かんりしゃ</rt></ruby>として、<ruby>事故<rt>じこ</rt></ruby>や<ruby>感染症<rt>かんせんしょう</rt></ruby>、<ruby>災害<rt>さいがい</rt></ruby>といった<ruby>危機<rt>きき</rt></ruby>から<ruby>守<rt>まも</rt></ruby>る<ruby>体制<rt>たいせい</rt></ruby>づくりを [___] といいます。",
+        "stem_plain": "管理者として、事故や感染症、災害といった危機から守る体制づくりを [___] といいます。"
+    },
+    {
+        "id": 82,
+        "unit": 4,
+        "unit_title": "第3節 人材育成・研鑽",
+        "q_number": "4-11",
+        "question_ruby": "<ruby>職員<rt>しょくいん</rt></ruby>が<ruby>負<rt>ふ</rt></ruby>のストレスに<ruby>追<rt>お</rt></ruby>いこまれ、 [___] （<ruby>燃<rt>も</rt></ruby>え<ruby>尽<rt>つ</rt></ruby>き<ruby>症候群<rt>しょうこうぐん</rt></ruby>）することがないように<ruby>調整<rt>ちょうせい</rt></ruby>することが<ruby>求<rt>もと</rt></ruby>められます。",
+        "question_plain": "職員が負のストレスに追いこまれ、 [___] （燃え尽き症候群）することがないように調整することが求められます。",
+        "options": [
+            "バーンアウト",
+            "ドロップアウト",
+            "スランプ",
+            "キャリーオーバー"
+        ],
+        "answer": 1,
+        "answer_text": "バーンアウト",
+        "explanation": "献身的に働いていた職員が心身の疲弊から意欲を喪失してしまう現象で、管理者はメンタルヘルス対策が必要です。",
+        "unitTitle": "第3節 人材育成・研鑽",
+        "qNumber": "4-11",
+        "stem": "<ruby>職員<rt>しょくいん</rt></ruby>が<ruby>負<rt>ふ</rt></ruby>のストレスに<ruby>追<rt>お</rt></ruby>いこまれ、 [___] （<ruby>燃<rt>も</rt></ruby>え<ruby>尽<rt>つ</rt></ruby>き<ruby>症候群<rt>しょうこうぐん</rt></ruby>）することがないように<ruby>調整<rt>ちょうせい</rt></ruby>することが<ruby>求<rt>もと</rt></ruby>められます。",
+        "stem_plain": "職員が負のストレスに追いこまれ、 [___] （燃え尽き症候群）することがないように調整することが求められます。"
+    },
+    {
+        "id": 83,
+        "unit": 4,
+        "unit_title": "第3節 人材育成・研鑽",
+        "q_number": "4-12",
+        "question_ruby": "キャリアに<ruby>応<rt>おう</rt></ruby>じて<ruby>求<rt>もと</rt></ruby>められる<ruby>実践力<rt>じっせんりょく</rt></ruby>を<ruby>把握<rt>はあく</rt></ruby>し、<ruby>任用要件<rt>にんようようけん</rt></ruby>と<ruby>賃金体系<rt>ちんぎんたいけい</rt></ruby>を<ruby>明文化<rt>めいぶんか</rt></ruby>したものを [___] といいます。",
+        "question_plain": "キャリアに応じて求められる実践力を把握し、任用要件と賃金体系を明文化したものを [___] といいます。",
+        "options": [
+            "キャリアパス",
+            "就業規則",
+            "組織規程",
+            "求人票"
+        ],
+        "answer": 1,
+        "answer_text": "キャリアパス",
+        "explanation": "職員の成長段階ごとの能力要件や評価基準、給与テーブルを連動させ明示した昇進・昇格の道筋です。",
+        "unitTitle": "第3節 人材育成・研鑽",
+        "qNumber": "4-12",
+        "stem": "キャリアに<ruby>応<rt>おう</rt></ruby>じて<ruby>求<rt>もと</rt></ruby>められる<ruby>実践力<rt>じっせんりょく</rt></ruby>を<ruby>把握<rt>はあく</rt></ruby>し、<ruby>任用要件<rt>にんようようけん</rt></ruby>と<ruby>賃金体系<rt>ちんぎんたいけい</rt></ruby>を<ruby>明文化<rt>めいぶんか</rt></ruby>したものを [___] といいます。",
+        "stem_plain": "キャリアに応じて求められる実践力を把握し、任用要件と賃金体系を明文化したものを [___] といいます。"
+    },
+    {
+        "id": 84,
+        "unit": 4,
+        "unit_title": "第3節 人材育成・研鑽",
+        "q_number": "4-13",
+        "question_ruby": "<ruby>長期的<rt>ちょうきてき</rt></ruby>で<ruby>計画的<rt>けいかくてき</rt></ruby>な<ruby>能力開発<rt>のうりょくかいはつ</rt></ruby>をおこなう<ruby>取<rt>と</rt></ruby>り<ruby>組<rt>く</rt></ruby>みを [___] と<ruby>呼<rt>よ</rt></ruby>びます。",
+        "question_plain": "長期的で計画的な能力開発をおこなう取り組みを [___] と呼びます。",
+        "options": [
+            "キャリア開発",
+            "業務ローテーション",
+            "福利厚生",
+            "自己啓発"
+        ],
+        "answer": 1,
+        "answer_text": "キャリア開発",
+        "explanation": "組織のニーズと個人の希望を擦り合わせ、中長期的に職員のキャリア向上を計画的に促す取り組みです。",
+        "unitTitle": "第3節 人材育成・研鑽",
+        "qNumber": "4-13",
+        "stem": "<ruby>長期的<rt>ちょうきてき</rt></ruby>で<ruby>計画的<rt>けいかくてき</rt></ruby>な<ruby>能力開発<rt>のうりょくかいはつ</rt></ruby>をおこなう<ruby>取<rt>と</rt></ruby>り<ruby>組<rt>く</rt></ruby>みを [___] と<ruby>呼<rt>よ</rt></ruby>びます。",
+        "stem_plain": "長期的で計画的な能力開発をおこなう取り組みを [___] と呼びます。"
+    },
+    {
+        "id": 85,
+        "unit": 4,
+        "unit_title": "第3節 人材育成・研鑽",
+        "q_number": "4-14",
+        "question_ruby": "<ruby>職務<rt>しょくむ</rt></ruby>を<ruby>離<rt>はな</rt></ruby>れておこなう<ruby>教育訓練<rt>きょういくくんれん</rt></ruby>のことを [___] といいます。",
+        "question_plain": "職務を離れておこなう教育訓練のことを [___] といいます。",
+        "options": [
+            "Off-JT",
+            "OJT",
+            "SDS",
+            "ケーススタディ"
+        ],
+        "answer": 1,
+        "answer_text": "Off-JT",
+        "explanation": "日常の持ち場を離れ、研修室や外部セミナー等で知識や概念を体系的に受講・学習する形式です。",
+        "unitTitle": "第3節 人材育成・研鑽",
+        "qNumber": "4-14",
+        "stem": "<ruby>職務<rt>しょくむ</rt></ruby>を<ruby>離<rt>はな</rt></ruby>れておこなう<ruby>教育訓練<rt>きょういくくんれん</rt></ruby>のことを [___] といいます。",
+        "stem_plain": "職務を離れておこなう教育訓練のことを [___] といいます。"
+    },
+    {
+        "id": 86,
+        "unit": 4,
+        "unit_title": "第3節 人材育成・研鑽",
+        "q_number": "4-15",
+        "question_ruby": "OJTにより、<ruby>部下<rt>ぶか</rt></ruby>は<ruby>自分<rt>じぶん</rt></ruby>の<ruby>成長<rt>せいちょう</rt></ruby>を<ruby>実感<rt>じっかん</rt></ruby>し、<ruby>専門職<rt>せんもんしょく</rt></ruby>としての<ruby>誇<rt>ほこ</rt></ruby>りや [___] を<ruby>高<rt>たか</rt></ruby>めます。",
+        "question_plain": "OJTにより、部下は自分の成長を実感し、専門職としての誇りや [___] を高めます。",
+        "options": [
+            "自己効力感",
+            "優越感",
+            "プライド",
+            "承認欲求"
+        ],
+        "answer": 1,
+        "answer_text": "自己効力感",
+        "explanation": "「自分にはできる」「うまく業務を遂行できる」という達成感と確信を心理学用語で「自己効力感」といいます。",
+        "unitTitle": "第3節 人材育成・研鑽",
+        "qNumber": "4-15",
+        "stem": "OJTにより、<ruby>部下<rt>ぶか</rt></ruby>は<ruby>自分<rt>じぶん</rt></ruby>の<ruby>成長<rt>せいちょう</rt></ruby>を<ruby>実感<rt>じっかん</rt></ruby>し、<ruby>専門職<rt>せんもんしょく</rt></ruby>としての<ruby>誇<rt>ほこ</rt></ruby>りや [___] を<ruby>高<rt>たか</rt></ruby>めます。",
+        "stem_plain": "OJTにより、部下は自分の成長を実感し、専門職としての誇りや [___] を高めます。"
+    },
+    {
+        "id": 87,
+        "unit": 4,
+        "unit_title": "第3節 人材育成・研鑽",
+        "q_number": "4-16",
+        "question_ruby": "OJTを<ruby>通<rt>つう</rt></ruby>じて<ruby>主体的<rt>しゅたいてき</rt></ruby>に<ruby>考<rt>かんが</rt></ruby>える<ruby>習慣<rt>しゅうかん</rt></ruby>を<ruby>獲得<rt>かくとく</rt></ruby>し、<ruby>自分<rt>じぶん</rt></ruby>で<ruby>自分<rt>じぶん</rt></ruby>を<ruby>成長<rt>せいちょう</rt></ruby>させられるようになることを [___] といいます。",
+        "question_plain": "OJTを通じて主体的に考える習慣を獲得し、自分で自分を成長させられるようになることを [___] といいます。",
+        "options": [
+            "独り立ち",
+            "孤立",
+            "独立採算",
+            "現場主任"
+        ],
+        "answer": 1,
+        "answer_text": "独り立ち",
+        "explanation": "先輩の指示を待つ段階を脱し、自律的に判断し自己成長のPDCAを回せる状態を「独り立ち」と呼びます。",
+        "unitTitle": "第3節 人材育成・研鑽",
+        "qNumber": "4-16",
+        "stem": "OJTを<ruby>通<rt>つう</rt></ruby>じて<ruby>主体的<rt>しゅたいてき</rt></ruby>に<ruby>考<rt>かんが</rt></ruby>える<ruby>習慣<rt>しゅうかん</rt></ruby>を<ruby>獲得<rt>かくとく</rt></ruby>し、<ruby>自分<rt>じぶん</rt></ruby>で<ruby>自分<rt>じぶん</rt></ruby>を<ruby>成長<rt>せいちょう</rt></ruby>させられるようになることを [___] といいます。",
+        "stem_plain": "OJTを通じて主体的に考える習慣を獲得し、自分で自分を成長させられるようになることを [___] といいます。"
+    },
+    {
+        "id": 88,
+        "unit": 4,
+        "unit_title": "第3節 人材育成・研鑽",
+        "q_number": "4-17",
+        "question_ruby": "<ruby>介護福祉職<rt>かいごふくししょく</rt></ruby>などの<ruby>対人援助職<rt>たいじんえんじょしょく</rt></ruby>が<ruby>指導者<rt>しどうしゃ</rt></ruby>から<ruby>受<rt>う</rt></ruby>ける<ruby>指導機会<rt>しどうきかい</rt></ruby>や<ruby>指導過程<rt>しどうかてい</rt></ruby>のことを [___] と<ruby>呼<rt>よ</rt></ruby>びます。",
+        "question_plain": "介護福祉職などの対人援助職が指導者から受ける指導機会や指導過程のことを [___] と呼びます。",
+        "options": [
+            "スーパービジョン",
+            "カンファレンス",
+            "コンサルテーション",
+            "メンタリング"
+        ],
+        "answer": 1,
+        "answer_text": "スーパービジョン",
+        "explanation": "対人援助職としての実践能力と専門的姿勢を高めるため、定期的に行われる専門的指導・教育プロセスです。",
+        "unitTitle": "第3節 人材育成・研鑽",
+        "qNumber": "4-17",
+        "stem": "<ruby>介護福祉職<rt>かいごふくししょく</rt></ruby>などの<ruby>対人援助職<rt>たいじんえんじょしょく</rt></ruby>が<ruby>指導者<rt>しどうしゃ</rt></ruby>から<ruby>受<rt>う</rt></ruby>ける<ruby>指導機会<rt>しどうきかい</rt></ruby>や<ruby>指導過程<rt>しどうかてい</rt></ruby>のことを [___] と<ruby>呼<rt>よ</rt></ruby>びます。",
+        "stem_plain": "介護福祉職などの対人援助職が指導者から受ける指導機会や指導過程のことを [___] と呼びます。"
+    },
+    {
+        "id": 89,
+        "unit": 4,
+        "unit_title": "第3節 人材育成・研鑽",
+        "q_number": "4-18",
+        "question_ruby": "スーパービジョンにおいて、<ruby>指導<rt>しどう</rt></ruby>する<ruby>側<rt>がわ</rt></ruby>を [___] と<ruby>呼<rt>よ</rt></ruby>びます。",
+        "question_plain": "スーパービジョンにおいて、指導する側を [___] と呼びます。",
+        "options": [
+            "スーパーバイザー",
+            "スーパーバイジー",
+            "リーダー",
+            "エバリュエーター"
+        ],
+        "answer": 1,
+        "answer_text": "スーパーバイザー",
+        "explanation": "スーパービジョンを提供する熟練者・指導側の専門職をスーパーバイザー（Supervisor）と呼びます。",
+        "unitTitle": "第3節 人材育成・研鑽",
+        "qNumber": "4-18",
+        "stem": "スーパービジョンにおいて、<ruby>指導<rt>しどう</rt></ruby>する<ruby>側<rt>がわ</rt></ruby>を [___] と<ruby>呼<rt>よ</rt></ruby>びます。",
+        "stem_plain": "スーパービジョンにおいて、指導する側を [___] と呼びます。"
+    },
+    {
+        "id": 90,
+        "unit": 4,
+        "unit_title": "第3節 人材育成・研鑽",
+        "q_number": "4-19",
+        "question_ruby": "スーパービジョンにおいて、<ruby>指導<rt>しどう</rt></ruby>を<ruby>受<rt>う</rt></ruby>ける<ruby>側<rt>がわ</rt></ruby>を [___] と<ruby>呼<rt>よ</rt></ruby>びます。",
+        "question_plain": "スーパービジョンにおいて、指導を受ける側を [___] と呼びます。",
+        "options": [
+            "スーパーバイジー",
+            "スーパーバイザー",
+            "メンティー",
+            "トレーニー"
+        ],
+        "answer": 1,
+        "answer_text": "スーパーバイジー",
+        "explanation": "スーパービジョンを受ける受指導者側の職員をスーパーバイジー（Supervisee）と呼びます。",
+        "unitTitle": "第3節 人材育成・研鑽",
+        "qNumber": "4-19",
+        "stem": "スーパービジョンにおいて、<ruby>指導<rt>しどう</rt></ruby>を<ruby>受<rt>う</rt></ruby>ける<ruby>側<rt>がわ</rt></ruby>を [___] と<ruby>呼<rt>よ</rt></ruby>びます。",
+        "stem_plain": "スーパービジョンにおいて、指導を受ける側を [___] と呼びます。"
+    },
+    {
+        "id": 91,
+        "unit": 4,
+        "unit_title": "第3節 人材育成・研鑽",
+        "q_number": "4-20",
+        "question_ruby": "スーパービジョンの<ruby>形態<rt>けいたい</rt></ruby>のうち、<ruby>学生同士<rt>がくせいどうし</rt></ruby>や<ruby>仲間関係<rt>なかまかんけい</rt></ruby>でおこなう<ruby>指導者<rt>しどうしゃ</rt></ruby>が<ruby>参加<rt>さんか</rt></ruby>しないタイプを [___] といいます。",
+        "question_plain": "スーパービジョンの形態のうち、学生同士や仲間関係でおこなう指導者が参加しないタイプを [___] といいます。",
+        "options": [
+            "ピアスーパービジョン",
+            "個別スーパービジョン",
+            "集団スーパービジョン",
+            "ライブスーパービジョン"
+        ],
+        "answer": 1,
+        "answer_text": "ピアスーパービジョン",
+        "explanation": "Peer（仲間・同僚）同士が対等な関係で意見を交換し、気付きや支え合いを得るスーパービジョンです。",
+        "unitTitle": "第3節 人材育成・研鑽",
+        "qNumber": "4-20",
+        "stem": "スーパービジョンの<ruby>形態<rt>けいたい</rt></ruby>のうち、<ruby>学生同士<rt>がくせいどうし</rt></ruby>や<ruby>仲間関係<rt>なかまかんけい</rt></ruby>でおこなう<ruby>指導者<rt>しどうしゃ</rt></ruby>が<ruby>参加<rt>さんか</rt></ruby>しないタイプを [___] といいます。",
+        "stem_plain": "スーパービジョンの形態のうち、学生同士や仲間関係でおこなう指導者が参加しないタイプを [___] といいます。"
+    },
+    {
+        "id": 92,
+        "unit": 4,
+        "unit_title": "第3節 人材育成・研鑽",
+        "q_number": "4-21",
+        "question_ruby": "スーパービジョンの<ruby>機能<rt>きのう</rt></ruby>のうち、<ruby>不安<rt>ふあん</rt></ruby>や<ruby>葛藤<rt>かっとう</rt></ruby>の<ruby>解消<rt>かいしょう</rt></ruby>が<ruby>期待<rt>きたい</rt></ruby>される<ruby>機能<rt>きのう</rt></ruby>を [___] といいます。",
+        "question_plain": "スーパービジョンの機能のうち、不安や葛藤の解消が期待される機能を [___] といいます。",
+        "options": [
+            "支持的機能",
+            "教育的機能",
+            "行政的機能",
+            "評価的機能"
+        ],
+        "answer": 1,
+        "answer_text": "支持的機能",
+        "explanation": "スーパービジョンの3大機能の一つで、援助者の心理的負担を傾聴・受容し精神的安定を支える機能です。",
+        "unitTitle": "第3節 人材育成・研鑽",
+        "qNumber": "4-21",
+        "stem": "スーパービジョンの<ruby>機能<rt>きのう</rt></ruby>のうち、<ruby>不安<rt>ふあん</rt></ruby>や<ruby>葛藤<rt>かっとう</rt></ruby>の<ruby>解消<rt>かいしょう</rt></ruby>が<ruby>期待<rt>きたい</rt></ruby>される<ruby>機能<rt>きのう</rt></ruby>を [___] といいます。",
+        "stem_plain": "スーパービジョンの機能のうち、不安や葛藤の解消が期待される機能を [___] といいます。"
+    },
+    {
+        "id": 93,
+        "unit": 4,
+        "unit_title": "第3節 人材育成・研鑽",
+        "q_number": "4-22",
+        "question_ruby": "<ruby>自己啓発<rt>じこけいはつ</rt></ruby>・<ruby>自己研鑽<rt>じこけんさん</rt></ruby>を<ruby>組織的<rt>そしきてき</rt></ruby>に<ruby>支<rt>ささ</rt></ruby>える<ruby>自己啓発援助制度<rt>じこけいはつえんじょせいど</rt></ruby>を [___] といいます。",
+        "question_plain": "自己啓発・自己研鑽を組織的に支える自己啓発援助制度を [___] といいます。",
+        "options": [
+            "SDS",
+            "OJT",
+            "Off-JT",
+            "MBO"
+        ],
+        "answer": 1,
+        "answer_text": "SDS",
+        "explanation": "Self-Development Support（自己啓発援助制度）の略称で、受講料補助や学習休暇の付与などを指します。",
+        "unitTitle": "第3節 人材育成・研鑽",
+        "qNumber": "4-22",
+        "stem": "<ruby>自己啓発<rt>じこけいはつ</rt></ruby>・<ruby>自己研鑽<rt>じこけんさん</rt></ruby>を<ruby>組織的<rt>そしきてき</rt></ruby>に<ruby>支<rt>ささ</rt></ruby>える<ruby>自己啓発援助制度<rt>じこけいはつえんじょせいど</rt></ruby>を [___] といいます。",
+        "stem_plain": "自己啓発・自己研鑽を組織的に支える自己啓発援助制度を [___] といいます。"
+    },
+    {
+        "id": 94,
+        "unit": 4,
+        "unit_title": "第3節 人材育成・研鑽",
+        "q_number": "4-23",
+        "question_ruby": "<ruby>自身<rt>じしん</rt></ruby>の<ruby>立場<rt>たちば</rt></ruby>や<ruby>役割<rt>やくわり</rt></ruby>に<ruby>応<rt>おう</rt></ruby>じた<ruby>知識<rt>ちしき</rt></ruby>や<ruby>技術<rt>ぎじゅつ</rt></ruby>を、<ruby>学問<rt>がくもん</rt></ruby>を<ruby>通<rt>つう</rt></ruby>じて<ruby>獲得<rt>かくとく</rt></ruby>していくことを [___] と<ruby>重視<rt>じゅうし</rt></ruby>します。",
+        "question_plain": "自身の立場や役割に応じた知識や技術を、学問を通じて獲得していくことを [___] と重視します。",
+        "options": [
+            "自己研鑽",
+            "自己満足",
+            "自己犠牲",
+            "出世競争"
+        ],
+        "answer": 1,
+        "answer_text": "自己研鑽",
+        "explanation": "資格取得にとどまらず、自ら学び続け専門的知見を深める姿勢がプロフェッショナルとしての自己研鑽です。",
+        "unitTitle": "第3節 人材育成・研鑽",
+        "qNumber": "4-23",
+        "stem": "<ruby>自身<rt>じしん</rt></ruby>の<ruby>立場<rt>たちば</rt></ruby>や<ruby>役割<rt>やくわり</rt></ruby>に<ruby>応<rt>おう</rt></ruby>じた<ruby>知識<rt>ちしき</rt></ruby>や<ruby>技術<rt>ぎじゅつ</rt></ruby>を、<ruby>学問<rt>がくもん</rt></ruby>を<ruby>通<rt>つう</rt></ruby>じて<ruby>獲得<rt>かくとく</rt></ruby>していくことを [___] と<ruby>重視<rt>じゅうし</rt></ruby>します。",
+        "stem_plain": "自身の立場や役割に応じた知識や技術を、学問を通じて獲得していくことを [___] と重視します。"
+    },
+    {
+        "id": 95,
+        "unit": 4,
+        "unit_title": "第3節 人材育成・研鑽",
+        "q_number": "4-24",
+        "question_ruby": "2007<ruby>年<rt>ねん</rt></ruby>の<ruby>法改正<rt>ほうかいせい</rt></ruby>において、<ruby>介護福祉士<rt>かいごふくしし</rt></ruby>の<ruby>義務<rt>ぎむ</rt></ruby>として「 [___] の<ruby>責務<rt>せきむ</rt></ruby>」が<ruby>追加<rt>ついか</rt></ruby>されました。",
+        "question_plain": "2007年の法改正において、介護福祉士の義務として「 [___] の責務」が追加されました。",
+        "options": [
+            "資質向上",
+            "秘密保持",
+            "信用失墜行為禁止",
+            "名称使用制限"
+        ],
+        "answer": 1,
+        "answer_text": "資質向上",
+        "explanation": "社会福祉士及び介護福祉士法第47条の2に、常に資質向上のための責務（努力義務）が明記されました。",
+        "unitTitle": "第3節 人材育成・研鑽",
+        "qNumber": "4-24",
+        "stem": "2007<ruby>年<rt>ねん</rt></ruby>の<ruby>法改正<rt>ほうかいせい</rt></ruby>において、<ruby>介護福祉士<rt>かいごふくしし</rt></ruby>の<ruby>義務<rt>ぎむ</rt></ruby>として「 [___] の<ruby>責務<rt>せきむ</rt></ruby>」が<ruby>追加<rt>ついか</rt></ruby>されました。",
+        "stem_plain": "2007年の法改正において、介護福祉士の義務として「 [___] の責務」が追加されました。"
+    },
+    {
+        "id": 96,
+        "unit": 4,
+        "unit_title": "第3節 人材育成・研鑽",
+        "q_number": "4-25",
+        "question_ruby": "<ruby>質<rt>しつ</rt></ruby>の<ruby>高<rt>たか</rt></ruby>いサービスを<ruby>提供<rt>ていきょう</rt></ruby>するための<ruby>実践力<rt>じっせんりょく</rt></ruby>を<ruby>獲得<rt>かくとく</rt></ruby>していく<ruby>方法<rt>ほうほう</rt></ruby>としては、 [___] の<ruby>活用<rt>かつよう</rt></ruby>が<ruby>有効<rt>ゆうこう</rt></ruby>です。",
+        "question_plain": "質の高いサービスを提供するための実践力を獲得していく方法としては、 [___] の活用が有効です。",
+        "options": [
+            "外部研修",
+            "社内飲み会",
+            "残業対応",
+            "年功序列"
+        ],
+        "answer": 1,
+        "answer_text": "外部研修",
+        "explanation": "他施設の先進事例や専門学会の知見を吸収できる外部研修への参加は、視野を広げる有効な方法です。",
+        "unitTitle": "第3節 人材育成・研鑽",
+        "qNumber": "4-25",
+        "stem": "<ruby>質<rt>しつ</rt></ruby>の<ruby>高<rt>たか</rt></ruby>いサービスを<ruby>提供<rt>ていきょう</rt></ruby>するための<ruby>実践力<rt>じっせんりょく</rt></ruby>を<ruby>獲得<rt>かくとく</rt></ruby>していく<ruby>方法<rt>ほうほう</rt></ruby>としては、 [___] の<ruby>活用<rt>かつよう</rt></ruby>が<ruby>有効<rt>ゆうこう</rt></ruby>です。",
+        "stem_plain": "質の高いサービスを提供するための実践力を獲得していく方法としては、 [___] の活用が有効です。"
+    },
+    {
+        "id": 97,
+        "unit": 5,
+        "unit_title": "第4節 組織目標達成",
+        "q_number": "5-1",
+        "question_ruby": "<ruby>組織<rt>そしき</rt></ruby>は、<ruby>単<rt>たん</rt></ruby>なる<ruby>集団<rt>しゅうだん</rt></ruby>とは<ruby>異<rt>こと</rt></ruby>なり、①<ruby>共通<rt>きょうつう</rt></ruby>の [___] を<ruby>持<rt>も</rt></ruby>つこと、②<ruby>協力<rt>きょうりょく</rt></ruby>する<ruby>意思<rt>いし</rt></ruby>、③コミュニケーションの3<ruby>要素<rt>ようそ</rt></ruby>が<ruby>特徴<rt>とくちょう</rt></ruby>です。",
+        "question_plain": "組織は、単なる集団とは異なり、①共通の [___] を持つこと、②協力する意思、③コミュニケーションの3要素が特徴です。",
+        "options": [
+            "目的",
+            "出身地",
+            "年齢",
+            "雇用形態"
+        ],
+        "answer": 1,
+        "answer_text": "目的",
+        "explanation": "チェスター・バーナードが定義した組織の3要素は①共通の目的、②貢献意欲（協力意志）、③コミュニケーションです。",
+        "unitTitle": "第4節 組織目標達成",
+        "qNumber": "5-1",
+        "stem": "<ruby>組織<rt>そしき</rt></ruby>は、<ruby>単<rt>たん</rt></ruby>なる<ruby>集団<rt>しゅうだん</rt></ruby>とは<ruby>異<rt>こと</rt></ruby>なり、①<ruby>共通<rt>きょうつう</rt></ruby>の [___] を<ruby>持<rt>も</rt></ruby>つこと、②<ruby>協力<rt>きょうりょく</rt></ruby>する<ruby>意思<rt>いし</rt></ruby>、③コミュニケーションの3<ruby>要素<rt>ようそ</rt></ruby>が<ruby>特徴<rt>とくちょう</rt></ruby>です。",
+        "stem_plain": "組織は、単なる集団とは異なり、①共通の [___] を持つこと、②協力する意思、③コミュニケーションの3要素が特徴です。"
+    },
+    {
+        "id": 98,
+        "unit": 5,
+        "unit_title": "第4節 組織目標達成",
+        "q_number": "5-2",
+        "question_ruby": "<ruby>法人<rt>ほうじん</rt></ruby>とは、<ruby>事業所<rt>じぎょうしょ</rt></ruby>の [___] <ruby>母体<rt>ぼたい</rt></ruby>のことであり、<ruby>複数<rt>ふくすう</rt></ruby>の<ruby>事業所<rt>じぎょうしょ</rt></ruby>を<ruby>一括<rt>いっかつ</rt></ruby>して<ruby>管理<rt>かんり</rt></ruby>・<ruby>運営<rt>うんえい</rt></ruby>する<ruby>役割<rt>やくわり</rt></ruby>を<ruby>果<rt>は</rt></ruby>たします。",
+        "question_plain": "法人とは、事業所の [___] 母体のことであり、複数の事業所を一括して管理・運営する役割を果たします。",
+        "options": [
+            "経営",
+            "建築",
+            "医療",
+            "ボランティア"
+        ],
+        "answer": 1,
+        "answer_text": "経営",
+        "explanation": "社会福祉法人や医療法人など、法的な権利義務の主体として事業所を経営・統括する母体を指します。",
+        "unitTitle": "第4節 組織目標達成",
+        "qNumber": "5-2",
+        "stem": "<ruby>法人<rt>ほうじん</rt></ruby>とは、<ruby>事業所<rt>じぎょうしょ</rt></ruby>の [___] <ruby>母体<rt>ぼたい</rt></ruby>のことであり、<ruby>複数<rt>ふくすう</rt></ruby>の<ruby>事業所<rt>じぎょうしょ</rt></ruby>を<ruby>一括<rt>いっかつ</rt></ruby>して<ruby>管理<rt>かんり</rt></ruby>・<ruby>運営<rt>うんえい</rt></ruby>する<ruby>役割<rt>やくわり</rt></ruby>を<ruby>果<rt>は</rt></ruby>たします。",
+        "stem_plain": "法人とは、事業所の [___] 母体のことであり、複数の事業所を一括して管理・運営する役割を果たします。"
+    },
+    {
+        "id": 99,
+        "unit": 5,
+        "unit_title": "第4節 組織目標達成",
+        "q_number": "5-3",
+        "question_ruby": "<ruby>法人<rt>ほうじん</rt></ruby>の<ruby>階層構造<rt>かいそうこうぞう</rt></ruby>は大別すると、 [___] <ruby>部門<rt>ぶもん</rt></ruby>、<ruby>中間管理部門<rt>ちゅうかんかんりぶもん</rt></ruby>、<ruby>現場部門<rt>げんばぶもん</rt></ruby>の3つで<ruby>構成<rt>こうせい</rt></ruby>されます。",
+        "question_plain": "法人の階層構造は大別すると、 [___] 部門、中間管理部門、現場部門の3つで構成されます。",
+        "options": [
+            "経営・管理",
+            "営業・販売",
+            "広報・宣伝",
+            "法務・監査"
+        ],
+        "answer": 1,
+        "answer_text": "経営・管理",
+        "explanation": "理事長や施設長を中心とする「経営・管理部門」、主任などの「中間管理部門」、直接ケアする「現場部門」の3層構造です。",
+        "unitTitle": "第4節 組織目標達成",
+        "qNumber": "5-3",
+        "stem": "<ruby>法人<rt>ほうじん</rt></ruby>の<ruby>階層構造<rt>かいそうこうぞう</rt></ruby>は大別すると、 [___] <ruby>部門<rt>ぶもん</rt></ruby>、<ruby>中間管理部門<rt>ちゅうかんかんりぶもん</rt></ruby>、<ruby>現場部門<rt>げんばぶもん</rt></ruby>の3つで<ruby>構成<rt>こうせい</rt></ruby>されます。",
+        "stem_plain": "法人の階層構造は大別すると、 [___] 部門、中間管理部門、現場部門の3つで構成されます。"
+    },
+    {
+        "id": 100,
+        "unit": 5,
+        "unit_title": "第4節 組織目標達成",
+        "q_number": "5-4",
+        "question_ruby": "<ruby>事業<rt>じぎょう</rt></ruby>をおこなううえでの<ruby>資源<rt>しげん</rt></ruby>である「ヒト・ [___] ・カネ」について<ruby>中長期計画<rt>ちゅうちょうきけいかく</rt></ruby>を<ruby>策定<rt>さくてい</rt></ruby>するのは、<ruby>経営・管理部門<rt>けいえいかんりぶもん</rt></ruby>の<ruby>役割<rt>やくわり</rt></ruby>です。",
+        "question_plain": "事業をおこなううえでの資源である「ヒト・ [___] ・カネ」について中長期計画を策定するのは、経営・管理部門の役割です。",
+        "options": [
+            "モノ",
+            "時間",
+            "情報",
+            "制度"
+        ],
+        "answer": 1,
+        "answer_text": "モノ",
+        "explanation": "経営の3大資源「ヒト（人材）・モノ（設備機器）・カネ（資金財源）」を配分・管理します。",
+        "unitTitle": "第4節 組織目標達成",
+        "qNumber": "5-4",
+        "stem": "<ruby>事業<rt>じぎょう</rt></ruby>をおこなううえでの<ruby>資源<rt>しげん</rt></ruby>である「ヒト・ [___] ・カネ」について<ruby>中長期計画<rt>ちゅうちょうきけいかく</rt></ruby>を<ruby>策定<rt>さくてい</rt></ruby>するのは、<ruby>経営・管理部門<rt>けいえいかんりぶもん</rt></ruby>の<ruby>役割<rt>やくわり</rt></ruby>です。",
+        "stem_plain": "事業をおこなううえでの資源である「ヒト・ [___] ・カネ」について中長期計画を策定するのは、経営・管理部門の役割です。"
+    },
+    {
+        "id": 101,
+        "unit": 5,
+        "unit_title": "第4節 組織目標達成",
+        "q_number": "5-5",
+        "question_ruby": "<ruby>経営・管理部門<rt>けいえいかんりぶもん</rt></ruby>と<ruby>現場部門<rt>げんばぶもん</rt></ruby>を<ruby>円滑<rt>えんかつ</rt></ruby>につなぐ<ruby>役割<rt>やくわり</rt></ruby>を<ruby>果<rt>は</rt></ruby>たすのが [___] <ruby>部門<rt>ぶもん</rt></ruby>です。",
+        "question_plain": "経営・管理部門と現場部門を円滑につなぐ役割を果たすのが [___] 部門です。",
+        "options": [
+            "中間管理",
+            "経理",
+            "相談",
+            "外部監査"
+        ],
+        "answer": 1,
+        "answer_text": "中間管理",
+        "explanation": "サービス提供責任者やフロアリーダー等の「中間管理部門」が、トップの理念を現場に降ろし、現場の声を吸い上げます。",
+        "unitTitle": "第4節 組織目標達成",
+        "qNumber": "5-5",
+        "stem": "<ruby>経営・管理部門<rt>けいえいかんりぶもん</rt></ruby>と<ruby>現場部門<rt>げんばぶもん</rt></ruby>を<ruby>円滑<rt>えんかつ</rt></ruby>につなぐ<ruby>役割<rt>やくわり</rt></ruby>を<ruby>果<rt>は</rt></ruby>たすのが [___] <ruby>部門<rt>ぶもん</rt></ruby>です。",
+        "stem_plain": "経営・管理部門と現場部門を円滑につなぐ役割を果たすのが [___] 部門です。"
+    },
+    {
+        "id": 102,
+        "unit": 5,
+        "unit_title": "第4節 組織目標達成",
+        "q_number": "5-6",
+        "question_ruby": "<ruby>介護<rt>かいご</rt></ruby>サービスに<ruby>直接<rt>ちょくせつ</rt></ruby>かかわり、<ruby>個別<rt>こべつ</rt></ruby>のサービス<ruby>提供<rt>ていきょう</rt></ruby>や<ruby>日々<rt>ひび</rt></ruby>の<ruby>継続性<rt>けいぞくせい</rt></ruby>に<ruby>責任<rt>せきにん</rt></ruby>を<ruby>持<rt>も</rt></ruby>つのが [___] <ruby>部門<rt>ぶもん</rt></ruby>です。",
+        "question_plain": "介護サービスに直接かかわり、個別のサービス提供や日々の継続性に責任を持つのが [___] 部門です。",
+        "options": [
+            "現場",
+            "経営",
+            "財務",
+            "人事"
+        ],
+        "answer": 1,
+        "answer_text": "現場",
+        "explanation": "直接利用者に触れ、生活全般のケアを24時間体制で責任を持って実践する部門が「現場部門」です。",
+        "unitTitle": "第4節 組織目標達成",
+        "qNumber": "5-6",
+        "stem": "<ruby>介護<rt>かいご</rt></ruby>サービスに<ruby>直接<rt>ちょくせつ</rt></ruby>かかわり、<ruby>個別<rt>こべつ</rt></ruby>のサービス<ruby>提供<rt>ていきょう</rt></ruby>や<ruby>日々<rt>ひび</rt></ruby>の<ruby>継続性<rt>けいぞくせい</rt></ruby>に<ruby>責任<rt>せきにん</rt></ruby>を<ruby>持<rt>も</rt></ruby>つのが [___] <ruby>部門<rt>ぶもん</rt></ruby>です。",
+        "stem_plain": "介護サービスに直接かかわり、個別のサービス提供や日々の継続性に責任を持つのが [___] 部門です。"
+    },
+    {
+        "id": 103,
+        "unit": 5,
+        "unit_title": "第4節 組織目標達成",
+        "q_number": "5-7",
+        "question_ruby": "<ruby>専門分野<rt>せんもんぶんや</rt></ruby>による<ruby>職員分<rt>しょくいんわ</rt></ruby>けを [___] と<ruby>呼<rt>よ</rt></ruby>び、<ruby>施設長<rt>しせつちょう</rt></ruby>や<ruby>主任<rt>しゅにん</rt></ruby>といった<ruby>地位<rt>ちい</rt></ruby>による<ruby>区分<rt>くぶん</rt></ruby>を<ruby>職位<rt>しょくい</rt></ruby>と<ruby>呼<rt>よ</rt></ruby>びます。",
+        "question_plain": "専門分野による職員分けを [___] と呼び、施設長や主任といった地位による区分を職位と呼びます。",
+        "options": [
+            "職種",
+            "学歴",
+            "勤務形態",
+            "雇用区分"
+        ],
+        "answer": 1,
+        "answer_text": "職種",
+        "explanation": "介護職、看護職、理学療法士などの業務の専門性による区分を「職種」、主任などの役職を「職位」といいます。",
+        "unitTitle": "第4節 組織目標達成",
+        "qNumber": "5-7",
+        "stem": "<ruby>専門分野<rt>せんもんぶんや</rt></ruby>による<ruby>職員分<rt>しょくいんわ</rt></ruby>けを [___] と<ruby>呼<rt>よ</rt></ruby>び、<ruby>施設長<rt>しせつちょう</rt></ruby>や<ruby>主任<rt>しゅにん</rt></ruby>といった<ruby>地位<rt>ちい</rt></ruby>による<ruby>区分<rt>くぶん</rt></ruby>を<ruby>職位<rt>しょくい</rt></ruby>と<ruby>呼<rt>よ</rt></ruby>びます。",
+        "stem_plain": "専門分野による職員分けを [___] と呼び、施設長や主任といった地位による区分を職位と呼びます。"
+    },
+    {
+        "id": 104,
+        "unit": 5,
+        "unit_title": "第4節 組織目標達成",
+        "q_number": "5-8",
+        "question_ruby": "<ruby>職員<rt>しょくいん</rt></ruby>の<ruby>経験年数<rt>けいけんねんすう</rt></ruby>や<ruby>求<rt>もと</rt></ruby>められる<ruby>能力<rt>のうりょく</rt></ruby>、<ruby>取得<rt>しゅとく</rt></ruby>すべき<ruby>資格等<rt>しかくとう</rt></ruby>を<ruby>明示<rt>めいじ</rt></ruby>し、<ruby>成長<rt>せいちょう</rt></ruby>の<ruby>道筋<rt>みちすじ</rt></ruby>を<ruby>示<rt>しめ</rt></ruby>すしくみを [___] と<ruby>呼<rt>よ</rt></ruby>びます。",
+        "question_plain": "職員の経験年数や求められる能力、取得すべき資格等を明示し、成長の道筋を示すしくみを [___] と呼びます。",
+        "options": [
+            "キャリアパス",
+            "タイムカード",
+            "名簿",
+            "人事台帳"
+        ],
+        "answer": 1,
+        "answer_text": "キャリアパス",
+        "explanation": "目指すべき将来像とステップアップの基準を明示することで、職員の離職防止と学習意欲を促進します。",
+        "unitTitle": "第4節 組織目標達成",
+        "qNumber": "5-8",
+        "stem": "<ruby>職員<rt>しょくいん</rt></ruby>の<ruby>経験年数<rt>けいけんねんすう</rt></ruby>や<ruby>求<rt>もと</rt></ruby>められる<ruby>能力<rt>のうりょく</rt></ruby>、<ruby>取得<rt>しゅとく</rt></ruby>すべき<ruby>資格等<rt>しかくとう</rt></ruby>を<ruby>明示<rt>めいじ</rt></ruby>し、<ruby>成長<rt>せいちょう</rt></ruby>の<ruby>道筋<rt>みちすじ</rt></ruby>を<ruby>示<rt>しめ</rt></ruby>すしくみを [___] と<ruby>呼<rt>よ</rt></ruby>びます。",
+        "stem_plain": "職員の経験年数や求められる能力、取得すべき資格等を明示し、成長の道筋を示すしくみを [___] と呼びます。"
+    },
+    {
+        "id": 105,
+        "unit": 5,
+        "unit_title": "第4節 組織目標達成",
+        "q_number": "5-9",
+        "question_ruby": "<ruby>組織<rt>そしき</rt></ruby>に<ruby>階層<rt>かいそう</rt></ruby>があり、それが<ruby>指揮命令系統<rt>しきめいれいけいとう</rt></ruby>でつながっていることを<ruby>目<rt>め</rt></ruby>に<ruby>見<rt>み</rt></ruby>える<ruby>形<rt>かたち</rt></ruby>で<ruby>示<rt>しめ</rt></ruby>したものを [___] といいます。",
+        "question_plain": "組織に階層があり、それが指揮命令系統でつながっていることを目に見える形で示したものを [___] といいます。",
+        "options": [
+            "組織図",
+            "見取り図",
+            "シフト表",
+            "タイムテーブル"
+        ],
+        "answer": 1,
+        "answer_text": "組織図",
+        "explanation": "権限と責任の所在、指揮命令のラインをグラフィカルに表現した図を組織図（組織系統図）と呼びます。",
+        "unitTitle": "第4節 組織目標達成",
+        "qNumber": "5-9",
+        "stem": "<ruby>組織<rt>そしき</rt></ruby>に<ruby>階層<rt>かいそう</rt></ruby>があり、それが<ruby>指揮命令系統<rt>しきめいれいけいとう</rt></ruby>でつながっていることを<ruby>目<rt>め</rt></ruby>に<ruby>見<rt>み</rt></ruby>える<ruby>形<rt>かたち</rt></ruby>で<ruby>示<rt>しめ</rt></ruby>したものを [___] といいます。",
+        "stem_plain": "組織に階層があり、それが指揮命令系統でつながっていることを目に見える形で示したものを [___] といいます。"
+    },
+    {
+        "id": 106,
+        "unit": 5,
+        "unit_title": "第4節 組織目標達成",
+        "q_number": "5-10",
+        "question_ruby": "<ruby>事業計画<rt>じぎょうけいかく</rt></ruby>とは<ruby>年度目標<rt>ねんどもくひょう</rt></ruby>を<ruby>示<rt>しめ</rt></ruby>した<ruby>管理表<rt>かんりひょう</rt></ruby>であり、Plan-Do-Check-Actionの [___] サイクルを<ruby>用<rt>もち</rt></ruby>いて<ruby>継続的<rt>けいぞくてき</rt></ruby>に<ruby>改善<rt>かいぜん</rt></ruby>していきます。",
+        "question_plain": "事業計画とは年度目標を示した管理表であり、Plan-Do-Check-Actionの [___] サイクルを用いて継続的に改善していきます。",
+        "options": [
+            "PDCA",
+            "OODA",
+            "SWOT",
+            "PEST"
+        ],
+        "answer": 1,
+        "answer_text": "PDCA",
+        "explanation": "計画（Plan）→実行（Do）→評価（Check）→改善（Action）の好循環を回して業務を向上させます。",
+        "unitTitle": "第4節 組織目標達成",
+        "qNumber": "5-10",
+        "stem": "<ruby>事業計画<rt>じぎょうけいかく</rt></ruby>とは<ruby>年度目標<rt>ねんどもくひょう</rt></ruby>を<ruby>示<rt>しめ</rt></ruby>した<ruby>管理表<rt>かんりひょう</rt></ruby>であり、Plan-Do-Check-Actionの [___] サイクルを<ruby>用<rt>もち</rt></ruby>いて<ruby>継続的<rt>けいぞくてき</rt></ruby>に<ruby>改善<rt>かいぜん</rt></ruby>していきます。",
+        "stem_plain": "事業計画とは年度目標を示した管理表であり、Plan-Do-Check-Actionの [___] サイクルを用いて継続的に改善していきます。"
+    },
+    {
+        "id": 107,
+        "unit": 5,
+        "unit_title": "第4節 組織目標達成",
+        "q_number": "5-11",
+        "question_ruby": "<ruby>介護<rt>かいご</rt></ruby>サービスを<ruby>持続的<rt>じぞくてき</rt></ruby>に<ruby>提供<rt>ていきょう</rt></ruby>するための<ruby>基盤<rt>きばん</rt></ruby>として、まず [___] <ruby>基盤<rt>きばん</rt></ruby>の<ruby>安定<rt>あんてい</rt></ruby>と<ruby>法令遵守<rt>ほうれいじゅんしゅ</rt></ruby>が<ruby>求<rt>もと</rt></ruby>められます。",
+        "question_plain": "介護サービスを持続的に提供するための基盤として、まず [___] 基盤の安定と法令遵守が求められます。",
+        "options": [
+            "経営",
+            "政治",
+            "IT",
+            "広報"
+        ],
+        "answer": 1,
+        "answer_text": "経営",
+        "explanation": "健全で安定した経営基盤とコンプライアンスが維持されていなければ、安心してケアを提供し続けることはできません。",
+        "unitTitle": "第4節 組織目標達成",
+        "qNumber": "5-11",
+        "stem": "<ruby>介護<rt>かいご</rt></ruby>サービスを<ruby>持続的<rt>じぞくてき</rt></ruby>に<ruby>提供<rt>ていきょう</rt></ruby>するための<ruby>基盤<rt>きばん</rt></ruby>として、まず [___] <ruby>基盤<rt>きばん</rt></ruby>の<ruby>安定<rt>あんてい</rt></ruby>と<ruby>法令遵守<rt>ほうれいじゅんしゅ</rt></ruby>が<ruby>求<rt>もと</rt></ruby>められます。",
+        "stem_plain": "介護サービスを持続的に提供するための基盤として、まず [___] 基盤の安定と法令遵守が求められます。"
+    },
+    {
+        "id": 108,
+        "unit": 5,
+        "unit_title": "第4節 組織目標達成",
+        "q_number": "5-12",
+        "question_ruby": "<ruby>法令<rt>ほうれい</rt></ruby>を<ruby>遵守<rt>じゅんしゅ</rt></ruby>することや、<ruby>透明性<rt>とうめいせい</rt></ruby>のある<ruby>健全<rt>けんぜん</rt></ruby>な<ruby>運営<rt>うんえい</rt></ruby>をおこなう<ruby>姿勢<rt>しせい</rt></ruby>を [___] と<ruby>呼<rt>よ</rt></ruby>びます。",
+        "question_plain": "法令を遵守することや、透明性のある健全な運営をおこなう姿勢を [___] と呼びます。",
+        "options": [
+            "コンプライアンス",
+            "ガバナンス",
+            "アカウンタビリティ",
+            "インフォームドコンセント"
+        ],
+        "answer": 1,
+        "answer_text": "コンプライアンス",
+        "explanation": "法令遵守にとどまらず、社会的な倫理規範や利用者本位の健全なモラルを守る姿勢全般を指します。",
+        "unitTitle": "第4節 組織目標達成",
+        "qNumber": "5-12",
+        "stem": "<ruby>法令<rt>ほうれい</rt></ruby>を<ruby>遵守<rt>じゅんしゅ</rt></ruby>することや、<ruby>透明性<rt>とうめいせい</rt></ruby>のある<ruby>健全<rt>けんぜん</rt></ruby>な<ruby>運営<rt>うんえい</rt></ruby>をおこなう<ruby>姿勢<rt>しせい</rt></ruby>を [___] と<ruby>呼<rt>よ</rt></ruby>びます。",
+        "stem_plain": "法令を遵守することや、透明性のある健全な運営をおこなう姿勢を [___] と呼びます。"
+    },
+    {
+        "id": 109,
+        "unit": 5,
+        "unit_title": "第4節 組織目標達成",
+        "q_number": "5-13",
+        "question_ruby": "<ruby>法人<rt>ほうじん</rt></ruby>や<ruby>事業所<rt>じぎょうしょ</rt></ruby>がめざす<ruby>目的<rt>もくてき</rt></ruby>や<ruby>志<rt>こころざし</rt></ruby>をわかりやすい<ruby>言葉<rt>ことば</rt></ruby>で<ruby>表現<rt>ひょうげん</rt></ruby>したものを [___] や<ruby>運営方針<rt>うんえいほうしん</rt></ruby>といいます。",
+        "question_plain": "法人や事業所がめざす目的や志をわかりやすい言葉で表現したものを [___] や運営方針といいます。",
+        "options": [
+            "理念",
+            "定款",
+            "マニュアル",
+            "スローガン"
+        ],
+        "answer": 1,
+        "answer_text": "理念",
+        "explanation": "組織が何のために存在し、何を最高の価値として社会貢献するのかを掲げたものが「理念（企業理念）」です。",
+        "unitTitle": "第4節 組織目標達成",
+        "qNumber": "5-13",
+        "stem": "<ruby>法人<rt>ほうじん</rt></ruby>や<ruby>事業所<rt>じぎょうしょ</rt></ruby>がめざす<ruby>目的<rt>もくてき</rt></ruby>や<ruby>志<rt>こころざし</rt></ruby>をわかりやすい<ruby>言葉<rt>ことば</rt></ruby>で<ruby>表現<rt>ひょうげん</rt></ruby>したものを [___] や<ruby>運営方針<rt>うんえいほうしん</rt></ruby>といいます。",
+        "stem_plain": "法人や事業所がめざす目的や志をわかりやすい言葉で表現したものを [___] や運営方針といいます。"
+    },
+    {
+        "id": 110,
+        "unit": 5,
+        "unit_title": "第4節 組織目標達成",
+        "q_number": "5-14",
+        "question_ruby": "<ruby>介護労働実態調査<rt>かいごろうどうじったいちょうさ</rt></ruby>によると、<ruby>前職<rt>ぜんしょく</rt></ruby>の<ruby>介護職<rt>かいごしょく</rt></ruby>を<ruby>辞<rt>や</rt></ruby>めた<ruby>理由<rt>りゆう</rt></ruby>の<ruby>上位<rt>じょうい</rt></ruby>には「<ruby>職場<rt>しょくば</rt></ruby>の [___] <ruby>関係<rt>かんけい</rt></ruby>に<ruby>問題<rt>もんだい</rt></ruby>があったため」があげられています。",
+        "question_plain": "介護労働実態調査によると、前職の介護職を辞めた理由の上位には「職場の [___] 関係に問題があったため」があげられています。",
+        "options": [
+            "人間",
+            "労働時間",
+            "通勤距離",
+            "給与"
+        ],
+        "answer": 1,
+        "answer_text": "人間",
+        "explanation": "介護現場における離職理由の上位に常に挙がるのが「職場の人間関係の悩み・ストレス」です。",
+        "unitTitle": "第4節 組織目標達成",
+        "qNumber": "5-14",
+        "stem": "<ruby>介護労働実態調査<rt>かいごろうどうじったいちょうさ</rt></ruby>によると、<ruby>前職<rt>ぜんしょく</rt></ruby>の<ruby>介護職<rt>かいごしょく</rt></ruby>を<ruby>辞<rt>や</rt></ruby>めた<ruby>理由<rt>りゆう</rt></ruby>の<ruby>上位<rt>じょうい</rt></ruby>には「<ruby>職場<rt>しょくば</rt></ruby>の [___] <ruby>関係<rt>かんけい</rt></ruby>に<ruby>問題<rt>もんだい</rt></ruby>があったため」があげられています。",
+        "stem_plain": "介護労働実態調査によると、前職の介護職を辞めた理由の上位には「職場の [___] 関係に問題があったため」があげられています。"
+    },
+    {
+        "id": 111,
+        "unit": 5,
+        "unit_title": "第4節 組織目標達成",
+        "q_number": "5-15",
+        "question_ruby": "<ruby>専門職<rt>せんもんしょく</rt></ruby>としての<ruby>知識<rt>ちしき</rt></ruby>・<ruby>技術<rt>ぎじゅつ</rt></ruby>を<ruby>高<rt>たか</rt></ruby>め<ruby>熟練<rt>じゅくれん</rt></ruby>したケアを<ruby>提供<rt>ていきょう</rt></ruby>するために、<ruby>介護福祉職自身<rt>かいごふくししょくじしん</rt></ruby>が [___] を<ruby>重<rt>かさ</rt></ruby>ねる<ruby>姿勢<rt>しせい</rt></ruby>も<ruby>重要<rt>じゅうよう</rt></ruby>です。",
+        "question_plain": "専門職としての知識・技術を高め熟練したケアを提供するために、介護福祉職自身が [___] を重ねる姿勢も重要です。",
+        "options": [
+            "自己研鑽",
+            "自己主張",
+            "残業",
+            "節約"
+        ],
+        "answer": 1,
+        "answer_text": "自己研鑽",
+        "explanation": "日々の実践に安住せず、自ら学び続けスキルアップを図る自己研鑽の積み重ねが不可欠です。",
+        "unitTitle": "第4節 組織目標達成",
+        "qNumber": "5-15",
+        "stem": "<ruby>専門職<rt>せんもんしょく</rt></ruby>としての<ruby>知識<rt>ちしき</rt></ruby>・<ruby>技術<rt>ぎじゅつ</rt></ruby>を<ruby>高<rt>たか</rt></ruby>め<ruby>熟練<rt>じゅくれん</rt></ruby>したケアを<ruby>提供<rt>ていきょう</rt></ruby>するために、<ruby>介護福祉職自身<rt>かいごふくししょくじしん</rt></ruby>が [___] を<ruby>重<rt>かさ</rt></ruby>ねる<ruby>姿勢<rt>しせい</rt></ruby>も<ruby>重要<rt>じゅうよう</rt></ruby>です。",
+        "stem_plain": "専門職としての知識・技術を高め熟練したケアを提供するために、介護福祉職自身が [___] を重ねる姿勢も重要です。"
+    },
+    {
+        "id": 112,
+        "unit": 5,
+        "unit_title": "第4節 組織目標達成",
+        "q_number": "5-16",
+        "question_ruby": "<ruby>介護業務<rt>かいごぎょうむ</rt></ruby>の<ruby>改善<rt>かいぜん</rt></ruby>や<ruby>意見交換<rt>いけんこうかん</rt></ruby>をおこなう<ruby>場<rt>ば</rt></ruby>として、<ruby>法人内<rt>ほうじんない</rt></ruby>には<ruby>食事<rt>しょくじ</rt></ruby>・<ruby>排泄<rt>はいせつ</rt></ruby>・<ruby>入浴<rt>にゅうよく</rt></ruby>などの<ruby>各種<rt>かくしゅ</rt></ruby> [___] が<ruby>設置<rt>せっち</rt></ruby>されます。",
+        "question_plain": "介護業務の改善や意見交換をおこなう場として、法人内には食事・排泄・入浴などの各種 [___] が設置されます。",
+        "options": [
+            "委員会",
+            "サークル",
+            "労働組合",
+            "派閥"
+        ],
+        "answer": 1,
+        "answer_text": "委員会",
+        "explanation": "褥瘡対策、感染予防、排泄ケアなど特定のテーマごとに職種横断で改善を進める委員会が設けられます。",
+        "unitTitle": "第4節 組織目標達成",
+        "qNumber": "5-16",
+        "stem": "<ruby>介護業務<rt>かいごぎょうむ</rt></ruby>の<ruby>改善<rt>かいぜん</rt></ruby>や<ruby>意見交換<rt>いけんこうかん</rt></ruby>をおこなう<ruby>場<rt>ば</rt></ruby>として、<ruby>法人内<rt>ほうじんない</rt></ruby>には<ruby>食事<rt>しょくじ</rt></ruby>・<ruby>排泄<rt>はいせつ</rt></ruby>・<ruby>入浴<rt>にゅうよく</rt></ruby>などの<ruby>各種<rt>かくしゅ</rt></ruby> [___] が<ruby>設置<rt>せっち</rt></ruby>されます。",
+        "stem_plain": "介護業務の改善や意見交換をおこなう場として、法人内には食事・排泄・入浴などの各種 [___] が設置されます。"
+    },
+    {
+        "id": 113,
+        "unit": 5,
+        "unit_title": "第4節 組織目標達成",
+        "q_number": "5-17",
+        "question_ruby": "<ruby>現場責任者<rt>げんばせきにんしゃ</rt></ruby>が<ruby>作成<rt>さくせい</rt></ruby>する1か<ruby>月単位<rt>げつたんい</rt></ruby>の [___] は、<ruby>人員不足<rt>じんいんふそく</rt></ruby>を<ruby>防<rt>ふせ</rt></ruby>ぎ<ruby>質<rt>しつ</rt></ruby>の<ruby>高<rt>たか</rt></ruby>いサービスを<ruby>提供<rt>ていきょう</rt></ruby>するための<ruby>設計図<rt>せっけいず</rt></ruby>となります。",
+        "question_plain": "現場責任者が作成する1か月単位の [___] は、人員不足を防ぎ質の高いサービスを提供するための設計図となります。",
+        "options": [
+            "勤務表",
+            "給与明細",
+            "有給届",
+            "日報"
+        ],
+        "answer": 1,
+        "answer_text": "勤務表",
+        "explanation": "人員配置基準を遵守しつつ職員のワークライフバランスと適切なケア体制を両立させる設計図です。",
+        "unitTitle": "第4節 組織目標達成",
+        "qNumber": "5-17",
+        "stem": "<ruby>現場責任者<rt>げんばせきにんしゃ</rt></ruby>が<ruby>作成<rt>さくせい</rt></ruby>する1か<ruby>月単位<rt>げつたんい</rt></ruby>の [___] は、<ruby>人員不足<rt>じんいんふそく</rt></ruby>を<ruby>防<rt>ふせ</rt></ruby>ぎ<ruby>質<rt>しつ</rt></ruby>の<ruby>高<rt>たか</rt></ruby>いサービスを<ruby>提供<rt>ていきょう</rt></ruby>するための<ruby>設計図<rt>せっけいず</rt></ruby>となります。",
+        "stem_plain": "現場責任者が作成する1か月単位の [___] は、人員不足を防ぎ質の高いサービスを提供するための設計図となります。"
+    },
+    {
+        "id": 114,
+        "unit": 5,
+        "unit_title": "第4節 組織目標達成",
+        "q_number": "5-18",
+        "question_ruby": "<ruby>常時<rt>じょうじ</rt></ruby>50<ruby>名以上<rt>めいいじょう</rt></ruby>を<ruby>使用<rt>しよう</rt></ruby>する<ruby>事業所<rt>じぎょうしょ</rt></ruby>では、<ruby>労働安全衛生法<rt>ろうどうあんぜんえいせいほう</rt></ruby>により<ruby>毎年<rt>まいとし</rt></ruby>1<ruby>回<rt>かい</rt></ruby>の [___] チェックが<ruby>義務<rt>ぎむ</rt></ruby>づけられています。",
+        "question_plain": "常時50名以上を使用する事業所では、労働安全衛生法により毎年1回の [___] チェックが義務づけられています。",
+        "options": [
+            "ストレス",
+            "健康診断",
+            "体力",
+            "適性"
+        ],
+        "answer": 1,
+        "answer_text": "ストレス",
+        "explanation": "労働者のメンタルヘルス不調を未然に防止（一次予防）するため、ストレスチェックの実施が法定義務となっています。",
+        "unitTitle": "第4節 組織目標達成",
+        "qNumber": "5-18",
+        "stem": "<ruby>常時<rt>じょうじ</rt></ruby>50<ruby>名以上<rt>めいいじょう</rt></ruby>を<ruby>使用<rt>しよう</rt></ruby>する<ruby>事業所<rt>じぎょうしょ</rt></ruby>では、<ruby>労働安全衛生法<rt>ろうどうあんぜんえいせいほう</rt></ruby>により<ruby>毎年<rt>まいとし</rt></ruby>1<ruby>回<rt>かい</rt></ruby>の [___] チェックが<ruby>義務<rt>ぎむ</rt></ruby>づけられています。",
+        "stem_plain": "常時50名以上を使用する事業所では、労働安全衛生法により毎年1回の [___] チェックが義務づけられています。"
+    },
+    {
+        "id": 115,
+        "unit": 5,
+        "unit_title": "第4節 組織目標達成",
+        "q_number": "5-19",
+        "question_ruby": "<ruby>言葉<rt>ことば</rt></ruby>や<ruby>行動<rt>こうどう</rt></ruby>による<ruby>嫌<rt>いや</rt></ruby>がらせ<ruby>行為<rt>こうい</rt></ruby>を [___] と<ruby>呼<rt>よ</rt></ruby>び、パワハラやセクハラ<ruby>等<rt>とう</rt></ruby>の<ruby>防止対策<rt>ぼうしたいさく</rt></ruby>が<ruby>求<rt>もと</rt></ruby>められます。",
+        "question_plain": "言葉や行動による嫌がらせ行為を [___] と呼び、パワハラやセクハラ等の防止対策が求められます。",
+        "options": [
+            "ハラスメント",
+            "ネグレクト",
+            "コンフリクト",
+            "モラルハザード"
+        ],
+        "answer": 1,
+        "answer_text": "ハラスメント",
+        "explanation": "優越的な関係を背景とした暴言や性的な言動など、他者の人格を傷つけ就業環境を害する嫌がらせです。",
+        "unitTitle": "第4節 組織目標達成",
+        "qNumber": "5-19",
+        "stem": "<ruby>言葉<rt>ことば</rt></ruby>や<ruby>行動<rt>こうどう</rt></ruby>による<ruby>嫌<rt>いや</rt></ruby>がらせ<ruby>行為<rt>こうい</rt></ruby>を [___] と<ruby>呼<rt>よ</rt></ruby>び、パワハラやセクハラ<ruby>等<rt>とう</rt></ruby>の<ruby>防止対策<rt>ぼうしたいさく</rt></ruby>が<ruby>求<rt>もと</rt></ruby>められます。",
+        "stem_plain": "言葉や行動による嫌がらせ行為を [___] と呼び、パワハラやセクハラ等の防止対策が求められます。"
+    },
+    {
+        "id": 116,
+        "unit": 5,
+        "unit_title": "第4節 組織目標達成",
+        "q_number": "5-20",
+        "question_ruby": "<ruby>非常事態<rt>ひじょうじたい</rt></ruby>が<ruby>発生<rt>はっせい</rt></ruby>した<ruby>場合<rt>ばあい</rt></ruby>でも、<ruby>必要<rt>ひつよう</rt></ruby>なサービスを<ruby>継続的<rt>けいぞくてき</rt></ruby>に<ruby>提供<rt>ていきょう</rt></ruby>するためにすべての<ruby>事業者<rt>じぎょうしゃ</rt></ruby>に<ruby>策定<rt>さくてい</rt></ruby>が<ruby>義務<rt>ぎむ</rt></ruby>づけられた<ruby>計画<rt>けいかく</rt></ruby>を [___] といいます。",
+        "question_plain": "非常事態が発生した場合でも、必要なサービスを継続的に提供するためにすべての事業者に策定が義務づけられた計画を [___] といいます。",
+        "options": [
+            "BCP",
+            "PDCA",
+            "OJT",
+            "SDS"
+        ],
+        "answer": 1,
+        "answer_text": "BCP",
+        "explanation": "介護報酬改定により、全介護サービス事業者に感染症および自然災害に係る業務継続計画（BCP）の策定が義務化されました。",
+        "unitTitle": "第4節 組織目標達成",
+        "qNumber": "5-20",
+        "stem": "<ruby>非常事態<rt>ひじょうじたい</rt></ruby>が<ruby>発生<rt>はっせい</rt></ruby>した<ruby>場合<rt>ばあい</rt></ruby>でも、<ruby>必要<rt>ひつよう</rt></ruby>なサービスを<ruby>継続的<rt>けいぞくてき</rt></ruby>に<ruby>提供<rt>ていきょう</rt></ruby>するためにすべての<ruby>事業者<rt>じぎょうしゃ</rt></ruby>に<ruby>策定<rt>さくてい</rt></ruby>が<ruby>義務<rt>ぎむ</rt></ruby>づけられた<ruby>計画<rt>けいかく</rt></ruby>を [___] といいます。",
+        "stem_plain": "非常事態が発生した場合でも、必要なサービスを継続的に提供するためにすべての事業者に策定が義務づけられた計画を [___] といいます。"
+    },
+    {
+        "id": 117,
+        "unit": 5,
+        "unit_title": "第4節 組織目標達成",
+        "q_number": "5-21",
+        "question_ruby": "<ruby>生命<rt>せいめい</rt></ruby>・<ruby>生活<rt>せいかつ</rt></ruby>・<ruby>人生<rt>じんせい</rt></ruby>の<ruby>質<rt>しつ</rt></ruby>を<ruby>意味<rt>いみ</rt></ruby>する [___] の<ruby>向上<rt>こうじょう</rt></ruby>を<ruby>目指<rt>めざ</rt></ruby>します。",
+        "question_plain": "生命・生活・人生の質を意味する [___] の向上を目指します。",
+        "options": [
+            "QOL",
+            "ADL",
+            "IADL",
+            "ICF"
+        ],
+        "answer": 1,
+        "answer_text": "QOL",
+        "explanation": "Quality of Life（生活の質・生命の質）の略称で、単なる生存にとどまらず心豊かに自分らしく生きる質です。",
+        "unitTitle": "第4節 組織目標達成",
+        "qNumber": "5-21",
+        "stem": "<ruby>生命<rt>せいめい</rt></ruby>・<ruby>生活<rt>せいかつ</rt></ruby>・<ruby>人生<rt>じんせい</rt></ruby>の<ruby>質<rt>しつ</rt></ruby>を<ruby>意味<rt>いみ</rt></ruby>する [___] の<ruby>向上<rt>こうじょう</rt></ruby>を<ruby>目指<rt>めざ</rt></ruby>します。",
+        "stem_plain": "生命・生活・人生の質を意味する [___] の向上を目指します。"
+    },
+    {
+        "id": 118,
+        "unit": 5,
+        "unit_title": "第4節 組織目標達成",
+        "q_number": "5-22",
+        "question_ruby": "<ruby>地域<rt>ちいき</rt></ruby>の<ruby>独居高齢者<rt>どっきょこうれいしゃ</rt></ruby>への<ruby>買<rt>か</rt></ruby>い<ruby>物支援<rt>ものしえん</rt></ruby>や<ruby>食事提供支援<rt>しょくじていきょうしえん</rt></ruby>など、<ruby>地域<rt>ちいき</rt></ruby>に<ruby>貢献<rt>こうけん</rt></ruby>する<ruby>取<rt>と</rt></ruby>り<ruby>組<rt>く</rt></ruby>みを [___] <ruby>活動<rt>かつどう</rt></ruby>といいます。",
+        "question_plain": "地域の独居高齢者への買い物支援や食事提供支援など、地域に貢献する取り組みを [___] 活動といいます。",
+        "options": [
+            "地域貢献",
+            "営利追求",
+            "自己実現",
+            "政治運動"
+        ],
+        "answer": 1,
+        "answer_text": "地域貢献",
+        "explanation": "社会福祉法人等の責務として、制度の狭間にある生活困窮者や孤立高齢者を見守り支援する地域貢献活動が期待されます。",
+        "unitTitle": "第4節 組織目標達成",
+        "qNumber": "5-22",
+        "stem": "<ruby>地域<rt>ちいき</rt></ruby>の<ruby>独居高齢者<rt>どっきょこうれいしゃ</rt></ruby>への<ruby>買<rt>か</rt></ruby>い<ruby>物支援<rt>ものしえん</rt></ruby>や<ruby>食事提供支援<rt>しょくじていきょうしえん</rt></ruby>など、<ruby>地域<rt>ちいき</rt></ruby>に<ruby>貢献<rt>こうけん</rt></ruby>する<ruby>取<rt>と</rt></ruby>り<ruby>組<rt>く</rt></ruby>みを [___] <ruby>活動<rt>かつどう</rt></ruby>といいます。",
+        "stem_plain": "地域の独居高齢者への買い物支援や食事提供支援など、地域に貢献する取り組みを [___] 活動といいます。"
+    }
 ]
