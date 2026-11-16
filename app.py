@@ -30,13 +30,16 @@ st.markdown("""
         color: #555;
     }
     .question-box {
-        background-color: #f8fafc;
         border-left: 5px solid #2563eb;
         padding: 18px;
         border-radius: 8px;
         margin-bottom: 20px;
         font-size: 1.15em;
         line-height: 2.2;
+        background-color: #ffffff !important;
+        color: #1e293b !important;
+        /* 濃いネイビーブラックではっきり表示 */
+        border: 2px solid #cbd5e1 !important;
     }
     .report-card {
         background-color: #f1f5f9;
